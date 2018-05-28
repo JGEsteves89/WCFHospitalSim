@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="288026ab-71d9-4cbe-bc5a-d982f14a8619" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:64686/SCP.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SCP.wsdl" MetadataType="Wsdl" ID="0b3b8cdb-7a6f-433a-842a-b2e9ccee69e7" SourceId="1" SourceUrl="http://localhost:64686/SCP.svc?wsdl" />
+    <MetadataFile FileName="SCP.xsd" MetadataType="Schema" ID="3a9eda8e-e0ee-40b8-8517-72a98aa62bfe" SourceId="1" SourceUrl="http://localhost:64686/SCP.svc?xsd=xsd2" />
+    <MetadataFile FileName="SCP1.xsd" MetadataType="Schema" ID="31d47896-753e-4c1c-80dd-3ee19b6a713d" SourceId="1" SourceUrl="http://localhost:64686/SCP.svc?xsd=xsd3" />
+    <MetadataFile FileName="SCP.disco" MetadataType="Disco" ID="c2ce4ae7-d54f-4824-966e-5a55e225451a" SourceId="1" SourceUrl="http://localhost:64686/SCP.svc?disco" />
+    <MetadataFile FileName="SCP2.xsd" MetadataType="Schema" ID="e1406aa5-80fd-4586-9619-b67cf2d60176" SourceId="1" SourceUrl="http://localhost:64686/SCP.svc?xsd=xsd0" />
+    <MetadataFile FileName="SCP3.xsd" MetadataType="Schema" ID="73f17065-a427-4e0d-b0b6-e1d18c8cff3e" SourceId="1" SourceUrl="http://localhost:64686/SCP.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

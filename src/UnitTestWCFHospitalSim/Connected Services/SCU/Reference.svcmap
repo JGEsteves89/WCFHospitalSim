@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c35595c4-a361-4810-9a4d-68914a859f49" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:64684/SCU.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SCU.disco" MetadataType="Disco" ID="d99827b6-e8de-4398-8977-f4dd1bf60eb1" SourceId="1" SourceUrl="http://localhost:64684/SCU.svc?disco" />
+    <MetadataFile FileName="ServiceSCU.wsdl" MetadataType="Wsdl" ID="c7df66f8-dc1c-4cb5-9828-8f48b6036c3d" SourceId="1" SourceUrl="http://localhost:64684/SCU.svc?wsdl" />
+    <MetadataFile FileName="SCU.xsd" MetadataType="Schema" ID="ba7e8160-71e7-43d4-8607-a054f323ccd0" SourceId="1" SourceUrl="http://localhost:64684/SCU.svc?xsd=xsd1" />
+    <MetadataFile FileName="SCU1.xsd" MetadataType="Schema" ID="0c050c65-ec20-4c20-8674-a8e6242a1222" SourceId="1" SourceUrl="http://localhost:64684/SCU.svc?xsd=xsd0" />
+    <MetadataFile FileName="SCU2.xsd" MetadataType="Schema" ID="77d6bfaf-524a-461b-b9eb-4f8da340e226" SourceId="1" SourceUrl="http://localhost:64684/SCU.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
