@@ -1,0 +1,10 @@
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\SCPLibrary\bin\Debug\SCPLibrary.dll.config
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\SCPLibrary\bin\Debug\SCPLibrary.dll
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\SCPLibrary\bin\Debug\SCPLibrary.pdb
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\SCPLibrary\bin\Debug\Services.dll
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\SCPLibrary\bin\Debug\Services.pdb
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\SCPLibrary\obj\Debug\SCPLibrary.csprojAssemblyReference.cache
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\SCPLibrary\obj\Debug\SCPLibrary.csproj.CoreCompileInputs.cache
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\SCPLibrary\obj\Debug\SCPLibrary.csproj.CopyComplete
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\SCPLibrary\obj\Debug\SCPLibrary.dll
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\SCPLibrary\obj\Debug\SCPLibrary.pdb

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WcfSCP.SCP" CodeBehind="SCP.svc.cs" %>

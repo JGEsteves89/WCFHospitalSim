@@ -1,0 +1,6 @@
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\Services\bin\Debug\Services.dll
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\Services\bin\Debug\Services.pdb
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\Services\obj\Debug\Services.csprojAssemblyReference.cache
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\Services\obj\Debug\Services.dll
+C:\Users\rffreitas\source\repos\WCFHospitalSimulation\Services\obj\Debug\Services.pdb
