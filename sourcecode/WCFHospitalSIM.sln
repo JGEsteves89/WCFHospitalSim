@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppB", "ConsoleAppB\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{C9A518E6-D5E2-46A8-8D85-930C05CB2242}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibraryUnittest", "SharedLibraryUnittest\SharedLibraryUnittest.csproj", "{3AAA4E0B-7F83-4990-82F9-115B68B1D2CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{C9A518E6-D5E2-46A8-8D85-930C05CB2242}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9A518E6-D5E2-46A8-8D85-930C05CB2242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9A518E6-D5E2-46A8-8D85-930C05CB2242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AAA4E0B-7F83-4990-82F9-115B68B1D2CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AAA4E0B-7F83-4990-82F9-115B68B1D2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AAA4E0B-7F83-4990-82F9-115B68B1D2CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AAA4E0B-7F83-4990-82F9-115B68B1D2CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
