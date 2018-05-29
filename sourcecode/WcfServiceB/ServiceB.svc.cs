@@ -14,6 +14,12 @@ namespace WcfServiceB
     {
         ServiceReferenceA.ServiceAClient srvA;
 
+        public ServiceB()
+        {
+            srvA = new ServiceReferenceA.ServiceAClient();
+        }
+
+
         public ServiceB(Uri uri=null)
         {
             srvA = new ServiceReferenceA.ServiceAClient();

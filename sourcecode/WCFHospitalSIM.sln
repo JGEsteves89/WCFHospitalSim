@@ -26,6 +26,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibraryUnitTest", "Sh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceAUnitTest", "WcfServiceAUnitTest\WcfServiceAUnitTest.csproj", "{737C1705-C347-416E-8F1E-2CCB0B5FF189}"
 	ProjectSection(ProjectDependencies) = postProject
+		{86BE550D-7425-4F34-85DB-AFE8C4A30858} = {86BE550D-7425-4F34-85DB-AFE8C4A30858}
 		{4D34EF3B-B68C-4401-82D9-AE3E1A9BEF44} = {4D34EF3B-B68C-4401-82D9-AE3E1A9BEF44}
 	EndProjectSection
 EndProject

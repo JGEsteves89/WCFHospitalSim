@@ -15,12 +15,26 @@ namespace WcfServiceA
     {
         ServiceReferenceB.ServiceBClient srvB;
 
+        public ServiceA()
+        {
+            srvB = new ServiceReferenceB.ServiceBClient();
+        }
+
+        public ServiceA(Uri uri = null)
+        {
+            srvB = new ServiceReferenceB.ServiceBClient();
+            if (!(uri is null))
+            {
+                srvB.Endpoint.Address = new EndpointAddress(uri, srvB.Endpoint.Address.Identity, srvB.Endpoint.Address.Headers);
+            }
+
+        }
+
         public bool ConnectionOK()
         {
             try
             {
-                srvB = new ServiceReferenceB.ServiceBClient();
-                srvB.Close();
+                srvB.Open();
                 return true;
             }
             catch (Exception ex)
@@ -42,7 +56,7 @@ namespace WcfServiceA
         {
             try
             {
-                srvB = new ServiceReferenceB.ServiceBClient();
+                // srvB = new ServiceReferenceB.ServiceBClient();
                 List<global::SharedLibray.Patient> patients = srvB.getPatients().ToList();
                 srvB.Close();
 

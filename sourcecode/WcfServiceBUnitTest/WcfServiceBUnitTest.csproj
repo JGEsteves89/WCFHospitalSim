@@ -74,7 +74,9 @@
     <None Include="Connected Services\ServiceReferenceA\WcfServiceBUnitTest.ServiceReferenceA.Patient.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WcfServiceB\WcfServiceB.csproj">

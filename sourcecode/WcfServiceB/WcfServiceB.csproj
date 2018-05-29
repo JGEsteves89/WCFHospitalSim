@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SharedLibray, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -70,7 +71,6 @@
     </None>
     <Content Include="ServiceB.svc" />
     <Content Include="Web.config" />
-    <Content Include="Properties\DataSources\PatientDLL.Patient.datasource" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connected Services\ServiceReferenceA\Reference.cs">
@@ -99,6 +99,8 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Properties\DataSources\SharedLibray.Patient.datasource" />
+    <Content Include="Properties\DataSources\SharedLibray.Patient1.datasource" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
