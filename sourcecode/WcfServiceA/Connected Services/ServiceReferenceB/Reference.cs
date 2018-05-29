@@ -16,16 +16,16 @@ namespace WcfServiceA.ServiceReferenceB {
     public interface IServiceB {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/getPatientsFromA", ReplyAction="http://tempuri.org/IServiceB/getPatientsFromAResponse")]
-        PatientDLL.Patient[] getPatientsFromA();
+        SharedLibray.Patient[] getPatientsFromA();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/getPatientsFromA", ReplyAction="http://tempuri.org/IServiceB/getPatientsFromAResponse")]
-        System.Threading.Tasks.Task<PatientDLL.Patient[]> getPatientsFromAAsync();
+        System.Threading.Tasks.Task<SharedLibray.Patient[]> getPatientsFromAAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/getPatients", ReplyAction="http://tempuri.org/IServiceB/getPatientsResponse")]
-        PatientDLL.Patient[] getPatients();
+        SharedLibray.Patient[] getPatients();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/getPatients", ReplyAction="http://tempuri.org/IServiceB/getPatientsResponse")]
-        System.Threading.Tasks.Task<PatientDLL.Patient[]> getPatientsAsync();
+        System.Threading.Tasks.Task<SharedLibray.Patient[]> getPatientsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/ConnectionOK", ReplyAction="http://tempuri.org/IServiceB/ConnectionOKResponse")]
         bool ConnectionOK();
@@ -61,19 +61,19 @@ namespace WcfServiceA.ServiceReferenceB {
                 base(binding, remoteAddress) {
         }
         
-        public PatientDLL.Patient[] getPatientsFromA() {
+        public SharedLibray.Patient[] getPatientsFromA() {
             return base.Channel.getPatientsFromA();
         }
         
-        public System.Threading.Tasks.Task<PatientDLL.Patient[]> getPatientsFromAAsync() {
+        public System.Threading.Tasks.Task<SharedLibray.Patient[]> getPatientsFromAAsync() {
             return base.Channel.getPatientsFromAAsync();
         }
         
-        public PatientDLL.Patient[] getPatients() {
+        public SharedLibray.Patient[] getPatients() {
             return base.Channel.getPatients();
         }
         
-        public System.Threading.Tasks.Task<PatientDLL.Patient[]> getPatientsAsync() {
+        public System.Threading.Tasks.Task<SharedLibray.Patient[]> getPatientsAsync() {
             return base.Channel.getPatientsAsync();
         }
         

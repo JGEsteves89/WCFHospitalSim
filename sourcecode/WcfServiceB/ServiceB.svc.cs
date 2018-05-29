@@ -28,19 +28,19 @@ namespace WcfServiceB
                 return false;
             }
         }
-        public List<global::PatientDLL.Patient> getPatients()
+        public List<global::SharedLibray.Patient> getPatients()
         {
-            return new List<PatientDLL.Patient> {
-                new PatientDLL.Patient("B1", 1),
-                new PatientDLL.Patient("B2", 2),
-                new PatientDLL.Patient("B3", 3) };
+            return new List<SharedLibray.Patient> {
+                new SharedLibray.Patient("B1", 1),
+                new SharedLibray.Patient("B2", 2),
+                new SharedLibray.Patient("B3", 3) };
         }
-        public List<global::PatientDLL.Patient> getPatientsFromA()
+        public List<global::SharedLibray.Patient> getPatientsFromA()
         {
             try
             {
                 srvA = new ServiceReferenceA.ServiceAClient();
-                List<global::PatientDLL.Patient> patients = srvA.getPatients().ToList() ;
+                List<global::SharedLibray.Patient> patients = srvA.getPatients().ToList() ;
                 srvA.Close();
 
                 return patients;
