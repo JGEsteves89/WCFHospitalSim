@@ -24,6 +24,13 @@ namespace ConsoleAppA
 
                 switch(command)
                 {
+                    case "test":
+                        {
+                            testConnection();
+                            Console.WriteLine();
+                            break;
+                        }
+
                     case "list":
                         {
                             List<Patient> patients = getPatientsFromB();
@@ -56,6 +63,14 @@ namespace ConsoleAppA
             }
             Console.WriteLine("This application cannot connect with service A");
             return new List<Patient>();
+        }
+
+        private static void testConnection()
+        {
+            if (srvA.ConnectionOK())
+                Console.WriteLine("Connection to Service A Successful ");
+            else
+                Console.WriteLine("Connection to Service A not successful ");
         }
     }
 }
