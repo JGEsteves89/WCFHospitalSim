@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WcfServiceB.ServiceReferenceA {
+namespace ConsoleAppA.ServiceReferenceA {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -35,12 +35,12 @@ namespace WcfServiceB.ServiceReferenceA {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServiceAChannel : WcfServiceB.ServiceReferenceA.IServiceA, System.ServiceModel.IClientChannel {
+    public interface IServiceAChannel : ConsoleAppA.ServiceReferenceA.IServiceA, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServiceAClient : System.ServiceModel.ClientBase<WcfServiceB.ServiceReferenceA.IServiceA>, WcfServiceB.ServiceReferenceA.IServiceA {
+    public partial class ServiceAClient : System.ServiceModel.ClientBase<ConsoleAppA.ServiceReferenceA.IServiceA>, ConsoleAppA.ServiceReferenceA.IServiceA {
         
         public ServiceAClient() {
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PatientDLL;
+using SharedLibray;
 
 
 namespace ConsoleAppB
@@ -13,16 +13,41 @@ namespace ConsoleAppB
         static ServiceReferenceB.ServiceBClient srvB = new ServiceReferenceB.ServiceBClient();
         static void Main(string[] args)
         {
-            Console.WriteLine("Started App B!");
-            List<Patient> patients = getPatientsFromA();
+            bool exit = false;
+            string command = string.Empty;
+            Console.WriteLine("Started App B!\n");
 
-            foreach (Patient pat in patients)
+            do
             {
-                Console.WriteLine("Pat: {0}, Age: {1}",pat.name,pat.age);
-            }
+                Console.Write("Insert command:");
+                command = Console.ReadLine();
 
+                switch (command)
+                {
+                    case "list":
+                        {
+                            List<Patient> patients = getPatientsFromA();
 
-            Console.ReadKey();
+                            foreach (Patient pat in patients)
+                            {
+                                Console.WriteLine("Pat: {0}, Age: {1}", pat.name, pat.age);
+                            }
+                            Console.WriteLine();
+                        }
+                        break;
+
+                    case "exit":
+                        exit = true;
+                        break;
+                    default:
+                        {
+                            Console.WriteLine("Command invalid");
+                            Console.WriteLine();
+                            break;
+                        }
+                }
+            } while (!exit);
+
         }
 
         private static List<Patient> getPatientsFromA()
@@ -31,7 +56,7 @@ namespace ConsoleAppB
             {
                 return srvB.getPatientsFromA().ToList();
             }
-            Console.WriteLine("This application cannot connect with service A");
+            Console.WriteLine("This application cannot connect with service B");
             return new List<Patient>();
         }
     }

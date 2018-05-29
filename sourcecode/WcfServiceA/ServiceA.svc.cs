@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-using PatientDLL;
+using SharedLibray;
 
 namespace WcfServiceA
 {
@@ -13,16 +13,45 @@ namespace WcfServiceA
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class ServiceA : IServiceA
     {
-        public List<global::PatientDLL.Patient> getPatients()
+        ServiceReferenceB.ServiceBClient srvB;
+
+        public bool ConnectionOK()
         {
-            return new List<PatientDLL.Patient> {
-                new PatientDLL.Patient("A1", 1),
-                new PatientDLL.Patient("A2", 2),
-                new PatientDLL.Patient("A3", 3) };
+            try
+            {
+                srvB = new ServiceReferenceB.ServiceBClient();
+                srvB.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
         }
+
+        public List<global::SharedLibray.Patient> getPatients()
+        {
+            return new List<SharedLibray.Patient> {
+                new SharedLibray.Patient("A1", 1),
+                new SharedLibray.Patient("A2", 2),
+                new SharedLibray.Patient("A3", 3) };
+        }
+
         public List<Patient> getPatientsFromB()
         {
-            throw new NotImplementedException();
+            try
+            {
+                srvB = new ServiceReferenceB.ServiceBClient();
+                List<global::SharedLibray.Patient> patients = srvB.getPatients().ToList();
+                srvB.Close();
+
+                return patients;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }

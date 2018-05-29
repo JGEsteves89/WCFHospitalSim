@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\ServiceReferenceB\Reference.cs">
+    <Compile Include="Connected Services\ServiceReferenceA\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -54,44 +54,46 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\ServiceReferenceB\ServiceB.wsdl" />
-    <None Include="Connected Services\ServiceReferenceB\ServiceB.xsd">
+    <None Include="Connected Services\ServiceReferenceA\ServiceA.wsdl" />
+    <None Include="Connected Services\ServiceReferenceA\ServiceA.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReferenceB\ServiceB1.xsd">
+    <None Include="Connected Services\ServiceReferenceA\ServiceA1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReferenceB\ServiceB2.xsd">
+    <None Include="Connected Services\ServiceReferenceA\ServiceA2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\PatientDLL.Patient.datasource" />
+    <None Include="Properties\DataSources\SharedLibray.Patient.datasource" />
     <None Include="Properties\DataSources\WcfServiceA.ServiceReferenceB.CompositeType.datasource" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WcfServiceA\WcfServiceA.csproj">
-      <Project>{4d34ef3b-b68c-4401-82d9-ae3e1a9bef44}</Project>
-      <Name>WcfServiceA</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceReferenceB\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReferenceA\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReferenceB\ServiceB.disco" />
+    <None Include="Connected Services\ServiceReferenceA\ServiceA.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReferenceB\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReferenceA\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReferenceB\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReferenceA\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReferenceB\Reference.svcmap">
+    <None Include="Connected Services\ServiceReferenceA\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj">
+      <Project>{c9a518e6-d5e2-46a8-8d85-930c05cb2242}</Project>
+      <Name>SharedLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
