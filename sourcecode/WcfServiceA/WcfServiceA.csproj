@@ -98,6 +98,7 @@
     <None Include="Connected Services\ServiceReferenceB\ServiceB2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Properties\DataSources\SharedLibray.Patient.datasource" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -112,9 +113,9 @@
     <WCFMetadataStorage Include="Connected Services\ServiceReferenceB\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PatientDLL\PatientDLL.csproj">
+    <ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj">
       <Project>{c9a518e6-d5e2-46a8-8d85-930c05cb2242}</Project>
-      <Name>PatientDLL</Name>
+      <Name>SharedLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

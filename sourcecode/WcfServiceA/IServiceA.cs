@@ -13,11 +13,13 @@ namespace WcfServiceA
     public interface IServiceA
     {
         [OperationContract]
-        List<global::PatientDLL.Patient> getPatients();
+        List<global::SharedLibray.Patient> getPatients();
 
         [OperationContract]
-        List<global::PatientDLL.Patient> getPatientsFromB();
+        List<global::SharedLibray.Patient> getPatientsFromB();
 
+        [OperationContract]
+        bool ConnectionOK();
         // TODO: Add your service operations here
     }
 

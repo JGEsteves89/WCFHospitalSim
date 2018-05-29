@@ -65,12 +65,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\PatientDLL.Patient.datasource" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PatientDLL\PatientDLL.csproj">
-      <Project>{c9a518e6-d5e2-46a8-8d85-930c05cb2242}</Project>
-      <Name>PatientDLL</Name>
-    </ProjectReference>
+    <None Include="Properties\DataSources\SharedLibray.Patient.datasource" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -92,6 +87,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj">
+      <Project>{c9a518e6-d5e2-46a8-8d85-930c05cb2242}</Project>
+      <Name>SharedLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
