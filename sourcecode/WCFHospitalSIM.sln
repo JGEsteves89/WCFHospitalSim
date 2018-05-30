@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceAUnitTest", "WcfS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceBUnitTest", "WcfServiceBUnitTest\WcfServiceBUnitTest.csproj", "{5D568ADD-DCFB-4ED2-A78D-CCD1CA67EB44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital_BL", "Hospital_BL\Hospital_BL.csproj", "{00E441A0-5CD0-4232-8BE3-F038865688FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +72,10 @@ Global
 		{5D568ADD-DCFB-4ED2-A78D-CCD1CA67EB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D568ADD-DCFB-4ED2-A78D-CCD1CA67EB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D568ADD-DCFB-4ED2-A78D-CCD1CA67EB44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E441A0-5CD0-4232-8BE3-F038865688FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E441A0-5CD0-4232-8BE3-F038865688FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E441A0-5CD0-4232-8BE3-F038865688FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E441A0-5CD0-4232-8BE3-F038865688FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
