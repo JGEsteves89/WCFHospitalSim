@@ -7,6 +7,10 @@ namespace SharedLibraryUnitTest
     [TestClass]
     public class UnitTest1
     {
+        /// <summary>
+        /// Verify if the values passed to the constructor are equal
+        /// to the values return by the atributtes
+        /// </summary>
         [TestMethod]
         public void NewPatientConstructorTest()
         {

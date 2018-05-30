@@ -3,9 +3,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace WcfServiceAUnitTest
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [TestClass]
     public class UnitTestServiceA
     {
+        /// <summary>
+        /// Test the connection is OK to the Service B through service A
+        /// </summary>
         [TestMethod]
         public void TestConnectionOk()
         {
@@ -14,6 +20,9 @@ namespace WcfServiceAUnitTest
             Assert.AreEqual(true, newClient.ConnectionOK());
         }
 
+        /// <summary>
+        /// Test the connection is NOK to the Service B through service A
+        /// </summary>
         [TestMethod]
         public void VerifyConnectionNOK()
         {
@@ -21,6 +30,9 @@ namespace WcfServiceAUnitTest
             Assert.AreEqual(false, srvB.ConnectionOK());
         }
 
+        /// <summary>
+        /// Verify is the list of patients doesn't return a null value
+        /// </summary>
         [TestMethod]
         public void ListPatientsFromBNotNull()
         {
@@ -29,6 +41,9 @@ namespace WcfServiceAUnitTest
             Assert.IsNotNull(newClient.getPatientsFromB());
         }
 
+        /// <summary>
+        /// Verify is the list of patients doesn't return a null value
+        /// </summary>
         [TestMethod]
         public void ListPatientsNotNull()
         {

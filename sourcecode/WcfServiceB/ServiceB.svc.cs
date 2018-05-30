@@ -8,18 +8,28 @@ using System.Text;
 
 namespace WcfServiceB
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
+    /// <summary>
+    /// Implementation of Interface 
+    /// </summary>
     public class ServiceB : IServiceB
     {
+        /// <summary>
+        /// Client of Service A
+        /// </summary>
         ServiceReferenceA.ServiceAClient srvA;
 
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public ServiceB()
         {
             srvA = new ServiceReferenceA.ServiceAClient();
         }
 
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="uri">Endpoint of WCF Service</param>
         public ServiceB(Uri uri=null)
         {
             srvA = new ServiceReferenceA.ServiceAClient();
@@ -30,6 +40,12 @@ namespace WcfServiceB
             
         }
 
+        /// <summary>
+        /// This function verifies if conection to WCF Service A 
+        /// is successful
+        /// </summary>
+        /// <returns>In case of connection on, return true.
+        /// Otherwise, return false</returns>
         public bool ConnectionOK()
         {
             try
@@ -43,6 +59,11 @@ namespace WcfServiceB
                 return false;
             }
         }
+
+        /// <summary>
+        /// Get a list of patients of this service
+        /// </summary>
+        /// <returns>Return a list of patients</returns>
         public List<global::SharedLibray.Patient> getPatients()
         {
             return new List<SharedLibray.Patient> {
@@ -50,6 +71,11 @@ namespace WcfServiceB
                 new SharedLibray.Patient("B2", 2),
                 new SharedLibray.Patient("B3", 3) };
         }
+
+        /// <summary>
+        /// Get the patients from the WCF Service A
+        /// </summary>
+        /// <returns>Returns a List of patients</returns>
         public List<global::SharedLibray.Patient> getPatientsFromA()
         {
             try
