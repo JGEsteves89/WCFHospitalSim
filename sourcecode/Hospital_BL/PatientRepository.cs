@@ -88,7 +88,7 @@ namespace Hospital_BL
 
                 return patient;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return null;
             }
@@ -102,16 +102,23 @@ namespace Hospital_BL
         {
             try
             {
-                PatientInfo patient2DB = dBEntities.PatientInfoes.Create();
-
-                Patient patient = new Patient
+                PatientInfo patient = new PatientInfo()
                 {
-                    ID = (ulong)patient2DB.ID,
-                    age = patient2DB.Age,
-                    name = patient2DB.Name
+                    Age = 0,
+                    Name = string.Empty
                 };
 
-                return patient;
+                dBEntities.PatientInfoes.Add(patient);
+                dBEntities.SaveChanges();
+
+                Patient newPatient = new Patient()
+                {
+                    age = patient.Age,
+                    name = patient.Name,
+                    ID = (ulong) patient.ID
+                };
+
+                return newPatient;
             }
             catch (Exception ex)
             {
