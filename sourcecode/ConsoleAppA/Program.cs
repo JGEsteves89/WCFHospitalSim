@@ -7,8 +7,12 @@ using SharedLibray;
 
 namespace ConsoleAppA
 {
+    /// <summary>
+    /// Test the connection to the Service A
+    /// </summary>
     class Program
     {
+        //Create a client to the service A
         static ServiceReferenceA.ServiceAClient srvA = new ServiceReferenceA.ServiceAClient();
 
         static void Main(string[] args)
@@ -19,9 +23,11 @@ namespace ConsoleAppA
         
             do
             {
+                //Read Command 
                 Console.Write("Insert command:");
                 command = Console.ReadLine();
 
+                //Executes the function relative to command
                 switch(command)
                 {
                     case "test":
@@ -34,6 +40,7 @@ namespace ConsoleAppA
                     case "list":
                         {
                             List<Patient> patients = getPatientsFromB();
+
                             foreach (Patient pat in patients)
                             {
                                 Console.WriteLine("Pat: {0}, Age: {1}", pat.name, pat.age);
@@ -55,6 +62,10 @@ namespace ConsoleAppA
             } while (!exit);
         }
 
+        /// <summary>
+        /// Gets the patients in Service B through service A
+        /// </summary>
+        /// <returns>Returns a list of patients</returns>
         private static List<Patient> getPatientsFromB()
         {
             if (srvA.ConnectionOK())
@@ -65,6 +76,10 @@ namespace ConsoleAppA
             return new List<Patient>();
         }
 
+        /// <summary>
+        /// Function verifies if conection with service B in service A is ok.
+        /// Show the state in console
+        /// </summary>
         private static void testConnection()
         {
             if (srvA.ConnectionOK())
