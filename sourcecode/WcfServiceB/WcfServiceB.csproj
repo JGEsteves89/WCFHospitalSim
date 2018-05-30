@@ -115,6 +115,10 @@
     <WCFMetadataStorage Include="Connected Services\ServiceReferenceA\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Hospital_BL\Hospital_BL.csproj">
+      <Project>{00e441a0-5cd0-4232-8be3-f038865688fc}</Project>
+      <Name>Hospital_BL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj">
       <Project>{c9a518e6-d5e2-46a8-8d85-930c05cb2242}</Project>
       <Name>SharedLibrary</Name>
