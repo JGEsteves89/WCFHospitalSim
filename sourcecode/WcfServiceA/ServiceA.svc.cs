@@ -20,7 +20,7 @@ namespace WcfServiceA
         ServiceReferenceB.ServiceBClient srvB;
 
         /// <summary>
-        /// 
+        /// Repository of Patient in Server Database
         /// </summary>
         Hospital_BL.PatientRepository repository;
 
@@ -49,7 +49,7 @@ namespace WcfServiceA
         #region CRUD
 
         /// <summary>
-        /// 
+        /// Update Patient in remote database
         /// </summary>
         /// <param name=""></param>
         /// <returns></returns>
@@ -67,7 +67,7 @@ namespace WcfServiceA
         }
 
         /// <summary>
-        /// 
+        ///  Update Patient in Server Database
         /// </summary>
         /// <param name=""></param>
         /// <returns></returns>
@@ -86,7 +86,7 @@ namespace WcfServiceA
         }
 
         /// <summary>
-        /// 
+        /// Delete Patient in server database
         /// </summary>
         /// <param name="patient"></param>
         /// <returns></returns>
@@ -104,7 +104,7 @@ namespace WcfServiceA
         }
 
         /// <summary>
-        /// 
+        /// Delete Patient in remote database
         /// </summary>
         /// <param name="patient"></param>
         /// <returns></returns>
@@ -122,7 +122,7 @@ namespace WcfServiceA
         }
 
         /// <summary>
-        /// 
+        /// Read Patient in server database
         /// </summary>
         /// <param name="ID"></param>
         /// <returns></returns>
@@ -140,7 +140,7 @@ namespace WcfServiceA
         }
 
         /// <summary>
-        /// 
+        /// Read Patient in remote Database
         /// </summary>
         /// <param name="ID"></param>
         /// <returns></returns>
@@ -158,7 +158,7 @@ namespace WcfServiceA
         }
 
         /// <summary>
-        /// 
+        /// Create Patient in server Database
         /// </summary>
         /// <returns></returns>
         public global::SharedLibray.Patient CreatePatient()
@@ -175,7 +175,7 @@ namespace WcfServiceA
         }
 
         /// <summary>
-        /// 
+        /// Create Patient in remote Database
         /// </summary>
         /// <returns></returns>
         public global::SharedLibray.Patient CreatePatientFromB()

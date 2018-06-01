@@ -40,6 +40,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital_BLUnitTest", "Hospital_BLUnitTest\Hospital_BLUnitTest.csproj", "{73AF92D0-0CE2-480B-8507-9CABA160F8FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFHospitalServer_A", "WPFHospitalServer_A\WPFHospitalServer_A.csproj", "{8DDD6BDB-F921-4135-B8B5-D9C57817CBB2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4D34EF3B-B68C-4401-82D9-AE3E1A9BEF44} = {4D34EF3B-B68C-4401-82D9-AE3E1A9BEF44}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
