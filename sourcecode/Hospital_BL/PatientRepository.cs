@@ -88,7 +88,7 @@ namespace Hospital_BL
 
                 return patient;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -120,7 +120,7 @@ namespace Hospital_BL
 
                 return newPatient;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }

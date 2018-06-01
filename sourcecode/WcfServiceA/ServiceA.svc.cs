@@ -19,7 +19,10 @@ namespace WcfServiceA
         /// </summary>
         ServiceReferenceB.ServiceBClient srvB;
 
-      
+        /// <summary>
+        /// 
+        /// </summary>
+        Hospital_BL.PatientRepository repository;
 
         /// <summary>
         /// Default Constructor
@@ -27,6 +30,7 @@ namespace WcfServiceA
         public ServiceA()
         {
             srvB = new ServiceReferenceB.ServiceBClient();
+            repository = new Hospital_BL.PatientRepository();
         }
 
         /// <summary>
@@ -53,7 +57,7 @@ namespace WcfServiceA
         {
             try
             {
-                return false; 
+                return repository.Update(patient);
             }
             catch (Exception ex)
             {
@@ -90,7 +94,7 @@ namespace WcfServiceA
         {
             try
             {
-                return false;
+                return repository.Delete(patient);
             }
             catch (Exception ex)
             {
@@ -126,7 +130,7 @@ namespace WcfServiceA
         {
             try
             {
-                return null;
+                return repository.Read(ID);
             }
             catch (Exception ex)
             {
@@ -161,7 +165,7 @@ namespace WcfServiceA
         {
             try
             {
-                return null;
+                return repository.Create();
             }
             catch (Exception ex)
             {
