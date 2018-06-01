@@ -88,9 +88,8 @@ namespace Hospital_BL
 
                 return patient;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.Write(ex.ToString());
                 return null;
             }
         }
@@ -121,9 +120,8 @@ namespace Hospital_BL
 
                 return newPatient;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.Write(ex.ToString());
                 return null;
             }
         }
