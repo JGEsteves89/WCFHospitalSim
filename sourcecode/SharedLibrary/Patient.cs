@@ -16,6 +16,7 @@ namespace SharedLibray
         /// <summary>
         /// Identification Number of Patient
         /// </summary>
+        [DataMember]
         public ulong ID
         {
             get;
@@ -26,7 +27,7 @@ namespace SharedLibray
         /// Patient's Name
         /// </summary>
         [DataMember]
-        public string name
+        public string Name
         {
             get;
             set;
@@ -36,7 +37,7 @@ namespace SharedLibray
         /// Patient Age
         /// </summary>
         [DataMember]
-        public int age;
+        public int Age;
 
         /// <summary>
         /// 
@@ -53,8 +54,8 @@ namespace SharedLibray
         /// <param name="age">Age of Patient</param>
         public Patient(string name, int age)
         {
-            this.name = name;
-            this.age = age;
+            this.Name = name;
+            this.Age = age;
         }
 
         /// <summary>
@@ -65,8 +66,8 @@ namespace SharedLibray
         /// <param name="id">ID of Patient</param>
         public Patient(string name, int age, ulong id)
         {
-            this.name = name;
-            this.age = age;
+            this.Name = name;
+            this.Age = age;
             this.ID = id;
         }
     }

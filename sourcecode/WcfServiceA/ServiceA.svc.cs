@@ -218,7 +218,7 @@ namespace WcfServiceA
         /// Get a list of patients of this service
         /// </summary>
         /// <returns>Return a list of patients</returns>
-        public List<global::SharedLibray.Patient> getPatients()
+        public List<global::SharedLibray.Patient> GetPatients()
         {
             return new List<SharedLibray.Patient> {
                 new SharedLibray.Patient("A1", 1),
@@ -230,12 +230,12 @@ namespace WcfServiceA
         /// Get the patients from the WCF Service B
         /// </summary>
         /// <returns>Returns a List of patients</returns>
-        public List<Patient> getPatientsFromB()
+        public List<Patient> GetPatientsFromB()
         {
             try
             {
                 // srvB = new ServiceReferenceB.ServiceBClient();
-                List<global::SharedLibray.Patient> patients = srvB.getPatients().ToList();
+                List<global::SharedLibray.Patient> patients = srvB.GetPatients().ToList();
                 srvB.Close();
 
                 return patients;

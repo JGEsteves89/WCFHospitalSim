@@ -18,6 +18,9 @@ namespace WcfServiceB
         /// </summary>
         ServiceReferenceA.ServiceAClient srvA;
 
+        /// <summary>
+        /// 
+        /// </summary>
         Hospital_BL.PatientRepository repository;
 
         /// <summary>
@@ -217,7 +220,7 @@ namespace WcfServiceB
         /// Get a list of patients of this service
         /// </summary>
         /// <returns>Return a list of patients</returns>
-        public List<global::SharedLibray.Patient> getPatients()
+        public List<global::SharedLibray.Patient> GetPatients()
         {
             return new List<SharedLibray.Patient> {
                 new SharedLibray.Patient("B1", 1),
@@ -229,11 +232,11 @@ namespace WcfServiceB
         /// Get the patients from the WCF Service A
         /// </summary>
         /// <returns>Returns a List of patients</returns>
-        public List<global::SharedLibray.Patient> getPatientsFromA()
+        public List<global::SharedLibray.Patient> GetPatientsFromA()
         {
             try
             {
-                List<global::SharedLibray.Patient> patients = srvA.getPatients().ToList() ;
+                List<global::SharedLibray.Patient> patients = srvA.GetPatients().ToList();
                 srvA.Close();
 
                 return patients;

@@ -109,27 +109,27 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getPatientsFromA">
+  <xs:element name="GetPatientsFromA">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="getPatientsFromAResponse">
+  <xs:element name="GetPatientsFromAResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SharedLibray" minOccurs="0" name="getPatientsFromAResult" nillable="true" type="q9:ArrayOfPatient" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SharedLibray" minOccurs="0" name="GetPatientsFromAResult" nillable="true" type="q9:ArrayOfPatient" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getPatients">
+  <xs:element name="GetPatients">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="getPatientsResponse">
+  <xs:element name="GetPatientsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SharedLibray" minOccurs="0" name="getPatientsResult" nillable="true" type="q10:ArrayOfPatient" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SharedLibray" minOccurs="0" name="GetPatientsResult" nillable="true" type="q10:ArrayOfPatient" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

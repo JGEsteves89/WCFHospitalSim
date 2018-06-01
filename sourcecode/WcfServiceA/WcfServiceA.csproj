@@ -94,8 +94,6 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\DataSources\SharedLibray.Patient.datasource" />
-    <Content Include="Properties\DataSources\SharedLibray.Patient1.datasource" />
     <None Include="Connected Services\ServiceReferenceB\ServiceB.wsdl" />
     <None Include="Connected Services\ServiceReferenceB\ServiceB.xsd">
       <SubType>Designer</SubType>
@@ -106,7 +104,10 @@
     <None Include="Connected Services\ServiceReferenceB\ServiceB2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Properties\DataSources\SharedLibray.Patient.datasource" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -118,9 +119,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceReferenceB\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Hospital_BL\Hospital_BL.csproj">
       <Project>{00e441a0-5cd0-4232-8be3-f038865688fc}</Project>
       <Name>Hospital_BL</Name>
@@ -129,6 +127,9 @@
       <Project>{c9a518e6-d5e2-46a8-8d85-930c05cb2242}</Project>
       <Name>SharedLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReferenceB\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

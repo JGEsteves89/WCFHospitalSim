@@ -82,14 +82,14 @@ namespace WcfServiceA
         /// </summary>
         /// <returns>Return a list of patients</returns>
         [OperationContract]
-        List<global::SharedLibray.Patient> getPatients();
+        List<global::SharedLibray.Patient> GetPatients();
 
         /// <summary>
         /// Get the patients from the WCF Service B
         /// </summary>
         /// <returns>Returns a List of patients</returns>
         [OperationContract]
-        List<global::SharedLibray.Patient> getPatientsFromB();
+        List<global::SharedLibray.Patient> GetPatientsFromB();
 
         /// <summary>
         /// This function verifies if conection to WCF Service B

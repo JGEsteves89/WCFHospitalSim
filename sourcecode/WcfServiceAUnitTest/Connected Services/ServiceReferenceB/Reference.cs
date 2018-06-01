@@ -9,23 +9,150 @@
 //------------------------------------------------------------------------------
 
 namespace WcfServiceAUnitTest.ServiceReferenceB {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Patient", Namespace="http://schemas.datacontract.org/2004/07/SharedLibray")]
+    [System.SerializableAttribute()]
+    public partial class Patient : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AgeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ulong IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Age {
+            get {
+                return this.AgeField;
+            }
+            set {
+                if ((this.AgeField.Equals(value) != true)) {
+                    this.AgeField = value;
+                    this.RaisePropertyChanged("Age");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ulong ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReferenceB.IServiceB")]
     public interface IServiceB {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/getPatientsFromA", ReplyAction="http://tempuri.org/IServiceB/getPatientsFromAResponse")]
-        SharedLibray.Patient[] getPatientsFromA();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/UpdatePatient", ReplyAction="http://tempuri.org/IServiceB/UpdatePatientResponse")]
+        bool UpdatePatient(WcfServiceAUnitTest.ServiceReferenceB.Patient patient);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/getPatientsFromA", ReplyAction="http://tempuri.org/IServiceB/getPatientsFromAResponse")]
-        System.Threading.Tasks.Task<SharedLibray.Patient[]> getPatientsFromAAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/UpdatePatient", ReplyAction="http://tempuri.org/IServiceB/UpdatePatientResponse")]
+        System.Threading.Tasks.Task<bool> UpdatePatientAsync(WcfServiceAUnitTest.ServiceReferenceB.Patient patient);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/getPatients", ReplyAction="http://tempuri.org/IServiceB/getPatientsResponse")]
-        SharedLibray.Patient[] getPatients();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/UpdatePatientFromA", ReplyAction="http://tempuri.org/IServiceB/UpdatePatientFromAResponse")]
+        bool UpdatePatientFromA(WcfServiceAUnitTest.ServiceReferenceB.Patient patient);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/getPatients", ReplyAction="http://tempuri.org/IServiceB/getPatientsResponse")]
-        System.Threading.Tasks.Task<SharedLibray.Patient[]> getPatientsAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/UpdatePatientFromA", ReplyAction="http://tempuri.org/IServiceB/UpdatePatientFromAResponse")]
+        System.Threading.Tasks.Task<bool> UpdatePatientFromAAsync(WcfServiceAUnitTest.ServiceReferenceB.Patient patient);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/DeletePatient", ReplyAction="http://tempuri.org/IServiceB/DeletePatientResponse")]
+        bool DeletePatient(WcfServiceAUnitTest.ServiceReferenceB.Patient patient);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/DeletePatient", ReplyAction="http://tempuri.org/IServiceB/DeletePatientResponse")]
+        System.Threading.Tasks.Task<bool> DeletePatientAsync(WcfServiceAUnitTest.ServiceReferenceB.Patient patient);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/DeletePatientFromA", ReplyAction="http://tempuri.org/IServiceB/DeletePatientFromAResponse")]
+        bool DeletePatientFromA(WcfServiceAUnitTest.ServiceReferenceB.Patient patient);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/DeletePatientFromA", ReplyAction="http://tempuri.org/IServiceB/DeletePatientFromAResponse")]
+        System.Threading.Tasks.Task<bool> DeletePatientFromAAsync(WcfServiceAUnitTest.ServiceReferenceB.Patient patient);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/ReadPatient", ReplyAction="http://tempuri.org/IServiceB/ReadPatientResponse")]
+        WcfServiceAUnitTest.ServiceReferenceB.Patient ReadPatient(ulong ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/ReadPatient", ReplyAction="http://tempuri.org/IServiceB/ReadPatientResponse")]
+        System.Threading.Tasks.Task<WcfServiceAUnitTest.ServiceReferenceB.Patient> ReadPatientAsync(ulong ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/ReadPatientFromA", ReplyAction="http://tempuri.org/IServiceB/ReadPatientFromAResponse")]
+        WcfServiceAUnitTest.ServiceReferenceB.Patient ReadPatientFromA(ulong ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/ReadPatientFromA", ReplyAction="http://tempuri.org/IServiceB/ReadPatientFromAResponse")]
+        System.Threading.Tasks.Task<WcfServiceAUnitTest.ServiceReferenceB.Patient> ReadPatientFromAAsync(ulong ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/CreatePatient", ReplyAction="http://tempuri.org/IServiceB/CreatePatientResponse")]
+        WcfServiceAUnitTest.ServiceReferenceB.Patient CreatePatient();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/CreatePatient", ReplyAction="http://tempuri.org/IServiceB/CreatePatientResponse")]
+        System.Threading.Tasks.Task<WcfServiceAUnitTest.ServiceReferenceB.Patient> CreatePatientAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/CreatePatientFromA", ReplyAction="http://tempuri.org/IServiceB/CreatePatientFromAResponse")]
+        WcfServiceAUnitTest.ServiceReferenceB.Patient CreatePatientFromA();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/CreatePatientFromA", ReplyAction="http://tempuri.org/IServiceB/CreatePatientFromAResponse")]
+        System.Threading.Tasks.Task<WcfServiceAUnitTest.ServiceReferenceB.Patient> CreatePatientFromAAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/GetPatientsFromA", ReplyAction="http://tempuri.org/IServiceB/GetPatientsFromAResponse")]
+        WcfServiceAUnitTest.ServiceReferenceB.Patient[] GetPatientsFromA();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/GetPatientsFromA", ReplyAction="http://tempuri.org/IServiceB/GetPatientsFromAResponse")]
+        System.Threading.Tasks.Task<WcfServiceAUnitTest.ServiceReferenceB.Patient[]> GetPatientsFromAAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/GetPatients", ReplyAction="http://tempuri.org/IServiceB/GetPatientsResponse")]
+        WcfServiceAUnitTest.ServiceReferenceB.Patient[] GetPatients();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/GetPatients", ReplyAction="http://tempuri.org/IServiceB/GetPatientsResponse")]
+        System.Threading.Tasks.Task<WcfServiceAUnitTest.ServiceReferenceB.Patient[]> GetPatientsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/ConnectionOK", ReplyAction="http://tempuri.org/IServiceB/ConnectionOKResponse")]
         bool ConnectionOK();
@@ -61,20 +188,84 @@ namespace WcfServiceAUnitTest.ServiceReferenceB {
                 base(binding, remoteAddress) {
         }
         
-        public SharedLibray.Patient[] getPatientsFromA() {
-            return base.Channel.getPatientsFromA();
+        public bool UpdatePatient(WcfServiceAUnitTest.ServiceReferenceB.Patient patient) {
+            return base.Channel.UpdatePatient(patient);
         }
         
-        public System.Threading.Tasks.Task<SharedLibray.Patient[]> getPatientsFromAAsync() {
-            return base.Channel.getPatientsFromAAsync();
+        public System.Threading.Tasks.Task<bool> UpdatePatientAsync(WcfServiceAUnitTest.ServiceReferenceB.Patient patient) {
+            return base.Channel.UpdatePatientAsync(patient);
         }
         
-        public SharedLibray.Patient[] getPatients() {
-            return base.Channel.getPatients();
+        public bool UpdatePatientFromA(WcfServiceAUnitTest.ServiceReferenceB.Patient patient) {
+            return base.Channel.UpdatePatientFromA(patient);
         }
         
-        public System.Threading.Tasks.Task<SharedLibray.Patient[]> getPatientsAsync() {
-            return base.Channel.getPatientsAsync();
+        public System.Threading.Tasks.Task<bool> UpdatePatientFromAAsync(WcfServiceAUnitTest.ServiceReferenceB.Patient patient) {
+            return base.Channel.UpdatePatientFromAAsync(patient);
+        }
+        
+        public bool DeletePatient(WcfServiceAUnitTest.ServiceReferenceB.Patient patient) {
+            return base.Channel.DeletePatient(patient);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeletePatientAsync(WcfServiceAUnitTest.ServiceReferenceB.Patient patient) {
+            return base.Channel.DeletePatientAsync(patient);
+        }
+        
+        public bool DeletePatientFromA(WcfServiceAUnitTest.ServiceReferenceB.Patient patient) {
+            return base.Channel.DeletePatientFromA(patient);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeletePatientFromAAsync(WcfServiceAUnitTest.ServiceReferenceB.Patient patient) {
+            return base.Channel.DeletePatientFromAAsync(patient);
+        }
+        
+        public WcfServiceAUnitTest.ServiceReferenceB.Patient ReadPatient(ulong ID) {
+            return base.Channel.ReadPatient(ID);
+        }
+        
+        public System.Threading.Tasks.Task<WcfServiceAUnitTest.ServiceReferenceB.Patient> ReadPatientAsync(ulong ID) {
+            return base.Channel.ReadPatientAsync(ID);
+        }
+        
+        public WcfServiceAUnitTest.ServiceReferenceB.Patient ReadPatientFromA(ulong ID) {
+            return base.Channel.ReadPatientFromA(ID);
+        }
+        
+        public System.Threading.Tasks.Task<WcfServiceAUnitTest.ServiceReferenceB.Patient> ReadPatientFromAAsync(ulong ID) {
+            return base.Channel.ReadPatientFromAAsync(ID);
+        }
+        
+        public WcfServiceAUnitTest.ServiceReferenceB.Patient CreatePatient() {
+            return base.Channel.CreatePatient();
+        }
+        
+        public System.Threading.Tasks.Task<WcfServiceAUnitTest.ServiceReferenceB.Patient> CreatePatientAsync() {
+            return base.Channel.CreatePatientAsync();
+        }
+        
+        public WcfServiceAUnitTest.ServiceReferenceB.Patient CreatePatientFromA() {
+            return base.Channel.CreatePatientFromA();
+        }
+        
+        public System.Threading.Tasks.Task<WcfServiceAUnitTest.ServiceReferenceB.Patient> CreatePatientFromAAsync() {
+            return base.Channel.CreatePatientFromAAsync();
+        }
+        
+        public WcfServiceAUnitTest.ServiceReferenceB.Patient[] GetPatientsFromA() {
+            return base.Channel.GetPatientsFromA();
+        }
+        
+        public System.Threading.Tasks.Task<WcfServiceAUnitTest.ServiceReferenceB.Patient[]> GetPatientsFromAAsync() {
+            return base.Channel.GetPatientsFromAAsync();
+        }
+        
+        public WcfServiceAUnitTest.ServiceReferenceB.Patient[] GetPatients() {
+            return base.Channel.GetPatients();
+        }
+        
+        public System.Threading.Tasks.Task<WcfServiceAUnitTest.ServiceReferenceB.Patient[]> GetPatientsAsync() {
+            return base.Channel.GetPatientsAsync();
         }
         
         public bool ConnectionOK() {

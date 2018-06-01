@@ -55,17 +55,17 @@
   <wsdl:message name="IServiceB_CreatePatientFromA_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreatePatientFromAResponse" />
   </wsdl:message>
-  <wsdl:message name="IServiceB_getPatientsFromA_InputMessage">
-    <wsdl:part name="parameters" element="tns:getPatientsFromA" />
+  <wsdl:message name="IServiceB_GetPatientsFromA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientsFromA" />
   </wsdl:message>
-  <wsdl:message name="IServiceB_getPatientsFromA_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getPatientsFromAResponse" />
+  <wsdl:message name="IServiceB_GetPatientsFromA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientsFromAResponse" />
   </wsdl:message>
-  <wsdl:message name="IServiceB_getPatients_InputMessage">
-    <wsdl:part name="parameters" element="tns:getPatients" />
+  <wsdl:message name="IServiceB_GetPatients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatients" />
   </wsdl:message>
-  <wsdl:message name="IServiceB_getPatients_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getPatientsResponse" />
+  <wsdl:message name="IServiceB_GetPatients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientsResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceB_ConnectionOK_InputMessage">
     <wsdl:part name="parameters" element="tns:ConnectionOK" />
@@ -106,13 +106,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/CreatePatientFromA" message="tns:IServiceB_CreatePatientFromA_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/CreatePatientFromAResponse" message="tns:IServiceB_CreatePatientFromA_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getPatientsFromA">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/getPatientsFromA" message="tns:IServiceB_getPatientsFromA_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/getPatientsFromAResponse" message="tns:IServiceB_getPatientsFromA_OutputMessage" />
+    <wsdl:operation name="GetPatientsFromA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/GetPatientsFromA" message="tns:IServiceB_GetPatientsFromA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/GetPatientsFromAResponse" message="tns:IServiceB_GetPatientsFromA_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getPatients">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/getPatients" message="tns:IServiceB_getPatients_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/getPatientsResponse" message="tns:IServiceB_getPatients_OutputMessage" />
+    <wsdl:operation name="GetPatients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/GetPatients" message="tns:IServiceB_GetPatients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/GetPatientsResponse" message="tns:IServiceB_GetPatients_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ConnectionOK">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/ConnectionOK" message="tns:IServiceB_ConnectionOK_InputMessage" />
@@ -193,8 +193,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getPatientsFromA">
-      <soap:operation soapAction="http://tempuri.org/IServiceB/getPatientsFromA" style="document" />
+    <wsdl:operation name="GetPatientsFromA">
+      <soap:operation soapAction="http://tempuri.org/IServiceB/GetPatientsFromA" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -202,8 +202,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getPatients">
-      <soap:operation soapAction="http://tempuri.org/IServiceB/getPatients" style="document" />
+    <wsdl:operation name="GetPatients">
+      <soap:operation soapAction="http://tempuri.org/IServiceB/GetPatients" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

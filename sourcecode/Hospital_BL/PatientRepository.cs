@@ -33,8 +33,8 @@ namespace Hospital_BL
             {
                 PatientInfo patient2DB = dBEntities.PatientInfoes.First(r => r.ID == (int) patient.ID);
 
-                patient2DB.Name = patient.name;
-                patient2DB.Age = patient.age;
+                patient2DB.Name = patient.Name;
+                patient2DB.Age = patient.Age;
 
                 dBEntities.SaveChanges();
 
@@ -82,8 +82,8 @@ namespace Hospital_BL
                 Patient patient = new Patient
                 {
                     ID = (ulong)patient2DB.ID,
-                    age = patient2DB.Age,
-                    name = patient2DB.Name
+                    Age = patient2DB.Age,
+                    Name = patient2DB.Name
                 };
 
                 return patient;
@@ -113,8 +113,8 @@ namespace Hospital_BL
 
                 Patient newPatient = new Patient()
                 {
-                    age = patient.Age,
-                    name = patient.Name,
+                    Age = patient.Age,
+                    Name = patient.Name,
                     ID = (ulong) patient.ID
                 };
 
@@ -143,8 +143,8 @@ namespace Hospital_BL
                     Patient newPatient = new Patient
                     {
                         ID = (ulong)info.ID,
-                        age = info.Age,
-                        name = info.Name
+                        Age = info.Age,
+                        Name = info.Name
                     };
 
                     patients.Add(newPatient);
