@@ -31,6 +31,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceAUnitTest", "WcfS
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceBUnitTest", "WcfServiceBUnitTest\WcfServiceBUnitTest.csproj", "{5D568ADD-DCFB-4ED2-A78D-CCD1CA67EB44}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4D34EF3B-B68C-4401-82D9-AE3E1A9BEF44} = {4D34EF3B-B68C-4401-82D9-AE3E1A9BEF44}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital_BL", "Hospital_BL\Hospital_BL.csproj", "{00E441A0-5CD0-4232-8BE3-F038865688FC}"
 EndProject
