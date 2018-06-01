@@ -33,10 +33,14 @@ namespace Hospital_BLUnitTest
         public void ReadPatientTest()
         {
             PatientRepository repository = new PatientRepository();
-            Patient newPatient = repository.Read(1);
+
+            Patient created = repository.Create();
+            Patient newPatient = repository.Read(created.ID);
 
             Assert.IsNotNull(newPatient);
             Assert.AreNotEqual(0, newPatient.ID);
+
+            repository.Delete(created);
         }
 
         /// <summary>
@@ -46,18 +50,22 @@ namespace Hospital_BLUnitTest
         public void UpdatePatientTest()
         {
             PatientRepository repository = new PatientRepository();
-            Patient patient2Updated = repository.Read(1);
+
+            Patient createdpatient = repository.Create();
+
+            Patient patient2Updated = repository.Read(createdpatient.ID);
             patient2Updated.name = "Ricardo";
             patient2Updated.age = 32;
 
             Assert.AreEqual(true, repository.Update(patient2Updated));
 
-            Patient patientUpdated = repository.Read(1);
+            Patient patientUpdated = repository.Read(createdpatient.ID);
 
             Assert.AreEqual(patient2Updated.ID, patientUpdated.ID);
             Assert.AreEqual(patient2Updated.age, patientUpdated.age);
             Assert.AreEqual(patient2Updated.name, patientUpdated.name);
 
+            repository.Delete(createdpatient);
         }
 
         /// <summary>
