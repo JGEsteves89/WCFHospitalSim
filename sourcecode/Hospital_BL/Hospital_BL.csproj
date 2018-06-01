@@ -64,10 +64,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="PatientInfo.cs">
-      <DependentUpon>HospitalModel.tt</DependentUpon>
+    <Compile Include="HospitalModelLocal.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalModelLocal.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="PatientRepository.cs" />
+    <Compile Include="HospitalModelLocal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalModelLocal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalModelLocal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalModelLocal.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientInfo.cs">
+      <DependentUpon>HospitalModelLocal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientRepositoryBase.cs" />
+    <Compile Include="PatientRepositoryLocal.cs" />
+    <Compile Include="PatientRepositoryServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +95,13 @@
     </EntityDeploy>
     <None Include="HospitalModel.edmx.diagram">
       <DependentUpon>HospitalModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="HospitalModelLocal.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HospitalModelLocal.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="HospitalModelLocal.edmx.diagram">
+      <DependentUpon>HospitalModelLocal.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -97,6 +121,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HospitalModel.edmx</DependentUpon>
       <LastGenOutput>HospitalModel1.cs</LastGenOutput>
+    </Content>
+    <Content Include="HospitalModelLocal.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HospitalModelLocal.edmx</DependentUpon>
+      <LastGenOutput>HospitalModelLocal.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="HospitalModelLocal.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HospitalModelLocal.edmx</DependentUpon>
+      <LastGenOutput>HospitalModelLocal.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

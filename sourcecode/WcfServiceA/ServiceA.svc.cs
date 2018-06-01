@@ -30,7 +30,7 @@ namespace WcfServiceA
         public ServiceA()
         {
             srvB = new ServiceReferenceB.ServiceBClient();
-            repository = new Hospital_BL.PatientRepository();
+            repository = new Hospital_BL.PatientRepositoryServer();
         }
 
         /// <summary>

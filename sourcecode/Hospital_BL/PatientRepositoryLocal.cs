@@ -10,16 +10,16 @@ namespace Hospital_BL
     /// <summary>
     /// 
     /// </summary>
-    public class PatientRepository
+    public class PatientRepositoryLocal:PatientRepository
     {
-        HospitalDBEntities dBEntities;
+        HospitalDBLocalEntities dBEntities;
 
         /// <summary>
         /// 
         /// </summary>
-        public PatientRepository()
+        public PatientRepositoryLocal()
         {
-            dBEntities = new HospitalDBEntities();
+            dBEntities = new HospitalDBLocalEntities();
         }
         
         /// <summary>
@@ -27,7 +27,7 @@ namespace Hospital_BL
         /// </summary>
         /// <param name="patient"></param>
         /// <returns></returns>
-        public bool Update(SharedLibray.Patient patient)
+        public override bool Update(SharedLibray.Patient patient)
         {           
             try
             {
@@ -51,7 +51,7 @@ namespace Hospital_BL
         /// </summary>
         /// <param name="patient"></param>
         /// <returns></returns>
-        public bool Delete(SharedLibray.Patient patient)
+        public override bool Delete(SharedLibray.Patient patient)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace Hospital_BL
         /// </summary>
         /// <param name="ID"></param>
         /// <returns></returns>
-        public SharedLibray.Patient Read(ulong ID)
+        public override SharedLibray.Patient Read(ulong ID)
         {
             try
             {
@@ -98,7 +98,7 @@ namespace Hospital_BL
         /// 
         /// </summary>
         /// <returns></returns>
-        public SharedLibray.Patient Create()
+        public override SharedLibray.Patient Create()
         {
             try
             {
@@ -131,7 +131,7 @@ namespace Hospital_BL
         /// 
         /// </summary>
         /// <returns></returns>
-        public List<SharedLibray.Patient> GetPatients()
+        public override List<SharedLibray.Patient> GetPatients()
         {
             try
             {

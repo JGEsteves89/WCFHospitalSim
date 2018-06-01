@@ -29,7 +29,7 @@ namespace WcfServiceB
         public ServiceB()
         {
             srvA = new ServiceReferenceA.ServiceAClient();
-            repository = new Hospital_BL.PatientRepository();
+            repository = new Hospital_BL.PatientRepositoryLocal();
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace WcfServiceB
             {
                 srvA.Endpoint.Address = new EndpointAddress(uri, srvA.Endpoint.Address.Identity, srvA.Endpoint.Address.Headers);
             }
-            repository = new Hospital_BL.PatientRepository();
+            repository = new Hospital_BL.PatientRepositoryServer();
         }
 
 
