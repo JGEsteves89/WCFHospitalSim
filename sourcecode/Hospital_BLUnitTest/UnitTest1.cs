@@ -95,7 +95,6 @@ namespace Hospital_BLUnitTest
             patients2DB.ForEach(r => repository.Delete(r));
         }
 
-
         public class PatientComparer : Comparer<Patient>
         {
             public override int Compare(Patient x, Patient y)

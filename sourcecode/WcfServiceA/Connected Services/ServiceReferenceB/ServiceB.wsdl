@@ -7,6 +7,54 @@
       <xsd:import schemaLocation="http://localhost:59694/ServiceB.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SharedLibray" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IServiceB_UpdatePatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePatient" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_UpdatePatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_UpdatePatientFromA_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePatientFromA" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_UpdatePatientFromA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePatientFromAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_DeletePatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePatient" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_DeletePatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_DeletePatientFromA_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePatientFromA" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_DeletePatientFromA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePatientFromAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_ReadPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPatient" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_ReadPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_ReadPatientFromA_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPatientFromA" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_ReadPatientFromA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPatientFromAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_CreatePatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePatient" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_CreatePatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_CreatePatientFromA_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePatientFromA" />
+  </wsdl:message>
+  <wsdl:message name="IServiceB_CreatePatientFromA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePatientFromAResponse" />
+  </wsdl:message>
   <wsdl:message name="IServiceB_getPatientsFromA_InputMessage">
     <wsdl:part name="parameters" element="tns:getPatientsFromA" />
   </wsdl:message>
@@ -26,6 +74,38 @@
     <wsdl:part name="parameters" element="tns:ConnectionOKResponse" />
   </wsdl:message>
   <wsdl:portType name="IServiceB">
+    <wsdl:operation name="UpdatePatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/UpdatePatient" message="tns:IServiceB_UpdatePatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/UpdatePatientResponse" message="tns:IServiceB_UpdatePatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePatientFromA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/UpdatePatientFromA" message="tns:IServiceB_UpdatePatientFromA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/UpdatePatientFromAResponse" message="tns:IServiceB_UpdatePatientFromA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/DeletePatient" message="tns:IServiceB_DeletePatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/DeletePatientResponse" message="tns:IServiceB_DeletePatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePatientFromA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/DeletePatientFromA" message="tns:IServiceB_DeletePatientFromA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/DeletePatientFromAResponse" message="tns:IServiceB_DeletePatientFromA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/ReadPatient" message="tns:IServiceB_ReadPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/ReadPatientResponse" message="tns:IServiceB_ReadPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadPatientFromA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/ReadPatientFromA" message="tns:IServiceB_ReadPatientFromA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/ReadPatientFromAResponse" message="tns:IServiceB_ReadPatientFromA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/CreatePatient" message="tns:IServiceB_CreatePatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/CreatePatientResponse" message="tns:IServiceB_CreatePatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePatientFromA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/CreatePatientFromA" message="tns:IServiceB_CreatePatientFromA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/CreatePatientFromAResponse" message="tns:IServiceB_CreatePatientFromA_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="getPatientsFromA">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceB/getPatientsFromA" message="tns:IServiceB_getPatientsFromA_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceB/getPatientsFromAResponse" message="tns:IServiceB_getPatientsFromA_OutputMessage" />
@@ -41,6 +121,78 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceB" type="tns:IServiceB">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdatePatient">
+      <soap:operation soapAction="http://tempuri.org/IServiceB/UpdatePatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePatientFromA">
+      <soap:operation soapAction="http://tempuri.org/IServiceB/UpdatePatientFromA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePatient">
+      <soap:operation soapAction="http://tempuri.org/IServiceB/DeletePatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePatientFromA">
+      <soap:operation soapAction="http://tempuri.org/IServiceB/DeletePatientFromA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadPatient">
+      <soap:operation soapAction="http://tempuri.org/IServiceB/ReadPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadPatientFromA">
+      <soap:operation soapAction="http://tempuri.org/IServiceB/ReadPatientFromA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePatient">
+      <soap:operation soapAction="http://tempuri.org/IServiceB/CreatePatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePatientFromA">
+      <soap:operation soapAction="http://tempuri.org/IServiceB/CreatePatientFromA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getPatientsFromA">
       <soap:operation soapAction="http://tempuri.org/IServiceB/getPatientsFromA" style="document" />
       <wsdl:input>

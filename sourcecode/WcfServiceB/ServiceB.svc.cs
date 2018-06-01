@@ -18,12 +18,15 @@ namespace WcfServiceB
         /// </summary>
         ServiceReferenceA.ServiceAClient srvA;
 
+        Hospital_BL.PatientRepository repository;
+
         /// <summary>
         /// Default Constructor
         /// </summary>
         public ServiceB()
         {
             srvA = new ServiceReferenceA.ServiceAClient();
+            repository = new Hospital_BL.PatientRepository();
         }
 
         /// <summary>
@@ -37,8 +40,158 @@ namespace WcfServiceB
             {
                 srvA.Endpoint.Address = new EndpointAddress(uri, srvA.Endpoint.Address.Identity, srvA.Endpoint.Address.Headers);
             }
-            
+            repository = new Hospital_BL.PatientRepository();
         }
+
+
+
+        #region CRUD
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public bool UpdatePatient(global::SharedLibray.Patient patient)
+        {
+            try
+            {
+                return repository.Update(patient);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public bool UpdatePatientFromA(global::SharedLibray.Patient patient)
+        {
+            try
+            {
+                return srvA.UpdatePatient(patient);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="patient"></param>
+        /// <returns></returns>
+        public bool DeletePatient(SharedLibray.Patient patient)
+        {
+            try
+            {
+                return repository.Delete(patient);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="patient"></param>
+        /// <returns></returns>
+        public bool DeletePatientFromA(SharedLibray.Patient patient)
+        {
+            try
+            {
+                return srvA.DeletePatient(patient);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        public global::SharedLibray.Patient ReadPatient(ulong ID)
+        {
+            try
+            {
+                return repository.Read(ID);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        public global::SharedLibray.Patient ReadPatientFromA(ulong ID)
+        {
+            try
+            {
+                return srvA.ReadPatient(ID);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public global::SharedLibray.Patient CreatePatient()
+        {
+            try
+            {
+                return repository.Create();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public global::SharedLibray.Patient CreatePatientFromA()
+        {
+            try
+            {
+                return srvA.CreatePatient();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
+
+        #endregion
+
 
         /// <summary>
         /// This function verifies if conection to WCF Service A 

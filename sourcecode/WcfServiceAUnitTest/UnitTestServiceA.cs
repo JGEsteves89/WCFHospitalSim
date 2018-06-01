@@ -29,27 +29,5 @@ namespace WcfServiceAUnitTest
             WcfServiceA.ServiceA srvB = new WcfServiceA.ServiceA(new Uri("https://DOES_NOT_EXIST"));
             Assert.AreEqual(false, srvB.ConnectionOK());
         }
-
-        /// <summary>
-        /// Verify is the list of patients doesn't return a null value
-        /// </summary>
-        [TestMethod]
-        public void ListPatientsFromBNotNull()
-        {
-            WcfServiceA.ServiceA newClient = new WcfServiceA.ServiceA();
-
-            Assert.IsNotNull(newClient.getPatientsFromB());
-        }
-
-        /// <summary>
-        /// Verify is the list of patients doesn't return a null value
-        /// </summary>
-        [TestMethod]
-        public void ListPatientsNotNull()
-        {
-            WcfServiceA.ServiceA newClient = new WcfServiceA.ServiceA();
-
-            Assert.IsNotNull(newClient.getPatients());
-        }
     }
 }

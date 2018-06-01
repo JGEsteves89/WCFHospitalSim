@@ -15,6 +15,69 @@ namespace WcfServiceA
     public interface IServiceA
     {
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        [OperationContract]
+        bool UpdatePatientFromB(global::SharedLibray.Patient patient);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        [OperationContract]
+        bool UpdatePatient(global::SharedLibray.Patient patient);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="patient"></param>
+        /// <returns></returns>
+        [OperationContract]
+        bool DeletePatient(SharedLibray.Patient patient);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="patient"></param>
+        /// <returns></returns>
+        [OperationContract]
+        bool DeletePatientFromB(SharedLibray.Patient patient);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        [OperationContract]
+        global::SharedLibray.Patient ReadPatient(ulong ID);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        [OperationContract]
+        global::SharedLibray.Patient ReadPatientFromB(ulong ID);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [OperationContract]
+        global::SharedLibray.Patient CreatePatient();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [OperationContract]
+        global::SharedLibray.Patient CreatePatientFromB();
+
+
+        /// <summary>
         /// Get a list of patients of this service
         /// </summary>
         /// <returns>Return a list of patients</returns>

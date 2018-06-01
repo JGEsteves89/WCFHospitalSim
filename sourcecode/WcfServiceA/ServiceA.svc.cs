@@ -19,6 +19,8 @@ namespace WcfServiceA
         /// </summary>
         ServiceReferenceB.ServiceBClient srvB;
 
+      
+
         /// <summary>
         /// Default Constructor
         /// </summary>
@@ -39,6 +41,154 @@ namespace WcfServiceA
                 srvB.Endpoint.Address = new EndpointAddress(uri, srvB.Endpoint.Address.Identity, srvB.Endpoint.Address.Headers);
             }
         }
+
+        #region CRUD
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public bool UpdatePatient(global::SharedLibray.Patient patient)
+        {
+            try
+            {
+                return false; 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public bool UpdatePatientFromB(global::SharedLibray.Patient patient)
+        {
+            try
+            {
+                return srvB.UpdatePatient(patient);
+     
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="patient"></param>
+        /// <returns></returns>
+        public bool DeletePatient(SharedLibray.Patient patient)
+        {
+            try
+            {
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="patient"></param>
+        /// <returns></returns>
+        public bool DeletePatientFromB(SharedLibray.Patient patient)
+        {
+            try
+            {
+                return srvB.DeletePatient(patient);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        public global::SharedLibray.Patient ReadPatient(ulong ID)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        public global::SharedLibray.Patient ReadPatientFromB(ulong ID)
+        {
+            try
+            {
+                return srvB.ReadPatient(ID);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public global::SharedLibray.Patient CreatePatient()
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public global::SharedLibray.Patient CreatePatientFromB()
+        {
+            try
+            {
+                return srvB.CreatePatient();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
+
+        #endregion
 
         /// <summary>
         /// This function verifies if conection to WCF Service A 
