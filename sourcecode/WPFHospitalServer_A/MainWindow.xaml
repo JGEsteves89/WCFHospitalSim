@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFHospitalServer_A"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowState="Maximized" Loaded="Window_Loaded">
+        Title="MainWindow" MaxHeight="450" MaxWidth="800" WindowState="Maximized" Loaded="Window_Loaded">
     <Grid>
         <TabControl>
             <TabItem Header="Server">
@@ -31,11 +31,11 @@
                                         <RowDefinition Height="40" />
                                     </Grid.RowDefinitions>
                                     <Label Name="lb_ID" Content="ID" Grid.Column="0" Grid.Row="0" MaxHeight="30" />
-                                    <TextBox Name="txt_ID" Grid.Column="1" Grid.Row="0" MaxHeight="30"  Text="{Binding ID}"/>
+                                    <TextBox Name="txt_ID" Grid.Column="1" Grid.Row="0" MaxHeight="30" IsEnabled="False"  Text="{Binding ID}"/>
                                     <Label Name="lb_Name" Content="Name" Grid.Column="0" Grid.Row="1" MaxHeight="30"/>
                                     <TextBox Name="txt_Name" Grid.Column="1" Grid.Row="1" MaxHeight="30" Text="{Binding Name}"/>
                                     <Label Name="lb_Age" Content="Age" Grid.Column="0" Grid.Row="2" MaxHeight="30"/>
-                                    <TextBox Name="txt_Age" Grid.Column="1" Grid.Row="2" MaxHeight="30" Text="{Binding Age}"/>
+                                    <TextBox Name="txt_Age" Grid.Column="1" Grid.Row="2" MaxHeight="30" Text="{Binding Age}" Height="40" VerticalAlignment="Top"/>
                                 </Grid>
                                 <Grid DockPanel.Dock="Top" Margin="0,20">
                                     <Grid.ColumnDefinitions>

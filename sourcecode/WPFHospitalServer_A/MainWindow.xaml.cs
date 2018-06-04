@@ -27,16 +27,6 @@ namespace WPFHospitalServer_A
         public MainWindow()
         {
             InitializeComponent();
-
-            //lst_Patients.Items.Add("Ola 1");
-            //lst_Patients.Items.Add("Ola 2");
-            //lst_Patients.Items.Add("Ola 3");
-            //lst_Patients.Items.Add("Ola 4");
-            //lst_Patients.Items.Add("Ola 5");
-            //lst_Patients.Items.Add("Ola 6");
-            //lst_Patients.Items.Add("Ola 7");
-
-            //lst_Patients.Items.Add("Ola 1");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -45,12 +35,12 @@ namespace WPFHospitalServer_A
             {
                 //   List<Patient> patients = new List<Patient>();
                 //  patients.AddRange(server.GetPatients());
-                List<Patient> patients = new List<Patient>();
-                patients.Add(new Patient() { Name = "Ana", ID = 1, Age = 21 });
-                patients.Add(new Patient() { Name = "Bruna", ID = 2, Age = 22 });
-                patients.Add(new Patient() { Name = "Carla", ID = 3, Age = 23 });
-                patients.Add(new Patient() { Name = "Diana", ID = 4, Age = 24 });
-                patients.Add(new Patient() { Name = "Eduarda", ID = 5, Age = 25 });
+                List<PatientView> patients = new List<PatientView>();
+                patients.Add(new PatientView() { Name = "Ana", ID = 1, Age = 21 });
+                patients.Add(new PatientView() { Name = "Bruna", ID = 2, Age = 22 });
+                patients.Add(new PatientView() { Name = "Carla", ID = 3, Age = 23 });
+                patients.Add(new PatientView() { Name = "Diana", ID = 4, Age = 24 });
+                patients.Add(new PatientView() { Name = "Eduarda", ID = 5, Age = 25 });
 
                 lst_Patients.ItemsSource = patients;
             }
@@ -66,7 +56,7 @@ namespace WPFHospitalServer_A
             {
                 if(e.AddedItems.Count>0)
                 {
-                    Patient patient = e.AddedItems[0] as Patient;
+                    PatientView patient = e.AddedItems[0] as PatientView;
                     if(patient!=null)
                     {
                         grp_Patient.DataContext = patient;
