@@ -51,7 +51,7 @@ namespace WcfServiceB
         /// Read Patient in local database
         /// </summary>
         /// <param name="ID">ID of patient</param>
-        /// <returns>Return the information if exists, otherwise returns false</returns>
+        /// <returns>Return the information if exists, otherwise returns null</returns>
         [OperationContract]
         global::SharedLibray.Patient ReadPatient(ulong ID);
 
@@ -59,7 +59,7 @@ namespace WcfServiceB
         /// Read Patient in server Database
         /// </summary>
         /// <param name="ID">ID of Patient</param>
-        /// <returns>Return the information if exists, otherwise returns false</returns>
+        /// <returns>Return the information if exists, otherwise returns null</returns>
         [OperationContract]
         global::SharedLibray.Patient ReadPatientFromA(ulong ID);
 

@@ -51,10 +51,10 @@ namespace WcfServiceB
         #region CRUD
 
         /// <summary>
-        /// 
+        /// Update Patient in local database
         /// </summary>
-        /// <param name=""></param>
-        /// <returns></returns>
+        /// <param name="patient">Patient information</param>
+        /// <returns>True if the update was sucessfull. Otherwise, returns false</returns>
         public bool UpdatePatient(global::SharedLibray.Patient patient)
         {
             try
@@ -69,10 +69,10 @@ namespace WcfServiceB
         }
 
         /// <summary>
-        /// 
+        /// Update Patient in Server Database
         /// </summary>
-        /// <param name=""></param>
-        /// <returns></returns>
+        /// <param name="patient">Patient information</param>
+        /// <returns>True if the update was sucessfull. Otherwise, returns false</returns>
         public bool UpdatePatientFromA(global::SharedLibray.Patient patient)
         {
             try
@@ -87,10 +87,10 @@ namespace WcfServiceB
         }
 
         /// <summary>
-        /// 
+        /// Delete Patient in local database
         /// </summary>
-        /// <param name="patient"></param>
-        /// <returns></returns>
+        /// <param name="patient">Patient information</param>
+        /// <returns>True if the delete was sucessfull. Otherwise, returns false</returns>
         public bool DeletePatient(SharedLibray.Patient patient)
         {
             try
@@ -105,10 +105,10 @@ namespace WcfServiceB
         }
 
         /// <summary>
-        /// 
+        /// Delete Patient in server database
         /// </summary>
-        /// <param name="patient"></param>
-        /// <returns></returns>
+        /// <param name="patient">Patient information</param>
+        /// <returns>True if the delete was sucessfull. Otherwise, returns false</returns>
         public bool DeletePatientFromA(SharedLibray.Patient patient)
         {
             try
@@ -123,10 +123,10 @@ namespace WcfServiceB
         }
 
         /// <summary>
-        /// 
+        /// Read Patient in local database
         /// </summary>
-        /// <param name="ID"></param>
-        /// <returns></returns>
+        /// <param name="ID">ID of Patient</param>
+        /// <returns>Return the information if exists, otherwise returns null</returns>
         public global::SharedLibray.Patient ReadPatient(ulong ID)
         {
             try
@@ -141,10 +141,10 @@ namespace WcfServiceB
         }
 
         /// <summary>
-        /// 
+        /// Read Patient in server Database
         /// </summary>
-        /// <param name="ID"></param>
-        /// <returns></returns>
+        /// <param name="ID">ID of Patient</param>
+        /// <returns>Return the information if exists, otherwise returns null</returns>
         public global::SharedLibray.Patient ReadPatientFromA(ulong ID)
         {
             try
@@ -159,9 +159,10 @@ namespace WcfServiceB
         }
 
         /// <summary>
-        /// 
+        /// Create Patient in local Database
         /// </summary>
-        /// <returns></returns>
+        /// <returns>If the patient is created successfull, returns a oject
+        /// otherwise returns null</returns>
         public global::SharedLibray.Patient CreatePatient()
         {
             try
@@ -176,9 +177,10 @@ namespace WcfServiceB
         }
 
         /// <summary>
-        /// 
+        /// Create Patient in server Database
         /// </summary>
-        /// <returns></returns>
+        /// <returns>If the patient is created successfull, returns a oject
+        /// otherwise returns null</returns>
         public global::SharedLibray.Patient CreatePatientFromA()
         {
             try
