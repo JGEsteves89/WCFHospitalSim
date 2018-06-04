@@ -57,6 +57,7 @@
     <Reference Include="Moq, Version=4.8.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <HintPath>..\packages\Moq.4.8.2\lib\net45\Moq.dll</HintPath>
     </Reference>
+    <Reference Include="SharedLibray, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -91,9 +92,6 @@
     </None>
     <None Include="Connected Services\ServiceReferenceB\ServiceB2.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceReferenceB\WcfServiceAUnitTest.ServiceReferenceB.Patient.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SharedLibray.Patient.datasource" />

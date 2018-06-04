@@ -30,7 +30,7 @@ namespace WcfServiceBUnitTest
         #region Local 
 
         /// <summary>
-        /// Test the connection is NOK to the Service B through service A
+        /// Test the creation of Patient in local server
         /// </summary>
         [TestMethod]
         public void CreateLocalPatient()
@@ -46,7 +46,7 @@ namespace WcfServiceBUnitTest
         }
 
         /// <summary>
-        /// Test the connection is NOK to the Service B through service A
+        /// Test the read of Patient information in local server
         /// </summary>
         [TestMethod]
         public void ReadLocalPatient()
@@ -64,7 +64,7 @@ namespace WcfServiceBUnitTest
         }
 
         /// <summary>
-        /// Test the connection is NOK to the Service B through service A
+        /// Test the update of Patient information in local server
         /// </summary>
         [TestMethod]
         public void UpdateLocalPatient()
@@ -84,7 +84,7 @@ namespace WcfServiceBUnitTest
 
 
         /// <summary>
-        /// Test the connection is NOK to the Service B through service A
+        /// Test the delete of Patient information in local server
         /// </summary>
         [TestMethod]
         public void DeleteLocalPatient()
@@ -101,7 +101,7 @@ namespace WcfServiceBUnitTest
         #region ServiceB 
 
         /// <summary>
-        /// Test the connection is NOK to the Service B through service A
+        /// Test the creation of Patient in remote server
         /// </summary>
         [TestMethod]
         public void CreatePatientFromA()
@@ -117,7 +117,7 @@ namespace WcfServiceBUnitTest
         }
 
         /// <summary>
-        /// Test the connection is NOK to the Service B through service A
+        /// Test the read of Patient information in remote server
         /// </summary>
         [TestMethod]
         public void ReadLocalPatientFromA()
@@ -135,7 +135,7 @@ namespace WcfServiceBUnitTest
         }
 
         /// <summary>
-        /// Test the connection is NOK to the Service B through service A
+        /// Test the update of Patient information in remote server
         /// </summary>
         [TestMethod]
         public void UpdatePatientFromA()
@@ -155,7 +155,7 @@ namespace WcfServiceBUnitTest
 
 
         /// <summary>
-        /// Test the connection is NOK to the Service B through service A
+        /// Test the delete of Patient information in remote server
         /// </summary>
         [TestMethod]
         public void DeletePatientFromA()

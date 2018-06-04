@@ -54,6 +54,8 @@ namespace Hospital_BLUnitTest
 
             Assert.IsNotNull(readPatient);
             Assert.AreNotEqual(0, readPatient.ID);
+
+            repository.Delete(newPatient);
         }
 
         /// <summary>
@@ -70,6 +72,8 @@ namespace Hospital_BLUnitTest
 
             Assert.IsNotNull(readPatient);
             Assert.AreNotEqual(0, readPatient.ID);
+
+            repository.Delete(newPatient);
         }
 
         /// <summary>
