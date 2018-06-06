@@ -39,7 +39,7 @@ namespace WcfServiceB
         public ServiceB(Uri uri=null)
         {
             srvA = new ServiceReferenceA.ServiceAClient();
-            if (!(uri is null))
+            if (uri != null)
             {
                 srvA.Endpoint.Address = new EndpointAddress(uri, srvA.Endpoint.Address.Identity, srvA.Endpoint.Address.Headers);
             }
