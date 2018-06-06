@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Summary numSequencePoints="10" visitedSequencePoints="5" numBranchPoints="6" visitedBranchPoints="3" sequenceCoverage="50" branchCoverage="50" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="3" visitedMethods="2" numMethods="4" />
+  <Modules>
+    <Module skippedDueTo="Filter" hash="AA-60-8C-0E-1D-15-0E-43-FE-55-44-DD-A1-3C-72-9A-D1-86-B2-75">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</ModulePath>
+      <ModuleTime>2018-05-20T08:26:42.8199731Z</ModuleTime>
+      <ModuleName>mscorlib</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="86-E9-3D-3D-7C-09-09-11-61-67-42-C6-1E-4B-75-FF-C4-1C-03-96">
+      <ModulePath>C:\Users\rffreitas\Downloads\Calculadora-master (1)\Calculadora-master\tools\NUnit.ConsoleRunner\tools\nunit3-console.exe</ModulePath>
+      <ModuleTime>2018-01-27T11:27:14Z</ModuleTime>
+      <ModuleName>nunit3-console</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="25-EA-B4-E7-9E-31-63-5C-13-0D-58-D4-F5-C4-37-1D-82-C2-E8-77">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</ModulePath>
+      <ModuleTime>2018-04-11T23:35:18.1228576Z</ModuleTime>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="C1-08-CD-F2-59-9C-E6-0B-62-F9-09-43-74-9F-8D-57-9D-A9-93-31">
+      <ModulePath>C:\Users\rffreitas\Downloads\Calculadora-master (1)\Calculadora-master\tools\NUnit.ConsoleRunner\tools\nunit.engine.api.dll</ModulePath>
+      <ModuleTime>2018-01-27T11:27:14Z</ModuleTime>
+      <ModuleName>nunit.engine.api</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="95-2A-FF-98-B6-82-8F-7C-F0-AC-3D-56-5A-54-93-7D-3B-32-4F-7B">
+      <ModulePath>C:\Users\rffreitas\Downloads\Calculadora-master (1)\Calculadora-master\tools\NUnit.ConsoleRunner\tools\nunit.engine.dll</ModulePath>
+      <ModuleTime>2018-01-27T11:27:14Z</ModuleTime>
+      <ModuleName>nunit.engine</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="F2-26-5B-FA-55-E9-5B-BC-DD-3A-32-56-2C-38-71-11-1A-8E-6D-32">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</ModulePath>
+      <ModuleTime>2018-04-11T23:35:17.0290261Z</ModuleTime>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="35-5C-04-D6-33-85-E0-4A-62-3E-E5-BA-4A-CB-AB-05-79-D9-02-21">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</ModulePath>
+      <ModuleTime>2018-04-11T23:35:15.6695494Z</ModuleTime>
+      <ModuleName>System.Web</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="B5-2C-52-19-7F-DE-8E-1A-EE-7C-F3-4D-31-FC-77-A2-C4-49-EE-AB">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Remoting\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll</ModulePath>
+      <ModuleTime>2018-04-11T23:35:17.0134Z</ModuleTime>
+      <ModuleName>System.Runtime.Remoting</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="2A-F4-1C-14-5D-7A-74-B3-03-8B-1D-2A-59-DC-B6-BE-1D-C8-EF-54">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</ModulePath>
+      <ModuleTime>2018-04-11T23:35:16.9508953Z</ModuleTime>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="8A-2E-8F-D6-9D-39-02-4A-2F-30-FC-06-42-F7-0F-A8-32-69-07-72">
+      <ModulePath>C:\Users\rffreitas\Downloads\Calculadora-master (1)\Calculadora-master\tools\NUnit.ConsoleRunner\tools\Mono.Cecil.dll</ModulePath>
+      <ModuleTime>2018-01-27T11:27:14Z</ModuleTime>
+      <ModuleName>Mono.Cecil</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="23-B3-8E-36-35-0B-BD-20-43-E0-A1-0E-D9-F4-93-5D-15-17-91-15">
+      <ModulePath>C:\Users\rffreitas\Downloads\Calculadora-master (1)\Calculadora-master\tools\NUnit.ConsoleRunner\tools\nunit-agent.exe</ModulePath>
+      <ModuleTime>2018-01-27T11:27:14Z</ModuleTime>
+      <ModuleName>nunit-agent</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="46-8F-73-28-B5-95-50-DA-6E-FF-25-AE-F6-51-AB-FE-4C-9F-AE-E2">
+      <ModulePath>C:\Users\rffreitas\Downloads\Calculadora-master (1)\Calculadora-master\Calculadora.Tests\bin\Debug\nunit.framework.dll</ModulePath>
+      <ModuleTime>2017-08-28T20:09:36Z</ModuleTime>
+      <ModuleName>nunit.framework</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="7D-CD-2F-B4-27-C5-3E-01-21-94-CD-BE-80-D4-B6-6D-16-96-8A-74">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</ModulePath>
+      <ModuleTime>2018-05-18T17:10:17.501157Z</ModuleTime>
+      <ModuleName>System.Core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="B0-E6-61-40-B9-07-A7-3A-8A-EB-CC-94-B8-AD-F1-CA-15-5F-B3-EE">
+      <ModulePath>C:\Users\rffreitas\Downloads\Calculadora-master (1)\Calculadora-master\Calculadora.Tests\bin\Debug\Calculadora.Tests.dll</ModulePath>
+      <ModuleTime>2018-06-06T14:31:23.495617Z</ModuleTime>
+      <ModuleName>Calculadora.Tests</ModuleName>
+      <Classes />
+      <TrackedMethods>
+        <TrackedMethod uid="1" token="100663297" name="System.Void Calculadora.Tests.CalculadoraTests::SomaValores()" strategy="NUnitTest" />
+        <TrackedMethod uid="2" token="100663298" name="System.Void Calculadora.Tests.CalculadoraTests::DivideValores()" strategy="NUnitTest" />
+      </TrackedMethods>
+    </Module>
+    <Module hash="CC-9C-75-95-95-25-1D-1D-24-EA-67-35-83-6B-2B-79-46-05-88-E0">
+      <Summary numSequencePoints="10" visitedSequencePoints="5" numBranchPoints="6" visitedBranchPoints="3" sequenceCoverage="50" branchCoverage="50" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="3" visitedMethods="2" numMethods="4" />
+      <ModulePath>C:\Users\rffreitas\Downloads\Calculadora-master (1)\Calculadora-master\Calculadora.Tests\bin\Debug\Calculadora.exe</ModulePath>
+      <ModuleTime>2018-06-06T14:31:23.3050913Z</ModuleTime>
+      <ModuleName>Calculadora</ModuleName>
+      <Files>
+        <File uid="1" fullPath="C:\Users\rffreitas\Downloads\Calculadora-master (1)\Calculadora-master\Calculadora\Calculadora.cs" />
+        <File uid="2" fullPath="C:\Users\rffreitas\Downloads\Calculadora-master (1)\Calculadora-master\Calculadora\Classe2.cs" />
+        <File uid="3" fullPath="C:\Users\rffreitas\Downloads\Calculadora-master (1)\Calculadora-master\Calculadora\Program.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+          <FullName>&lt;Module&gt;</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="6" visitedSequencePoints="5" numBranchPoints="4" visitedBranchPoints="3" sequenceCoverage="83.33" branchCoverage="75" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="2" numMethods="2" />
+          <FullName>Calculadora.Calculadora</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663297</MetadataToken>
+              <Name>System.Double Calculadora.Calculadora::Soma(System.Double,System.Double)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="1" ordinal="0" offset="0" sl="11" sc="61" el="11" ec="76" bec="0" bev="0" fileid="1">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="1" ordinal="0" offset="0" sl="11" sc="61" el="11" ec="76" bec="0" bev="0" fileid="1">
+                <TrackedMethodRefs>
+                  <TrackedMethodRef uid="1" vc="1" />
+                </TrackedMethodRefs>
+              </MethodPoint>
+            </Method>
+            <Method visited="true" cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="80" branchCoverage="66.67" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="5" visitedSequencePoints="4" numBranchPoints="3" visitedBranchPoints="2" sequenceCoverage="80" branchCoverage="66.67" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663298</MetadataToken>
+              <Name>System.Double Calculadora.Calculadora::Divide(System.Double,System.Double)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="2" ordinal="0" offset="0" sl="14" sc="9" el="14" ec="10" bec="0" bev="0" fileid="1">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="2" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="3" ordinal="1" offset="1" sl="15" sc="13" el="15" ec="29" bec="2" bev="1" fileid="1">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="2" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="0" uspid="4" ordinal="2" offset="17" sl="16" sc="17" el="16" ec="35" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="5" ordinal="3" offset="29" sl="18" sc="13" el="18" ec="36" bec="0" bev="0" fileid="1">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="2" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="6" ordinal="4" offset="35" sl="19" sc="9" el="19" ec="10" bec="0" bev="0" fileid="1">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="2" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="7" ordinal="0" offset="15" sl="15" path="0" offsetend="17" fileid="1" />
+                <BranchPoint vc="1" uspid="8" ordinal="1" offset="15" sl="15" path="1" offsetend="29" fileid="1">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="2" vc="1" />
+                  </TrackedMethodRefs>
+                </BranchPoint>
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="2" ordinal="0" offset="0" sl="14" sc="9" el="14" ec="10" bec="0" bev="0" fileid="1">
+                <TrackedMethodRefs>
+                  <TrackedMethodRef uid="2" vc="1" />
+                </TrackedMethodRefs>
+              </MethodPoint>
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663299</MetadataToken>
+              <Name>System.Void Calculadora.Calculadora::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="2" uspid="9" ordinal="0" offset="0">
+                <TrackedMethodRefs>
+                  <TrackedMethodRef uid="2" vc="1" />
+                  <TrackedMethodRef uid="1" vc="1" />
+                </TrackedMethodRefs>
+              </MethodPoint>
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>Calculadora.Classe2</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663300</MetadataToken>
+              <Name>System.Void Calculadora.Classe2::Metodo1()</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="10" ordinal="0" offset="0" sl="12" sc="9" el="12" ec="10" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="0" uspid="11" ordinal="1" offset="1" sl="14" sc="9" el="14" ec="10" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="10" ordinal="0" offset="0" sl="12" sc="9" el="12" ec="10" bec="0" bev="0" fileid="2" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663301</MetadataToken>
+              <Name>System.Void Calculadora.Classe2::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="12" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>Calculadora.Program</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663302</MetadataToken>
+              <Name>System.Void Calculadora.Program::Main(System.String[])</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="13" ordinal="0" offset="0" sl="12" sc="9" el="12" ec="10" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="0" uspid="14" ordinal="1" offset="1" sl="14" sc="9" el="14" ec="10" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="13" ordinal="0" offset="0" sl="12" sc="9" el="12" ec="10" bec="0" bev="0" fileid="3" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663303</MetadataToken>
+              <Name>System.Void Calculadora.Program::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="15" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+  </Modules>
+</CoverageSession>

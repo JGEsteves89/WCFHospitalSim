@@ -1,0 +1,18 @@
+engines:
+ rubocop:
+   enabled: true
+ duplication:
+   enabled: true
+ metrics:
+   enabled: true
+ # coverage:
+   # enabled: true
+   
+xclude_paths:
+  - '.bundle/**'
+  - 'spec/**/*'
+  - 'benchmarks/**/*'
+  - '*.min.js'
+  - '**/tests/**'
+  - '**/wwwroot/**'
+  

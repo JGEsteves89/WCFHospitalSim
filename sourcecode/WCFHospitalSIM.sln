@@ -44,6 +44,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFHospitalServer_A", "WPFH
 		{4D34EF3B-B68C-4401-82D9-AE3E1A9BEF44} = {4D34EF3B-B68C-4401-82D9-AE3E1A9BEF44}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cover", "Cover", "{D8E62AD9-D3FB-42E6-92B4-C180DD2EACA3}"
+	ProjectSection(SolutionItems) = preProject
+		build.cake = build.cake
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

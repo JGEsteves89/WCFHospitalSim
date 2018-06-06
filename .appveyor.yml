@@ -1,0 +1,99 @@
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
+
+# version format
+version: 0.1.{build}-{branch}
+
+# branches to build  
+branches:
+  only:
+  - master
+  - dev
+
+# Do not build on tags (GitHub and BitBucket)
+skip_tags: true
+
+# Build worker image (VM template)
+image:
+ - Visual Studio 2017
+
+init:
+- ps: $Env:LABEL = "CI" + $Env:APPVEYOR_BUILD_NUMBER.PadLeft(5, "0")
+
+#---------------------------------#
+#       build configuration       #
+#---------------------------------#
+
+# build Configuration, i.e. Debug, Release, etc.
+configuration:
+ - Release
+ - Debug
+
+# build platform, i.e. x86, x64, Any CPU. This setting is optional
+platform:
+  - x64
+#  - x86
+
+build_script:
+- dotnet build "Util" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
+- dotnet build "Domain" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
+- dotnet build "Infrastructure" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
+- dotnet build "Application" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
+- dotnet build "Presentation/WebApplicationMVC" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
+
+- dotnet build "Application/Test" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
+
+before_build:
+ - nuget restore
+ - appveyor-retry dotnet restore -v Minimal
+
+# cache:
+# - '%USERPROFILE%\.nuget\packages'
+
+#---------------------------------#
+#    environment configuration    #
+#---------------------------------#
+  
+# environment variables
+environment:
+  CODACY_PROJECT_TOKEN: 909dd767787943658cde4290d6d68ee5
+
+# Automatically register private account and/or project AppVeyor NuGet feeds.
+nuget:
+  account_feed: true
+  project_feed: true
+
+#---------------------------------#
+#         notifications           #
+#---------------------------------#
+
+notifications:
+
+# Email
+- provider: Email
+  to:
+  - lfmachadodasilva@gmail.com
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: true
+
+#---------------------------------#
+#       tests configuration       #
+#---------------------------------#
+
+# to run your custom scripts instead of automatic tests
+test_script:
+  - dotnet test "Application/Test" -c %CONFIGURATION%
+  - OpenCover.Console.exe -register:user -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test Application/Test/ApplicationTest.csproj" -output:"TestResult.xml"
+
+# scripts to run before tests
+before_test:
+ - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
+ - choco install opencover.portable
+ - choco install codecov
+#  - pip install git+git://github.com/codecov/codecov-python.git
+
+# scripts to run after tests
+after_test:
+ - codecov -f "TestResult.xml" -t 81c4ac46-b5bc-4d0d-8c4f-4de04812e6e3
