@@ -35,15 +35,6 @@ platform:
   - x64
 #  - x86
 
-build_script:
-- dotnet build "Util" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-- dotnet build "Domain" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-- dotnet build "Infrastructure" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-- dotnet build "Application" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-- dotnet build "Presentation/WebApplicationMVC" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-
-- dotnet build "Application/Test" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-
 before_build:
  - nuget restore
  - appveyor-retry dotnet restore -v Minimal
@@ -59,6 +50,12 @@ before_build:
 #environment:
  # CODACY_PROJECT_TOKEN: 909dd767787943658cde4290d6d68ee5
 
+build:
+    project: C:\projects\wcfhospitalsim\WCFHospitalSIM.sln
+    verbosity: minimal
+    parallel: true
+
+ 
 # Automatically register private account and/or project AppVeyor NuGet feeds.
 nuget:
   account_feed: true
