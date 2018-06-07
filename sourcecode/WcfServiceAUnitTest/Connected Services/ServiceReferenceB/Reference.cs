@@ -15,17 +15,65 @@ namespace WcfServiceAUnitTest.ServiceReferenceB {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReferenceB.IServiceB")]
     public interface IServiceB {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/getPatientsFromA", ReplyAction="http://tempuri.org/IServiceB/getPatientsFromAResponse")]
-        SharedLibray.Patient[] getPatientsFromA();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/UpdatePatient", ReplyAction="http://tempuri.org/IServiceB/UpdatePatientResponse")]
+        bool UpdatePatient(SharedLibray.Patient patient);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/getPatientsFromA", ReplyAction="http://tempuri.org/IServiceB/getPatientsFromAResponse")]
-        System.Threading.Tasks.Task<SharedLibray.Patient[]> getPatientsFromAAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/UpdatePatient", ReplyAction="http://tempuri.org/IServiceB/UpdatePatientResponse")]
+        System.Threading.Tasks.Task<bool> UpdatePatientAsync(SharedLibray.Patient patient);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/getPatients", ReplyAction="http://tempuri.org/IServiceB/getPatientsResponse")]
-        SharedLibray.Patient[] getPatients();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/UpdatePatientFromA", ReplyAction="http://tempuri.org/IServiceB/UpdatePatientFromAResponse")]
+        bool UpdatePatientFromA(SharedLibray.Patient patient);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/getPatients", ReplyAction="http://tempuri.org/IServiceB/getPatientsResponse")]
-        System.Threading.Tasks.Task<SharedLibray.Patient[]> getPatientsAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/UpdatePatientFromA", ReplyAction="http://tempuri.org/IServiceB/UpdatePatientFromAResponse")]
+        System.Threading.Tasks.Task<bool> UpdatePatientFromAAsync(SharedLibray.Patient patient);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/DeletePatient", ReplyAction="http://tempuri.org/IServiceB/DeletePatientResponse")]
+        bool DeletePatient(SharedLibray.Patient patient);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/DeletePatient", ReplyAction="http://tempuri.org/IServiceB/DeletePatientResponse")]
+        System.Threading.Tasks.Task<bool> DeletePatientAsync(SharedLibray.Patient patient);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/DeletePatientFromA", ReplyAction="http://tempuri.org/IServiceB/DeletePatientFromAResponse")]
+        bool DeletePatientFromA(SharedLibray.Patient patient);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/DeletePatientFromA", ReplyAction="http://tempuri.org/IServiceB/DeletePatientFromAResponse")]
+        System.Threading.Tasks.Task<bool> DeletePatientFromAAsync(SharedLibray.Patient patient);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/ReadPatient", ReplyAction="http://tempuri.org/IServiceB/ReadPatientResponse")]
+        SharedLibray.Patient ReadPatient(ulong ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/ReadPatient", ReplyAction="http://tempuri.org/IServiceB/ReadPatientResponse")]
+        System.Threading.Tasks.Task<SharedLibray.Patient> ReadPatientAsync(ulong ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/ReadPatientFromA", ReplyAction="http://tempuri.org/IServiceB/ReadPatientFromAResponse")]
+        SharedLibray.Patient ReadPatientFromA(ulong ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/ReadPatientFromA", ReplyAction="http://tempuri.org/IServiceB/ReadPatientFromAResponse")]
+        System.Threading.Tasks.Task<SharedLibray.Patient> ReadPatientFromAAsync(ulong ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/CreatePatient", ReplyAction="http://tempuri.org/IServiceB/CreatePatientResponse")]
+        SharedLibray.Patient CreatePatient();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/CreatePatient", ReplyAction="http://tempuri.org/IServiceB/CreatePatientResponse")]
+        System.Threading.Tasks.Task<SharedLibray.Patient> CreatePatientAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/CreatePatientFromA", ReplyAction="http://tempuri.org/IServiceB/CreatePatientFromAResponse")]
+        SharedLibray.Patient CreatePatientFromA();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/CreatePatientFromA", ReplyAction="http://tempuri.org/IServiceB/CreatePatientFromAResponse")]
+        System.Threading.Tasks.Task<SharedLibray.Patient> CreatePatientFromAAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/GetPatientsFromA", ReplyAction="http://tempuri.org/IServiceB/GetPatientsFromAResponse")]
+        SharedLibray.Patient[] GetPatientsFromA();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/GetPatientsFromA", ReplyAction="http://tempuri.org/IServiceB/GetPatientsFromAResponse")]
+        System.Threading.Tasks.Task<SharedLibray.Patient[]> GetPatientsFromAAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/GetPatients", ReplyAction="http://tempuri.org/IServiceB/GetPatientsResponse")]
+        SharedLibray.Patient[] GetPatients();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/GetPatients", ReplyAction="http://tempuri.org/IServiceB/GetPatientsResponse")]
+        System.Threading.Tasks.Task<SharedLibray.Patient[]> GetPatientsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceB/ConnectionOK", ReplyAction="http://tempuri.org/IServiceB/ConnectionOKResponse")]
         bool ConnectionOK();
@@ -61,20 +109,84 @@ namespace WcfServiceAUnitTest.ServiceReferenceB {
                 base(binding, remoteAddress) {
         }
         
-        public SharedLibray.Patient[] getPatientsFromA() {
-            return base.Channel.getPatientsFromA();
+        public bool UpdatePatient(SharedLibray.Patient patient) {
+            return base.Channel.UpdatePatient(patient);
         }
         
-        public System.Threading.Tasks.Task<SharedLibray.Patient[]> getPatientsFromAAsync() {
-            return base.Channel.getPatientsFromAAsync();
+        public System.Threading.Tasks.Task<bool> UpdatePatientAsync(SharedLibray.Patient patient) {
+            return base.Channel.UpdatePatientAsync(patient);
         }
         
-        public SharedLibray.Patient[] getPatients() {
-            return base.Channel.getPatients();
+        public bool UpdatePatientFromA(SharedLibray.Patient patient) {
+            return base.Channel.UpdatePatientFromA(patient);
         }
         
-        public System.Threading.Tasks.Task<SharedLibray.Patient[]> getPatientsAsync() {
-            return base.Channel.getPatientsAsync();
+        public System.Threading.Tasks.Task<bool> UpdatePatientFromAAsync(SharedLibray.Patient patient) {
+            return base.Channel.UpdatePatientFromAAsync(patient);
+        }
+        
+        public bool DeletePatient(SharedLibray.Patient patient) {
+            return base.Channel.DeletePatient(patient);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeletePatientAsync(SharedLibray.Patient patient) {
+            return base.Channel.DeletePatientAsync(patient);
+        }
+        
+        public bool DeletePatientFromA(SharedLibray.Patient patient) {
+            return base.Channel.DeletePatientFromA(patient);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeletePatientFromAAsync(SharedLibray.Patient patient) {
+            return base.Channel.DeletePatientFromAAsync(patient);
+        }
+        
+        public SharedLibray.Patient ReadPatient(ulong ID) {
+            return base.Channel.ReadPatient(ID);
+        }
+        
+        public System.Threading.Tasks.Task<SharedLibray.Patient> ReadPatientAsync(ulong ID) {
+            return base.Channel.ReadPatientAsync(ID);
+        }
+        
+        public SharedLibray.Patient ReadPatientFromA(ulong ID) {
+            return base.Channel.ReadPatientFromA(ID);
+        }
+        
+        public System.Threading.Tasks.Task<SharedLibray.Patient> ReadPatientFromAAsync(ulong ID) {
+            return base.Channel.ReadPatientFromAAsync(ID);
+        }
+        
+        public SharedLibray.Patient CreatePatient() {
+            return base.Channel.CreatePatient();
+        }
+        
+        public System.Threading.Tasks.Task<SharedLibray.Patient> CreatePatientAsync() {
+            return base.Channel.CreatePatientAsync();
+        }
+        
+        public SharedLibray.Patient CreatePatientFromA() {
+            return base.Channel.CreatePatientFromA();
+        }
+        
+        public System.Threading.Tasks.Task<SharedLibray.Patient> CreatePatientFromAAsync() {
+            return base.Channel.CreatePatientFromAAsync();
+        }
+        
+        public SharedLibray.Patient[] GetPatientsFromA() {
+            return base.Channel.GetPatientsFromA();
+        }
+        
+        public System.Threading.Tasks.Task<SharedLibray.Patient[]> GetPatientsFromAAsync() {
+            return base.Channel.GetPatientsFromAAsync();
+        }
+        
+        public SharedLibray.Patient[] GetPatients() {
+            return base.Channel.GetPatients();
+        }
+        
+        public System.Threading.Tasks.Task<SharedLibray.Patient[]> GetPatientsAsync() {
+            return base.Channel.GetPatientsAsync();
         }
         
         public bool ConnectionOK() {

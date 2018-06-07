@@ -33,18 +33,18 @@ namespace ConsoleAppB
                 {
                     case "test":
                         {
-                            testConnection();
+                            TestConnection();
                             Console.WriteLine();
                             break;
                         }
 
                     case "list":
                         {
-                            List<Patient> patients = getPatientsFromA();
+                            List<Patient> patients = GetPatientsFromA();
 
                             foreach (Patient pat in patients)
                             {
-                                Console.WriteLine("Pat: {0}, Age: {1}", pat.name, pat.age);
+                                Console.WriteLine("Pat: {0}, Age: {1}", pat.Name, pat.Age);
                             }
                             Console.WriteLine();
                         }
@@ -68,7 +68,7 @@ namespace ConsoleAppB
         /// Gets the patients in Service A through service B
         /// </summary>
         /// <returns>Returns a list of patients</returns>
-        private static List<Patient> getPatientsFromA()
+        private static List<Patient> GetPatientsFromA()
         {
             if (srvB.ConnectionOK())
             {
@@ -82,7 +82,7 @@ namespace ConsoleAppB
         /// Function verifies if conection with service B in service A is ok.
         /// Show the state in console
         /// </summary>
-        private static void testConnection()
+        private static void TestConnection()
         {
             if (srvB.ConnectionOK())
                 Console.WriteLine("Connection to Service B Successful ");

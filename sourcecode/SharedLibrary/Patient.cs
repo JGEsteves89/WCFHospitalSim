@@ -14,16 +14,38 @@ namespace SharedLibray
     public class Patient
     {
         /// <summary>
+        /// Identification Number of Patient
+        /// </summary>
+        [DataMember]
+        public ulong ID
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Patient's Name
         /// </summary>
         [DataMember]
-        public string name;
+        public string Name
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Patient Age
         /// </summary>
         [DataMember]
-        public int age;
+        public int Age;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Patient()
+        {
+
+        }
 
         /// <summary>
         /// Initializes an instance of patient
@@ -32,8 +54,21 @@ namespace SharedLibray
         /// <param name="age">Age of Patient</param>
         public Patient(string name, int age)
         {
-            this.name = name;
-            this.age = age;
+            this.Name = name;
+            this.Age = age;
+        }
+
+        /// <summary>
+        /// Initializes an instance of patient
+        /// </summary>
+        /// <param name="name">Name of patient</param>
+        /// <param name="age">Age of Patient</param>
+        /// <param name="id">ID of Patient</param>
+        public Patient(string name, int age, ulong id)
+        {
+            this.Name = name;
+            this.Age = age;
+            this.ID = id;
         }
     }
 }

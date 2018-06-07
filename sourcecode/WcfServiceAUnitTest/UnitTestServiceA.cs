@@ -30,26 +30,146 @@ namespace WcfServiceAUnitTest
             Assert.AreEqual(false, srvB.ConnectionOK());
         }
 
+        #region Local 
+
         /// <summary>
-        /// Verify is the list of patients doesn't return a null value
+        ///  Test the creation of Patient in local server
         /// </summary>
         [TestMethod]
-        public void ListPatientsFromBNotNull()
+        public void CreateLocalPatient()
         {
-            WcfServiceA.ServiceA newClient = new WcfServiceA.ServiceA();
+            WcfServiceA.ServiceA srvB = new WcfServiceA.ServiceA();
 
-            Assert.IsNotNull(newClient.getPatientsFromB());
+            SharedLibray.Patient newPatient = srvB.CreatePatient();
+
+            Assert.IsNotNull(newPatient);
+            Assert.AreNotEqual(newPatient.ID, 0);
+
+            srvB.DeletePatient(newPatient);
         }
 
         /// <summary>
-        /// Verify is the list of patients doesn't return a null value
+        /// Test the read of Patient information in local server
         /// </summary>
         [TestMethod]
-        public void ListPatientsNotNull()
+        public void ReadLocalPatient()
         {
-            WcfServiceA.ServiceA newClient = new WcfServiceA.ServiceA();
+            WcfServiceA.ServiceA srvB = new WcfServiceA.ServiceA();
 
-            Assert.IsNotNull(newClient.getPatients());
+            SharedLibray.Patient newPatient = srvB.CreatePatient();
+
+            SharedLibray.Patient readPatient = srvB.ReadPatient(newPatient.ID);
+
+            Assert.IsNotNull(readPatient);
+            Assert.AreNotEqual(readPatient.ID, 0);
+
+            srvB.DeletePatient(newPatient);
         }
+
+        /// <summary>
+        /// Test the update of Patient information in local server
+        /// </summary>
+        [TestMethod]
+        public void UpdateLocalPatient()
+        {
+            WcfServiceA.ServiceA srvB = new WcfServiceA.ServiceA();
+
+            SharedLibray.Patient newPatient = srvB.CreatePatient();
+
+            SharedLibray.Patient patient = srvB.ReadPatient(newPatient.ID);
+            patient.Name = "Ricardo";
+            patient.Age = 32;
+
+            Assert.AreEqual(true, srvB.UpdatePatient(patient));
+
+            srvB.DeletePatient(newPatient);
+        }
+
+
+        /// <summary>
+        /// Test the delete of Patient information in local server
+        /// </summary>
+        [TestMethod]
+        public void DeleteLocalPatient()
+        {
+            WcfServiceA.ServiceA srvB = new WcfServiceA.ServiceA();
+
+            SharedLibray.Patient newPatient = srvB.CreatePatient();
+
+            Assert.AreEqual(true, srvB.DeletePatient(newPatient));
+        }
+
+        #endregion
+
+        #region ServiceB 
+
+        /// <summary>
+        /// Test the creation of Patient in remote server
+        /// </summary>
+        [TestMethod]
+        public void CreatePatientFromB()
+        {
+            WcfServiceA.ServiceA srvB = new WcfServiceA.ServiceA();
+
+            SharedLibray.Patient newPatient = srvB.CreatePatientFromB();
+
+            Assert.IsNotNull(newPatient);
+            Assert.AreNotEqual(newPatient.ID, 0);
+
+            srvB.DeletePatientFromB(newPatient);
+        }
+
+        /// <summary>
+        /// Test the read of Patient information in remote server
+        /// </summary>
+        [TestMethod]
+        public void ReadPatientFromB()
+        {
+            WcfServiceA.ServiceA srvB = new WcfServiceA.ServiceA();
+
+            SharedLibray.Patient newPatient = srvB.CreatePatientFromB();
+
+            SharedLibray.Patient readPatient = srvB.ReadPatientFromB(newPatient.ID);
+
+            Assert.IsNotNull(readPatient);
+            Assert.AreNotEqual(readPatient.ID, 0);
+
+            srvB.DeletePatientFromB(newPatient);
+        }
+
+        /// <summary>
+        /// Test the update of Patient information in remote server
+        /// </summary>
+        [TestMethod]
+        public void UpdatePatientFromB()
+        {
+            WcfServiceA.ServiceA srvB = new WcfServiceA.ServiceA();
+
+            SharedLibray.Patient newPatient = srvB.CreatePatientFromB();
+
+            SharedLibray.Patient patient = srvB.ReadPatientFromB(newPatient.ID);
+            patient.Name = "Ricardo";
+            patient.Age = 32;
+
+            Assert.AreEqual(true, srvB.UpdatePatientFromB(patient));
+
+            srvB.DeletePatientFromB(newPatient);
+        }
+
+
+        /// <summary>
+        /// Test the delete of Patient information in remote server
+        /// </summary>
+        [TestMethod]
+        public void DeletePatientFromB()
+        {
+            WcfServiceA.ServiceA srvB = new WcfServiceA.ServiceA();
+
+            SharedLibray.Patient newPatient = srvB.CreatePatientFromB();
+
+            Assert.AreEqual(true, srvB.DeletePatientFromB(newPatient));
+        }
+
+        #endregion
     }
 }

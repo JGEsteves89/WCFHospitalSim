@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="4.6.0.0">
+  <Summary numSequencePoints="248" visitedSequencePoints="34" numBranchPoints="35" visitedBranchPoints="7" sequenceCoverage="13.71" branchCoverage="20" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" maxCrapScore="20" minCrapScore="1" visitedClasses="5" numClasses="10" visitedMethods="7" numMethods="33" />
+  <Modules>
+    <Module hash="00-78-AE-8B-4C-B6-1B-03-75-03-55-BE-29-FD-87-4D-35-BB-9D-E2">
+      <Summary numSequencePoints="95" visitedSequencePoints="6" numBranchPoints="15" visitedBranchPoints="1" sequenceCoverage="6.32" branchCoverage="6.67" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" maxCrapScore="20" minCrapScore="1" visitedClasses="1" numClasses="4" visitedMethods="1" numMethods="13" />
+      <ModulePath>C:\Users\rffreitas\source\repos\WCFHospitalSim\sourcecode\Hospital_BLUnitTest\bin\Debug\Hospital_BLUnitTest.dll</ModulePath>
+      <ModuleTime>2018-06-06T13:42:01.243579Z</ModuleTime>
+      <ModuleName>Hospital_BLUnitTest</ModuleName>
+      <Files>
+        <File uid="1" fullPath="C:\Users\rffreitas\source\repos\WCFHospitalSim\sourcecode\Hospital_BLUnitTest\UnitTest1.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="88" visitedSequencePoints="6" numBranchPoints="10" visitedBranchPoints="1" sequenceCoverage="6.82" branchCoverage="10" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="10" />
+          <FullName>Hospital_BLUnitTest.UnitTest1</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663297</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1::CreatePatientTestLocal()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="1" ordinal="0" offset="0" sl="20" sc="9" el="20" ec="10" bec="0" bev="0" fileid="1">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="2" ordinal="1" offset="1" sl="21" sc="13" el="21" ec="78" bec="0" bev="0" fileid="1">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="3" ordinal="2" offset="7" sl="22" sc="13" el="22" ec="54" bec="0" bev="0" fileid="1">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="4" ordinal="3" offset="14" sl="24" sc="13" el="24" ec="50" bec="0" bev="0" fileid="1">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="5" ordinal="4" offset="37" sl="26" sc="13" el="26" ec="43" bec="0" bev="0" fileid="1">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="6" ordinal="5" offset="45" sl="27" sc="9" el="27" ec="10" bec="0" bev="0" fileid="1">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="1" ordinal="0" offset="0" sl="20" sc="9" el="20" ec="10" bec="0" bev="0" fileid="1">
+                <TrackedMethodRefs>
+                  <TrackedMethodRef uid="1" vc="1" />
+                </TrackedMethodRefs>
+              </MethodPoint>
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663298</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1::CreatePatientTestServer()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="7" ordinal="0" offset="0" sl="34" sc="9" el="34" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="8" ordinal="1" offset="1" sl="35" sc="13" el="35" ec="80" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="9" ordinal="2" offset="7" sl="36" sc="13" el="36" ec="54" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="10" ordinal="3" offset="14" sl="38" sc="13" el="38" ec="50" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="11" ordinal="4" offset="37" sl="40" sc="13" el="40" ec="43" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="12" ordinal="5" offset="45" sl="41" sc="9" el="41" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="7" ordinal="0" offset="0" sl="34" sc="9" el="34" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="8" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663299</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1::ReadPatientTestLocal()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="13" ordinal="0" offset="0" sl="48" sc="9" el="48" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="14" ordinal="1" offset="1" sl="49" sc="13" el="49" ec="78" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="15" ordinal="2" offset="7" sl="51" sc="13" el="51" ec="54" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="16" ordinal="3" offset="14" sl="53" sc="13" el="53" ec="66" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="17" ordinal="4" offset="27" sl="55" sc="13" el="55" ec="43" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="18" ordinal="5" offset="34" sl="56" sc="13" el="56" ec="51" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="19" ordinal="6" offset="57" sl="58" sc="13" el="58" ec="43" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="20" ordinal="7" offset="65" sl="59" sc="9" el="59" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="13" ordinal="0" offset="0" sl="48" sc="9" el="48" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="8" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663300</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1::ReadPatientTestServer()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="21" ordinal="0" offset="0" sl="66" sc="9" el="66" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="22" ordinal="1" offset="1" sl="67" sc="13" el="67" ec="80" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="23" ordinal="2" offset="7" sl="69" sc="13" el="69" ec="54" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="24" ordinal="3" offset="14" sl="71" sc="13" el="71" ec="66" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="25" ordinal="4" offset="27" sl="73" sc="13" el="73" ec="43" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="26" ordinal="5" offset="34" sl="74" sc="13" el="74" ec="51" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="27" ordinal="6" offset="57" sl="76" sc="13" el="76" ec="43" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="28" ordinal="7" offset="65" sl="77" sc="9" el="77" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="21" ordinal="0" offset="0" sl="66" sc="9" el="66" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="13" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663301</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1::UpdatePatientTestLocal()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="29" ordinal="0" offset="0" sl="84" sc="9" el="84" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="30" ordinal="1" offset="1" sl="85" sc="13" el="85" ec="78" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="31" ordinal="2" offset="7" sl="87" sc="13" el="87" ec="54" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="32" ordinal="3" offset="14" sl="89" sc="13" el="89" ec="70" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="33" ordinal="4" offset="27" sl="90" sc="13" el="90" ec="46" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="34" ordinal="5" offset="39" sl="91" sc="13" el="91" ec="38" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="35" ordinal="6" offset="47" sl="93" sc="13" el="93" ec="71" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="36" ordinal="7" offset="61" sl="95" sc="13" el="95" ec="69" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="37" ordinal="8" offset="74" sl="97" sc="13" el="97" ec="68" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="38" ordinal="9" offset="92" sl="98" sc="13" el="98" ec="70" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="39" ordinal="10" offset="110" sl="99" sc="13" el="99" ec="72" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="40" ordinal="11" offset="128" sl="101" sc="13" el="101" ec="43" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="41" ordinal="12" offset="136" sl="102" sc="9" el="102" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="29" ordinal="0" offset="0" sl="84" sc="9" el="84" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="13" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663302</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1::UpdatePatientTestServer()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="42" ordinal="0" offset="0" sl="110" sc="9" el="110" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="43" ordinal="1" offset="1" sl="111" sc="13" el="111" ec="80" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="44" ordinal="2" offset="7" sl="113" sc="13" el="113" ec="54" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="45" ordinal="3" offset="14" sl="115" sc="13" el="115" ec="70" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="46" ordinal="4" offset="27" sl="116" sc="13" el="116" ec="46" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="47" ordinal="5" offset="39" sl="117" sc="13" el="117" ec="38" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="48" ordinal="6" offset="47" sl="119" sc="13" el="119" ec="71" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="49" ordinal="7" offset="61" sl="121" sc="13" el="121" ec="69" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="50" ordinal="8" offset="74" sl="123" sc="13" el="123" ec="68" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="51" ordinal="9" offset="92" sl="124" sc="13" el="124" ec="70" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="52" ordinal="10" offset="110" sl="125" sc="13" el="125" ec="72" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="53" ordinal="11" offset="128" sl="127" sc="13" el="127" ec="43" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="54" ordinal="12" offset="136" sl="128" sc="9" el="128" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="42" ordinal="0" offset="0" sl="110" sc="9" el="110" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663303</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1::DeletePatientTestLocal()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="55" ordinal="0" offset="0" sl="135" sc="9" el="135" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="56" ordinal="1" offset="1" sl="136" sc="13" el="136" ec="78" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="57" ordinal="2" offset="7" sl="137" sc="13" el="137" ec="54" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="58" ordinal="3" offset="14" sl="139" sc="13" el="139" ec="66" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="59" ordinal="4" offset="28" sl="141" sc="13" el="141" ec="59" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="60" ordinal="5" offset="46" sl="142" sc="9" el="142" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="55" ordinal="0" offset="0" sl="135" sc="9" el="135" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663304</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1::DeletePatientTestServer()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="61" ordinal="0" offset="0" sl="149" sc="9" el="149" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="62" ordinal="1" offset="1" sl="150" sc="13" el="150" ec="80" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="63" ordinal="2" offset="7" sl="151" sc="13" el="151" ec="54" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="64" ordinal="3" offset="14" sl="153" sc="13" el="153" ec="66" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="65" ordinal="4" offset="28" sl="155" sc="13" el="155" ec="59" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="66" ordinal="5" offset="46" sl="156" sc="9" el="156" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="61" ordinal="0" offset="0" sl="149" sc="9" el="149" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="11" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663305</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1::GetListPatientsTestLocal()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="67" ordinal="0" offset="6" sl="164" sc="9" el="164" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="68" ordinal="1" offset="7" sl="165" sc="13" el="165" ec="78" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="69" ordinal="2" offset="18" sl="167" sc="13" el="167" ec="51" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="70" ordinal="3" offset="24" sl="168" sc="13" el="168" ec="55" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="71" ordinal="4" offset="36" sl="169" sc="13" el="169" ec="42" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="72" ordinal="5" offset="44" sl="170" sc="13" el="170" ec="55" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="73" ordinal="6" offset="56" sl="171" sc="13" el="171" ec="42" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="74" ordinal="7" offset="64" sl="173" sc="13" el="173" ec="53" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="75" ordinal="8" offset="77" sl="175" sc="13" el="175" ec="84" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="76" ordinal="9" offset="91" sl="177" sc="13" el="177" ec="60" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="77" ordinal="10" offset="110" sl="178" sc="9" el="178" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="78" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="11" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663306</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1::GetListPatientsTestServer()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="79" ordinal="0" offset="6" sl="185" sc="9" el="185" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="80" ordinal="1" offset="7" sl="186" sc="13" el="186" ec="80" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="81" ordinal="2" offset="18" sl="188" sc="13" el="188" ec="51" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="82" ordinal="3" offset="24" sl="189" sc="13" el="189" ec="55" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="83" ordinal="4" offset="36" sl="190" sc="13" el="190" ec="42" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="84" ordinal="5" offset="44" sl="191" sc="13" el="191" ec="55" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="85" ordinal="6" offset="56" sl="192" sc="13" el="192" ec="42" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="86" ordinal="7" offset="64" sl="194" sc="13" el="194" ec="53" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="87" ordinal="8" offset="77" sl="196" sc="13" el="196" ec="85" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="88" ordinal="9" offset="91" sl="198" sc="13" el="198" ec="60" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="89" ordinal="10" offset="110" sl="199" sc="9" el="199" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="90" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663307</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="91" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="3" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" maxCrapScore="20" minCrapScore="2" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>Hospital_BLUnitTest.UnitTest1/PatientComparer</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="4" nPathComplexity="2" sequenceCoverage="0" branchCoverage="0" crapScore="20" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="3" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" maxCrapScore="20" minCrapScore="20" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663308</MetadataToken>
+              <Name>System.Int32 Hospital_BLUnitTest.UnitTest1/PatientComparer::Compare(SharedLibray.Patient,SharedLibray.Patient)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="92" ordinal="0" offset="0" sl="204" sc="13" el="204" ec="14" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="93" ordinal="1" offset="1" sl="205" sc="17" el="205" ec="77" bec="2" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="94" ordinal="2" offset="55" sl="206" sc="21" el="206" ec="30" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="95" ordinal="3" offset="59" sl="208" sc="21" el="208" ec="31" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="96" ordinal="4" offset="63" sl="209" sc="13" el="209" ec="14" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="101" ordinal="4" offset="53" sl="205" path="0" offsetend="55" fileid="1" />
+                <BranchPoint vc="0" uspid="102" ordinal="5" offset="53" sl="205" path="1" offsetend="59" fileid="1" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="92" ordinal="0" offset="0" sl="204" sc="13" el="204" ec="14" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663309</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1/PatientComparer::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="103" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>Hospital_BLUnitTest.UnitTest1/&lt;&gt;c__DisplayClass8_0</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663310</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1/&lt;&gt;c__DisplayClass8_0::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="104" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663311</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1/&lt;&gt;c__DisplayClass8_0::&lt;GetListPatientsTestLocal&gt;b__0(SharedLibray.Patient)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="105" ordinal="0" offset="0" sl="177" sc="38" el="177" ec="58" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="105" ordinal="0" offset="0" sl="177" sc="38" el="177" ec="58" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="1" />
+          <FullName>Hospital_BLUnitTest.UnitTest1/&lt;&gt;c__DisplayClass9_0</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663312</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1/&lt;&gt;c__DisplayClass9_0::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="106" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663313</MetadataToken>
+              <Name>System.Void Hospital_BLUnitTest.UnitTest1/&lt;&gt;c__DisplayClass9_0::&lt;GetListPatientsTestServer&gt;b__0(SharedLibray.Patient)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="107" ordinal="0" offset="0" sl="198" sc="38" el="198" ec="58" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="107" ordinal="0" offset="0" sl="198" sc="38" el="198" ec="58" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+      <TrackedMethods>
+        <TrackedMethod uid="1" token="100663297" name="System.Void Hospital_BLUnitTest.UnitTest1::CreatePatientTestLocal()" strategy="MSTestTest" />
+        <TrackedMethod uid="2" token="100663298" name="System.Void Hospital_BLUnitTest.UnitTest1::CreatePatientTestServer()" strategy="MSTestTest" />
+        <TrackedMethod uid="3" token="100663299" name="System.Void Hospital_BLUnitTest.UnitTest1::ReadPatientTestLocal()" strategy="MSTestTest" />
+        <TrackedMethod uid="4" token="100663300" name="System.Void Hospital_BLUnitTest.UnitTest1::ReadPatientTestServer()" strategy="MSTestTest" />
+        <TrackedMethod uid="5" token="100663301" name="System.Void Hospital_BLUnitTest.UnitTest1::UpdatePatientTestLocal()" strategy="MSTestTest" />
+        <TrackedMethod uid="6" token="100663302" name="System.Void Hospital_BLUnitTest.UnitTest1::UpdatePatientTestServer()" strategy="MSTestTest" />
+        <TrackedMethod uid="7" token="100663303" name="System.Void Hospital_BLUnitTest.UnitTest1::DeletePatientTestLocal()" strategy="MSTestTest" />
+        <TrackedMethod uid="8" token="100663304" name="System.Void Hospital_BLUnitTest.UnitTest1::DeletePatientTestServer()" strategy="MSTestTest" />
+        <TrackedMethod uid="9" token="100663305" name="System.Void Hospital_BLUnitTest.UnitTest1::GetListPatientsTestLocal()" strategy="MSTestTest" />
+        <TrackedMethod uid="10" token="100663306" name="System.Void Hospital_BLUnitTest.UnitTest1::GetListPatientsTestServer()" strategy="MSTestTest" />
+      </TrackedMethods>
+    </Module>
+    <Module hash="FA-16-A7-E7-B2-E7-FF-56-3A-9E-4B-E3-EE-7D-1A-5B-F7-60-AA-96">
+      <Summary numSequencePoints="14" visitedSequencePoints="3" numBranchPoints="3" visitedBranchPoints="1" sequenceCoverage="21.43" branchCoverage="33.33" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="3" />
+      <ModulePath>C:\Users\rffreitas\source\repos\WCFHospitalSim\sourcecode\Hospital_BLUnitTest\bin\Debug\SharedLibray.dll</ModulePath>
+      <ModuleTime>2018-06-06T13:41:58.4699987Z</ModuleTime>
+      <ModuleName>SharedLibray</ModuleName>
+      <Files>
+        <File uid="9" fullPath="C:\Users\rffreitas\source\repos\WCFHospitalSim\sourcecode\SharedLibrary\Patient.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="14" visitedSequencePoints="3" numBranchPoints="3" visitedBranchPoints="1" sequenceCoverage="21.43" branchCoverage="33.33" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="3" />
+          <FullName>SharedLibray.Patient</FullName>
+          <Methods>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663297</MetadataToken>
+              <Name>System.UInt64 SharedLibray.Patient::get_ID()</Name>
+              <FileRef uid="9" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663298</MetadataToken>
+              <Name>System.Void SharedLibray.Patient::set_ID(System.UInt64)</Name>
+              <FileRef uid="9" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663299</MetadataToken>
+              <Name>System.String SharedLibray.Patient::get_Name()</Name>
+              <FileRef uid="9" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663300</MetadataToken>
+              <Name>System.Void SharedLibray.Patient::set_Name(System.String)</Name>
+              <FileRef uid="9" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663301</MetadataToken>
+              <Name>System.Void SharedLibray.Patient::.ctor()</Name>
+              <FileRef uid="9" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="108" ordinal="0" offset="0" sl="45" sc="9" el="45" ec="25" bec="0" bev="0" fileid="9">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="109" ordinal="1" offset="7" sl="46" sc="9" el="46" ec="10" bec="0" bev="0" fileid="9">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="110" ordinal="2" offset="8" sl="48" sc="9" el="48" ec="10" bec="0" bev="0" fileid="9">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="108" ordinal="0" offset="0" sl="45" sc="9" el="45" ec="25" bec="0" bev="0" fileid="9">
+                <TrackedMethodRefs>
+                  <TrackedMethodRef uid="1" vc="1" />
+                </TrackedMethodRefs>
+              </MethodPoint>
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663302</MetadataToken>
+              <Name>System.Void SharedLibray.Patient::.ctor(System.String,System.Int32)</Name>
+              <FileRef uid="9" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="111" ordinal="0" offset="0" sl="55" sc="9" el="55" ec="45" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="112" ordinal="1" offset="7" sl="56" sc="9" el="56" ec="10" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="113" ordinal="2" offset="8" sl="57" sc="13" el="57" ec="30" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="114" ordinal="3" offset="16" sl="58" sc="13" el="58" ec="28" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="115" ordinal="4" offset="23" sl="59" sc="9" el="59" ec="10" bec="0" bev="0" fileid="9" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="111" ordinal="0" offset="0" sl="55" sc="9" el="55" ec="45" bec="0" bev="0" fileid="9" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663303</MetadataToken>
+              <Name>System.Void SharedLibray.Patient::.ctor(System.String,System.Int32,System.UInt64)</Name>
+              <FileRef uid="9" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="116" ordinal="0" offset="0" sl="67" sc="9" el="67" ec="55" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="117" ordinal="1" offset="7" sl="68" sc="9" el="68" ec="10" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="118" ordinal="2" offset="8" sl="69" sc="13" el="69" ec="30" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="119" ordinal="3" offset="16" sl="70" sc="13" el="70" ec="28" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="120" ordinal="4" offset="23" sl="71" sc="13" el="71" ec="26" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="121" ordinal="5" offset="31" sl="72" sc="9" el="72" ec="10" bec="0" bev="0" fileid="9" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="116" ordinal="0" offset="0" sl="67" sc="9" el="67" ec="55" bec="0" bev="0" fileid="9" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+      <TrackedMethods />
+    </Module>
+    <Module hash="72-A0-67-D8-0B-02-80-BD-E9-36-E1-FE-BA-EF-D5-3E-C3-7B-16-F7">
+      <Summary numSequencePoints="139" visitedSequencePoints="25" numBranchPoints="17" visitedBranchPoints="5" sequenceCoverage="17.99" branchCoverage="29.41" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" maxCrapScore="6" minCrapScore="1" visitedClasses="3" numClasses="5" visitedMethods="5" numMethods="17" />
+      <ModulePath>C:\Users\rffreitas\source\repos\WCFHospitalSim\sourcecode\Hospital_BLUnitTest\bin\Debug\Hospital_BL.dll</ModulePath>
+      <ModuleTime>2018-06-06T13:41:59.4713209Z</ModuleTime>
+      <ModuleName>Hospital_BL</ModuleName>
+      <Files>
+        <File uid="11" fullPath="C:\Users\rffreitas\source\repos\WCFHospitalSim\sourcecode\Hospital_BL\HospitalModel.Context.cs" />
+        <File uid="12" fullPath="C:\Users\rffreitas\source\repos\WCFHospitalSim\sourcecode\Hospital_BL\HospitalModelLocal.Context.cs" />
+        <File uid="13" fullPath="C:\Users\rffreitas\source\repos\WCFHospitalSim\sourcecode\Hospital_BL\PatientInfo.cs" />
+        <File uid="14" fullPath="C:\Users\rffreitas\source\repos\WCFHospitalSim\sourcecode\Hospital_BL\PatientRepositoryBase.cs" />
+        <File uid="15" fullPath="C:\Users\rffreitas\source\repos\WCFHospitalSim\sourcecode\Hospital_BL\PatientRepositoryLocal.cs" />
+        <File uid="16" fullPath="C:\Users\rffreitas\source\repos\WCFHospitalSim\sourcecode\Hospital_BL\PatientRepositoryServer.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="2" />
+          <FullName>Hospital_BL.HospitalDBEntities</FullName>
+          <Methods>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663299</MetadataToken>
+              <Name>System.Data.Entity.DbSet`1&lt;Hospital_BL.PatientInfo&gt; Hospital_BL.HospitalDBEntities::get_PatientInfoes()</Name>
+              <FileRef uid="11" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663300</MetadataToken>
+              <Name>System.Void Hospital_BL.HospitalDBEntities::set_PatientInfoes(System.Data.Entity.DbSet`1&lt;Hospital_BL.PatientInfo&gt;)</Name>
+              <FileRef uid="11" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663297</MetadataToken>
+              <Name>System.Void Hospital_BL.HospitalDBEntities::.ctor()</Name>
+              <FileRef uid="11" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="122" ordinal="0" offset="0" sl="19" sc="15" el="19" ec="46" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="123" ordinal="1" offset="12" sl="20" sc="9" el="20" ec="10" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="124" ordinal="2" offset="13" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="11" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="122" ordinal="0" offset="0" sl="19" sc="15" el="19" ec="46" bec="0" bev="0" fileid="11" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663298</MetadataToken>
+              <Name>System.Void Hospital_BL.HospitalDBEntities::OnModelCreating(System.Data.Entity.DbModelBuilder)</Name>
+              <FileRef uid="11" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="125" ordinal="0" offset="0" sl="24" sc="9" el="24" ec="10" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="126" ordinal="1" offset="1" sl="25" sc="13" el="25" ec="57" bec="0" bev="0" fileid="11" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="125" ordinal="0" offset="0" sl="24" sc="9" el="24" ec="10" bec="0" bev="0" fileid="11" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="3" numBranchPoints="2" visitedBranchPoints="1" sequenceCoverage="60" branchCoverage="50" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="2" />
+          <FullName>Hospital_BL.HospitalDBLocalEntities</FullName>
+          <Methods>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663303</MetadataToken>
+              <Name>System.Data.Entity.DbSet`1&lt;Hospital_BL.PatientInfo&gt; Hospital_BL.HospitalDBLocalEntities::get_PatientInfoes()</Name>
+              <FileRef uid="12" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663304</MetadataToken>
+              <Name>System.Void Hospital_BL.HospitalDBLocalEntities::set_PatientInfoes(System.Data.Entity.DbSet`1&lt;Hospital_BL.PatientInfo&gt;)</Name>
+              <FileRef uid="12" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663301</MetadataToken>
+              <Name>System.Void Hospital_BL.HospitalDBLocalEntities::.ctor()</Name>
+              <FileRef uid="12" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="127" ordinal="0" offset="0" sl="19" sc="15" el="19" ec="51" bec="0" bev="0" fileid="12">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="128" ordinal="1" offset="12" sl="20" sc="9" el="20" ec="10" bec="0" bev="0" fileid="12">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="129" ordinal="2" offset="13" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="12">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="127" ordinal="0" offset="0" sl="19" sc="15" el="19" ec="51" bec="0" bev="0" fileid="12">
+                <TrackedMethodRefs>
+                  <TrackedMethodRef uid="1" vc="1" />
+                </TrackedMethodRefs>
+              </MethodPoint>
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663302</MetadataToken>
+              <Name>System.Void Hospital_BL.HospitalDBLocalEntities::OnModelCreating(System.Data.Entity.DbModelBuilder)</Name>
+              <FileRef uid="12" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="130" ordinal="0" offset="0" sl="24" sc="9" el="24" ec="10" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="131" ordinal="1" offset="1" sl="25" sc="13" el="25" ec="57" bec="0" bev="0" fileid="12" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="130" ordinal="0" offset="0" sl="24" sc="9" el="24" ec="10" bec="0" bev="0" fileid="12" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+          <FullName>Hospital_BL.PatientInfo</FullName>
+          <Methods>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663305</MetadataToken>
+              <Name>System.Int32 Hospital_BL.PatientInfo::get_ID()</Name>
+              <FileRef uid="13" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663306</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientInfo::set_ID(System.Int32)</Name>
+              <FileRef uid="13" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663307</MetadataToken>
+              <Name>System.String Hospital_BL.PatientInfo::get_Name()</Name>
+              <FileRef uid="13" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663308</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientInfo::set_Name(System.String)</Name>
+              <FileRef uid="13" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663309</MetadataToken>
+              <Name>System.Int32 Hospital_BL.PatientInfo::get_Age()</Name>
+              <FileRef uid="13" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663310</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientInfo::set_Age(System.Int32)</Name>
+              <FileRef uid="13" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663311</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientInfo::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="132" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>Hospital_BL.PatientRepository</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663312</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientRepository::.ctor()</Name>
+              <FileRef uid="14" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="133" ordinal="0" offset="0" sl="18" sc="9" el="18" ec="35" bec="0" bev="0" fileid="14">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="134" ordinal="1" offset="7" sl="19" sc="9" el="19" ec="10" bec="0" bev="0" fileid="14">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="135" ordinal="2" offset="8" sl="20" sc="9" el="20" ec="10" bec="0" bev="0" fileid="14">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="133" ordinal="0" offset="0" sl="18" sc="9" el="18" ec="35" bec="0" bev="0" fileid="14">
+                <TrackedMethodRefs>
+                  <TrackedMethodRef uid="1" vc="1" />
+                </TrackedMethodRefs>
+              </MethodPoint>
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="63" visitedSequencePoints="19" numBranchPoints="6" visitedBranchPoints="3" sequenceCoverage="30.16" branchCoverage="50" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" maxCrapScore="6" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="3" numMethods="6" />
+          <FullName>Hospital_BL.PatientRepositoryLocal</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663318</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientRepositoryLocal::.ctor()</Name>
+              <FileRef uid="15" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="136" ordinal="0" offset="0" sl="20" sc="9" el="20" ec="40" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="137" ordinal="1" offset="7" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="138" ordinal="2" offset="8" sl="22" sc="13" el="22" ec="56" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="139" ordinal="3" offset="19" sl="23" sc="9" el="23" ec="10" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="136" ordinal="0" offset="0" sl="20" sc="9" el="20" ec="40" bec="0" bev="0" fileid="15">
+                <TrackedMethodRefs>
+                  <TrackedMethodRef uid="1" vc="1" />
+                </TrackedMethodRefs>
+              </MethodPoint>
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="11" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663319</MetadataToken>
+              <Name>System.Boolean Hospital_BL.PatientRepositoryLocal::Update(SharedLibray.Patient)</Name>
+              <FileRef uid="15" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="140" ordinal="0" offset="13" sl="31" sc="9" el="31" ec="10" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="141" ordinal="1" offset="14" sl="33" sc="13" el="33" ec="14" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="142" ordinal="2" offset="15" sl="34" sc="17" el="34" ec="104" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="143" ordinal="3" offset="160" sl="36" sc="17" el="36" ec="48" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="144" ordinal="4" offset="178" sl="37" sc="17" el="37" ec="46" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="145" ordinal="5" offset="196" sl="39" sc="17" el="39" ec="42" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="146" ordinal="6" offset="208" sl="41" sc="17" el="41" ec="29" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="147" ordinal="7" offset="212" sl="43" sc="13" el="43" ec="29" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="148" ordinal="8" offset="213" sl="44" sc="13" el="44" ec="14" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="149" ordinal="9" offset="214" sl="45" sc="17" el="45" ec="30" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="150" ordinal="10" offset="218" sl="47" sc="9" el="47" ec="10" bec="0" bev="0" fileid="15" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="151" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="70" branchCoverage="100" crapScore="1.03" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="10" visitedSequencePoints="7" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="70" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1.03" minCrapScore="1.03" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663320</MetadataToken>
+              <Name>System.Boolean Hospital_BL.PatientRepositoryLocal::Delete(SharedLibray.Patient)</Name>
+              <FileRef uid="15" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="152" ordinal="0" offset="13" sl="55" sc="9" el="55" ec="10" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="153" ordinal="1" offset="14" sl="57" sc="13" el="57" ec="14" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="154" ordinal="2" offset="15" sl="58" sc="17" el="58" ec="103" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="155" ordinal="3" offset="160" sl="60" sc="17" el="60" ec="61" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="156" ordinal="4" offset="178" sl="61" sc="17" el="61" ec="42" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="157" ordinal="5" offset="190" sl="63" sc="17" el="63" ec="29" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="0" uspid="158" ordinal="6" offset="194" sl="65" sc="13" el="65" ec="30" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="159" ordinal="7" offset="195" sl="66" sc="13" el="66" ec="14" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="160" ordinal="8" offset="196" sl="67" sc="17" el="67" ec="30" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="1" uspid="161" ordinal="9" offset="200" sl="69" sc="9" el="69" ec="10" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="162" ordinal="0" offset="0">
+                <TrackedMethodRefs>
+                  <TrackedMethodRef uid="1" vc="1" />
+                </TrackedMethodRefs>
+              </MethodPoint>
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="9" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663321</MetadataToken>
+              <Name>SharedLibray.Patient Hospital_BL.PatientRepositoryLocal::Read(System.UInt64)</Name>
+              <FileRef uid="15" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="163" ordinal="0" offset="13" sl="77" sc="9" el="77" ec="10" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="164" ordinal="1" offset="14" sl="79" sc="13" el="79" ec="14" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="165" ordinal="2" offset="15" sl="80" sc="17" el="80" ec="95" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="166" ordinal="3" offset="140" sl="82" sc="17" el="87" ec="19" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="167" ordinal="4" offset="185" sl="89" sc="17" el="89" ec="32" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="168" ordinal="5" offset="190" sl="91" sc="13" el="91" ec="30" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="169" ordinal="6" offset="191" sl="92" sc="13" el="92" ec="14" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="170" ordinal="7" offset="192" sl="93" sc="17" el="93" ec="29" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="171" ordinal="8" offset="197" sl="95" sc="9" el="95" ec="10" bec="0" bev="0" fileid="15" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="172" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="66.67" branchCoverage="100" crapScore="1.04" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="12" visitedSequencePoints="8" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="66.67" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1.04" minCrapScore="1.04" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663322</MetadataToken>
+              <Name>SharedLibray.Patient Hospital_BL.PatientRepositoryLocal::Create()</Name>
+              <FileRef uid="15" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="173" ordinal="0" offset="0" sl="102" sc="9" el="102" ec="10" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="174" ordinal="1" offset="1" sl="104" sc="13" el="104" ec="14" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="175" ordinal="2" offset="2" sl="105" sc="17" el="109" ec="19" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="176" ordinal="3" offset="28" sl="111" sc="17" el="111" ec="55" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="177" ordinal="4" offset="46" sl="112" sc="17" el="112" ec="42" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="178" ordinal="5" offset="58" sl="114" sc="17" el="119" ec="19" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="179" ordinal="6" offset="103" sl="121" sc="17" el="121" ec="35" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="0" uspid="180" ordinal="7" offset="107" sl="123" sc="13" el="123" ec="33" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="181" ordinal="8" offset="108" sl="124" sc="13" el="124" ec="14" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="182" ordinal="9" offset="109" sl="125" sc="17" el="125" ec="46" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="183" ordinal="10" offset="121" sl="126" sc="17" el="126" ec="29" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="1" uspid="184" ordinal="11" offset="125" sl="128" sc="9" el="128" ec="10" bec="0" bev="0" fileid="15">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="1" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="173" ordinal="0" offset="0" sl="102" sc="9" el="102" ec="10" bec="0" bev="0" fileid="15">
+                <TrackedMethodRefs>
+                  <TrackedMethodRef uid="1" vc="1" />
+                </TrackedMethodRefs>
+              </MethodPoint>
+            </Method>
+            <Method visited="false" cyclomaticComplexity="2" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="6" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="17" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="6" minCrapScore="6" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663323</MetadataToken>
+              <Name>System.Collections.Generic.List`1&lt;SharedLibray.Patient&gt; Hospital_BL.PatientRepositoryLocal::GetPatients()</Name>
+              <FileRef uid="15" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="185" ordinal="0" offset="0" sl="135" sc="9" el="135" ec="10" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="186" ordinal="1" offset="1" sl="137" sc="13" el="137" ec="14" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="187" ordinal="2" offset="2" sl="138" sc="17" el="138" ec="83" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="188" ordinal="3" offset="19" sl="139" sc="17" el="139" ec="62" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="189" ordinal="4" offset="25" sl="141" sc="17" el="141" ec="24" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="190" ordinal="5" offset="26" sl="141" sc="45" el="141" ec="56" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="191" ordinal="6" offset="35" sl="141" sc="25" el="141" ec="41" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="192" ordinal="7" offset="43" sl="142" sc="17" el="142" ec="18" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="193" ordinal="8" offset="44" sl="143" sc="21" el="148" ec="23" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="194" ordinal="9" offset="90" sl="150" sc="21" el="150" ec="46" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="195" ordinal="10" offset="99" sl="151" sc="17" el="151" ec="18" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="196" ordinal="11" offset="100" sl="141" sc="42" el="141" ec="44" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="197" ordinal="12" offset="126" sl="153" sc="17" el="153" ec="33" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="198" ordinal="13" offset="131" sl="155" sc="13" el="155" ec="30" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="199" ordinal="14" offset="132" sl="156" sc="13" el="156" ec="14" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="200" ordinal="15" offset="133" sl="157" sc="17" el="157" ec="29" bec="0" bev="0" fileid="15" />
+                <SequencePoint vc="0" uspid="201" ordinal="16" offset="138" sl="159" sc="9" el="159" ec="10" bec="0" bev="0" fileid="15" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="185" ordinal="0" offset="0" sl="135" sc="9" el="135" ec="10" bec="0" bev="0" fileid="15" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+          <FullName>Hospital_BL.PatientRepositoryLocal/&lt;&gt;c__DisplayClass2_0</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663330</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientRepositoryLocal/&lt;&gt;c__DisplayClass2_0::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="204" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+          <FullName>Hospital_BL.PatientRepositoryLocal/&lt;&gt;c__DisplayClass3_0</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663331</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientRepositoryLocal/&lt;&gt;c__DisplayClass3_0::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="205" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+          <FullName>Hospital_BL.PatientRepositoryLocal/&lt;&gt;c__DisplayClass4_0</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663332</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientRepositoryLocal/&lt;&gt;c__DisplayClass4_0::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="206" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="63" visitedSequencePoints="0" numBranchPoints="6" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" maxCrapScore="6" minCrapScore="2" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="6" />
+          <FullName>Hospital_BL.PatientRepositoryServer</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663324</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientRepositoryServer::.ctor()</Name>
+              <FileRef uid="16" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="207" ordinal="0" offset="0" sl="20" sc="9" el="20" ec="41" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="208" ordinal="1" offset="7" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="209" ordinal="2" offset="8" sl="22" sc="13" el="22" ec="51" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="210" ordinal="3" offset="19" sl="23" sc="9" el="23" ec="10" bec="0" bev="0" fileid="16" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="207" ordinal="0" offset="0" sl="20" sc="9" el="20" ec="41" bec="0" bev="0" fileid="16" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="11" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663325</MetadataToken>
+              <Name>System.Boolean Hospital_BL.PatientRepositoryServer::Update(SharedLibray.Patient)</Name>
+              <FileRef uid="16" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="211" ordinal="0" offset="13" sl="31" sc="9" el="31" ec="10" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="212" ordinal="1" offset="14" sl="33" sc="13" el="33" ec="14" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="213" ordinal="2" offset="15" sl="34" sc="17" el="34" ec="104" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="214" ordinal="3" offset="160" sl="36" sc="17" el="36" ec="48" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="215" ordinal="4" offset="178" sl="37" sc="17" el="37" ec="46" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="216" ordinal="5" offset="196" sl="39" sc="17" el="39" ec="42" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="217" ordinal="6" offset="208" sl="41" sc="17" el="41" ec="29" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="218" ordinal="7" offset="212" sl="43" sc="13" el="43" ec="29" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="219" ordinal="8" offset="213" sl="44" sc="13" el="44" ec="14" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="220" ordinal="9" offset="214" sl="45" sc="17" el="45" ec="30" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="221" ordinal="10" offset="218" sl="47" sc="9" el="47" ec="10" bec="0" bev="0" fileid="16" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="222" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="10" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663326</MetadataToken>
+              <Name>System.Boolean Hospital_BL.PatientRepositoryServer::Delete(SharedLibray.Patient)</Name>
+              <FileRef uid="16" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="223" ordinal="0" offset="13" sl="55" sc="9" el="55" ec="10" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="224" ordinal="1" offset="14" sl="57" sc="13" el="57" ec="14" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="225" ordinal="2" offset="15" sl="58" sc="17" el="58" ec="103" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="226" ordinal="3" offset="160" sl="60" sc="17" el="60" ec="61" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="227" ordinal="4" offset="178" sl="61" sc="17" el="61" ec="42" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="228" ordinal="5" offset="190" sl="63" sc="17" el="63" ec="29" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="229" ordinal="6" offset="194" sl="65" sc="13" el="65" ec="30" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="230" ordinal="7" offset="195" sl="66" sc="13" el="66" ec="14" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="231" ordinal="8" offset="196" sl="67" sc="17" el="67" ec="30" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="232" ordinal="9" offset="200" sl="69" sc="9" el="69" ec="10" bec="0" bev="0" fileid="16" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="233" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="9" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663327</MetadataToken>
+              <Name>SharedLibray.Patient Hospital_BL.PatientRepositoryServer::Read(System.UInt64)</Name>
+              <FileRef uid="16" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="234" ordinal="0" offset="13" sl="77" sc="9" el="77" ec="10" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="235" ordinal="1" offset="14" sl="79" sc="13" el="79" ec="14" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="236" ordinal="2" offset="15" sl="80" sc="17" el="80" ec="95" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="237" ordinal="3" offset="140" sl="82" sc="17" el="87" ec="19" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="238" ordinal="4" offset="185" sl="89" sc="17" el="89" ec="32" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="239" ordinal="5" offset="190" sl="91" sc="13" el="91" ec="30" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="240" ordinal="6" offset="191" sl="92" sc="13" el="92" ec="14" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="241" ordinal="7" offset="192" sl="93" sc="17" el="93" ec="29" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="242" ordinal="8" offset="197" sl="95" sc="9" el="95" ec="10" bec="0" bev="0" fileid="16" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="243" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="12" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663328</MetadataToken>
+              <Name>SharedLibray.Patient Hospital_BL.PatientRepositoryServer::Create()</Name>
+              <FileRef uid="16" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="244" ordinal="0" offset="0" sl="102" sc="9" el="102" ec="10" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="245" ordinal="1" offset="1" sl="104" sc="13" el="104" ec="14" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="246" ordinal="2" offset="2" sl="105" sc="17" el="109" ec="19" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="247" ordinal="3" offset="28" sl="111" sc="17" el="111" ec="55" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="248" ordinal="4" offset="46" sl="112" sc="17" el="112" ec="42" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="249" ordinal="5" offset="58" sl="114" sc="17" el="119" ec="19" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="250" ordinal="6" offset="103" sl="121" sc="17" el="121" ec="35" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="251" ordinal="7" offset="107" sl="123" sc="13" el="123" ec="33" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="252" ordinal="8" offset="108" sl="124" sc="13" el="124" ec="14" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="253" ordinal="9" offset="109" sl="125" sc="17" el="125" ec="46" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="254" ordinal="10" offset="121" sl="126" sc="17" el="126" ec="29" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="255" ordinal="11" offset="125" sl="128" sc="9" el="128" ec="10" bec="0" bev="0" fileid="16" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="244" ordinal="0" offset="0" sl="102" sc="9" el="102" ec="10" bec="0" bev="0" fileid="16" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="2" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="6" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="17" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="6" minCrapScore="6" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663329</MetadataToken>
+              <Name>System.Collections.Generic.List`1&lt;SharedLibray.Patient&gt; Hospital_BL.PatientRepositoryServer::GetPatients()</Name>
+              <FileRef uid="16" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="256" ordinal="0" offset="0" sl="135" sc="9" el="135" ec="10" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="257" ordinal="1" offset="1" sl="137" sc="13" el="137" ec="14" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="258" ordinal="2" offset="2" sl="138" sc="17" el="138" ec="83" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="259" ordinal="3" offset="19" sl="139" sc="17" el="139" ec="62" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="260" ordinal="4" offset="25" sl="141" sc="17" el="141" ec="24" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="261" ordinal="5" offset="26" sl="141" sc="45" el="141" ec="56" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="262" ordinal="6" offset="35" sl="141" sc="25" el="141" ec="41" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="263" ordinal="7" offset="43" sl="142" sc="17" el="142" ec="18" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="264" ordinal="8" offset="44" sl="143" sc="21" el="148" ec="23" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="265" ordinal="9" offset="90" sl="150" sc="21" el="150" ec="46" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="266" ordinal="10" offset="99" sl="151" sc="17" el="151" ec="18" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="267" ordinal="11" offset="100" sl="141" sc="42" el="141" ec="44" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="268" ordinal="12" offset="126" sl="153" sc="17" el="153" ec="33" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="269" ordinal="13" offset="131" sl="155" sc="13" el="155" ec="30" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="270" ordinal="14" offset="132" sl="156" sc="13" el="156" ec="14" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="271" ordinal="15" offset="133" sl="157" sc="17" el="157" ec="29" bec="0" bev="0" fileid="16" />
+                <SequencePoint vc="0" uspid="272" ordinal="16" offset="138" sl="159" sc="9" el="159" ec="10" bec="0" bev="0" fileid="16" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="256" ordinal="0" offset="0" sl="135" sc="9" el="135" ec="10" bec="0" bev="0" fileid="16" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+          <FullName>Hospital_BL.PatientRepositoryServer/&lt;&gt;c__DisplayClass2_0</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663333</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientRepositoryServer/&lt;&gt;c__DisplayClass2_0::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="275" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+          <FullName>Hospital_BL.PatientRepositoryServer/&lt;&gt;c__DisplayClass3_0</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663334</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientRepositoryServer/&lt;&gt;c__DisplayClass3_0::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="276" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+          <FullName>Hospital_BL.PatientRepositoryServer/&lt;&gt;c__DisplayClass4_0</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663335</MetadataToken>
+              <Name>System.Void Hospital_BL.PatientRepositoryServer/&lt;&gt;c__DisplayClass4_0::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="277" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+      <TrackedMethods />
+    </Module>
+  </Modules>
+</CoverageSession>

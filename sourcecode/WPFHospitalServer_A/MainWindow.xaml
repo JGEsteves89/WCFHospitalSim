@@ -1,0 +1,65 @@
+﻿<Window x:Class="WPFHospitalServer_A.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFHospitalServer_A"
+        mc:Ignorable="d"
+        Title="MainWindow" MaxHeight="450" MaxWidth="800" WindowState="Maximized" Loaded="Window_Loaded">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Server">
+                <DockPanel LastChildFill="True">
+                    <ListBox Name="lst_Patients" DockPanel.Dock="Left" MinWidth="200" ItemsSource="{Binding Items}" SelectionMode="Single" SelectionChanged="lst_Patients_SelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}"></TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <DockPanel DockPanel.Dock="Left" LastChildFill="True">
+                        <GroupBox Width="250" DockPanel.Dock="Left" Header="Patient" Name="grp_Patient">
+                            <DockPanel LastChildFill="True">
+                                <Grid DockPanel.Dock="Top" Margin="0,20,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="1*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40" />
+                                        <RowDefinition Height="40" />
+                                        <RowDefinition Height="40" />
+                                    </Grid.RowDefinitions>
+                                    <Label Name="lb_ID" Content="ID" Grid.Column="0" Grid.Row="0" MaxHeight="30" />
+                                    <TextBox Name="txt_ID" Grid.Column="1" Grid.Row="0" MaxHeight="30" IsEnabled="False"  Text="{Binding ID}"/>
+                                    <Label Name="lb_Name" Content="Name" Grid.Column="0" Grid.Row="1" MaxHeight="30"/>
+                                    <TextBox Name="txt_Name" Grid.Column="1" Grid.Row="1" MaxHeight="30" Text="{Binding Name}"/>
+                                    <Label Name="lb_Age" Content="Age" Grid.Column="0" Grid.Row="2" MaxHeight="30"/>
+                                    <TextBox Name="txt_Age" Grid.Column="1" Grid.Row="2" MaxHeight="30" Text="{Binding Age}" Height="40" VerticalAlignment="Top"/>
+                                </Grid>
+                                <Grid DockPanel.Dock="Top" Margin="0,20">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="1*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Button Name="btn_delete" Grid.Column="0" VerticalAlignment="Center"
+                                            HorizontalAlignment="Center" MinWidth="80" >Delete</Button>
+                                    <Button Name="btn_Update" Grid.Column="1" VerticalAlignment="Center"
+                                            HorizontalAlignment="Center" MinWidth="80">Update</Button>
+                                </Grid>
+                                <Grid DockPanel.Dock="Top"></Grid>
+                            </DockPanel>
+                        </GroupBox>
+                        <GroupBox Width="250" DockPanel.Dock="Left" Header="New Patient">
+
+                        </GroupBox>
+                    </DockPanel>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="Local Terminal" >
+                
+                
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

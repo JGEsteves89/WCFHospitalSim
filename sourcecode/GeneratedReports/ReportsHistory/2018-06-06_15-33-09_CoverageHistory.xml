@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2018-06-06_15-33-09" tag="">
+  <assembly name="Calculadora">
+    <class name="Calculadora.Calculadora" coveredlines="5" coverablelines="6" totallines="21" coveredbranches="1" totalbranches="2" />
+    <class name="Calculadora.Classe2" coveredlines="0" coverablelines="2" totallines="16" coveredbranches="0" totalbranches="0" />
+    <class name="Calculadora.Program" coveredlines="0" coverablelines="2" totallines="16" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

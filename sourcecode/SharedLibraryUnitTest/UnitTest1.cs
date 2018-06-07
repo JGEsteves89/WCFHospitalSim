@@ -16,8 +16,8 @@ namespace SharedLibraryUnitTest
         {
             Patient newPatient = new Patient("Name", 2);
 
-            Assert.AreEqual(newPatient.name, "Name");
-            Assert.AreEqual(newPatient.age, 2);
+            Assert.AreEqual(newPatient.Name, "Name");
+            Assert.AreEqual(newPatient.Age, 2);
         }
     }
 }

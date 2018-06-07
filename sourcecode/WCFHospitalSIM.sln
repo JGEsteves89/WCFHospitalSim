@@ -31,6 +31,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceAUnitTest", "WcfS
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceBUnitTest", "WcfServiceBUnitTest\WcfServiceBUnitTest.csproj", "{5D568ADD-DCFB-4ED2-A78D-CCD1CA67EB44}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4D34EF3B-B68C-4401-82D9-AE3E1A9BEF44} = {4D34EF3B-B68C-4401-82D9-AE3E1A9BEF44}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital_BL", "Hospital_BL\Hospital_BL.csproj", "{00E441A0-5CD0-4232-8BE3-F038865688FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital_BLUnitTest", "Hospital_BLUnitTest\Hospital_BLUnitTest.csproj", "{73AF92D0-0CE2-480B-8507-9CABA160F8FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFHospitalServer_A", "WPFHospitalServer_A\WPFHospitalServer_A.csproj", "{8DDD6BDB-F921-4135-B8B5-D9C57817CBB2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4D34EF3B-B68C-4401-82D9-AE3E1A9BEF44} = {4D34EF3B-B68C-4401-82D9-AE3E1A9BEF44}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cover", "Cover", "{D8E62AD9-D3FB-42E6-92B4-C180DD2EACA3}"
+	ProjectSection(SolutionItems) = preProject
+		build.cake = build.cake
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,6 +87,18 @@ Global
 		{5D568ADD-DCFB-4ED2-A78D-CCD1CA67EB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D568ADD-DCFB-4ED2-A78D-CCD1CA67EB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D568ADD-DCFB-4ED2-A78D-CCD1CA67EB44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E441A0-5CD0-4232-8BE3-F038865688FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E441A0-5CD0-4232-8BE3-F038865688FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E441A0-5CD0-4232-8BE3-F038865688FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E441A0-5CD0-4232-8BE3-F038865688FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73AF92D0-0CE2-480B-8507-9CABA160F8FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73AF92D0-0CE2-480B-8507-9CABA160F8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73AF92D0-0CE2-480B-8507-9CABA160F8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73AF92D0-0CE2-480B-8507-9CABA160F8FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DDD6BDB-F921-4135-B8B5-D9C57817CBB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDD6BDB-F921-4135-B8B5-D9C57817CBB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDD6BDB-F921-4135-B8B5-D9C57817CBB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDD6BDB-F921-4135-B8B5-D9C57817CBB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
