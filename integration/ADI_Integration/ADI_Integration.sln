@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADI_Integration", "ADI_Integration\ADI_Integration.csproj", "{6574C5AD-A733-414D-8C06-C4996A1D9DAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6574C5AD-A733-414D-8C06-C4996A1D9DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6574C5AD-A733-414D-8C06-C4996A1D9DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6574C5AD-A733-414D-8C06-C4996A1D9DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6574C5AD-A733-414D-8C06-C4996A1D9DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28E9B518-A959-451C-8AFF-E9837439CFBC}
+	EndGlobalSection
+EndGlobal
