@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADIU_UnitTest", "ADIU_UnitTest\ADIU_UnitTest.csproj", "{2723F533-7937-4C53-BD2A-7CAEAB513AFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADIP_UnitTest", "ADIP_UnitTest\ADIP_UnitTest.csproj", "{98C38553-3263-4309-9F1E-1E1A5091A6F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2723F533-7937-4C53-BD2A-7CAEAB513AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2723F533-7937-4C53-BD2A-7CAEAB513AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2723F533-7937-4C53-BD2A-7CAEAB513AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2723F533-7937-4C53-BD2A-7CAEAB513AFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98C38553-3263-4309-9F1E-1E1A5091A6F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C38553-3263-4309-9F1E-1E1A5091A6F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C38553-3263-4309-9F1E-1E1A5091A6F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C38553-3263-4309-9F1E-1E1A5091A6F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C30F80BE-B2EE-461C-94CF-DDB3EAED20FD}
+	EndGlobalSection
+EndGlobal
