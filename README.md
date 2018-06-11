@@ -5,4 +5,4 @@ Simulation of the architecture of a hospital using C#/WFC/SQL and DICOM
 
 [![Build status](https://ci.appveyor.com/api/projects/status/g7524f16gn4flre7?svg=true)](https://ci.appveyor.com/project/ricardofilipefreitas/wcfhospitalsim)
 
-[![Coverage Status](https://coveralls.io/repos/github/RTOperators/WCFHospitalSim/badge.svg?branch=master)](https://coveralls.io/github/RTOperators/WCFHospitalSim?branch=master)
+[![codecov](https://codecov.io/gh/RTOperators/WCFHospitalSim/branch/master/graph/badge.svg)](https://codecov.io/gh/RTOperators/WCFHospitalSim)
