@@ -1,0 +1,10 @@
+# This is an example "pfl" file used with mc3dcomb.
+# The only stipulation for the format of this file is that the tags
+# contained within it be sorted in ascending order within this file.
+#
+Last Serviced By,0009,ACME Imaging Group,2A,PN,1
+Last Service Date,0009,ACME Imaging Group,2B,DT,1
+#
+# It is acceptable to separate sections with commants, like this.
+#
+Bold Density Scan Parms,0009,ACME MR Group,00,SS,3

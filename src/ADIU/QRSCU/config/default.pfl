@@ -1,0 +1,1928 @@
+#******************************************************************************
+#*                                                                            *
+#*              ===  MERGE DICOM C/C++ Toolkit Defaults File ===              *
+#*                                                                            *
+#******************************************************************************
+#* This file is used by the utility program MC3File.  It is used to fill in   *
+#* default values for each message type.  This file contains contains a       *
+#* listing of each attribute that has a default value.  The defaults that are *
+#* for all service command pairs have [ALL,ALL] in front of them.  The        *
+#* specific service command pairs have [SERVICE,COMMAND] in front of them.    *
+#* The default values are contained within the delimiters '[' and ']'.  For   *
+#* defaults for all service command pairs, only the first default value is    *
+#* added to the attribute.  For specific service command pairs, all the       *
+#* values in the default delimited by the '\' character are entered as values.*
+#* If the default is specified as 'NULL', the attribute is set to NULL by the *
+#* MC_Set_Value_To_NULL() function call.  If the value contains only two      *
+#* backslashes, this forces the attribute not to be set.  This is for cases   *
+#* were there is a default for all values except a specific service/coomand.  *
+#*                                                                            *
+#* The MC3File utility program will first look for this file in the current   *
+#* directory.  If it is not found, it will then look for it in the directory  *
+#* specified by the environmental variable MC3DB_DIR.                         *
+#*                                                                            *
+#* NOTE:  If you modify this file by adding new defaults for tags, be sure to *
+#* place the tags in order.  If adding a default for a specific service       *
+#* command pair, be sure to place the specific default before a default for   *
+#* all message types.  If you add any new defaults with the [ALL,ALL]         *
+#* type, messages are no longer guarenteed to validate properly.              *
+#* If you see any other areas of variation from the DICOM standard, please    *
+#* report them to Merge eFilm.                                                *
+#******************************************************************************
+#  *                                                                        *
+#  *                          COPYRIGHT (C) 2012                            *
+#  *                           Merge Healthcare                             *
+#  *                       Hartland, Wisconsin 53029                        *
+#  *                                                                        *
+#  *                      -- ALL RIGHTS RESERVED --                         *
+#  *                                                                        *
+#  *  This software is furnished under license and may be used and copied   *
+#  *  only in accordance with the terms of such license and with the        *
+#  *  inclusion of the above copyright notice.  This software or any other  *
+#  *  copies thereof may not be provided or otherwise made available to any *
+#  *  other person.  No title to and ownership of the software is hereby    *
+#  *  transferred.                                                          *
+#  *                                                                        *
+#  **************************************************************************/
+
+[0002,0016]
+          NAME    = Source Application Entity Title
+          VR      = AE
+          VM      = 1
+     [ALL,ALL] [\MC3file\]
+[0004,1130]
+          NAME    = File-set ID
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [SETID]
+[0004,1200]
+          NAME    = Offset of the First Directory Record of the Root Directory Entity
+          VR      = UL
+          VM      = 1
+     [ALL,ALL] [1]
+[0004,1202]
+          NAME    = Offset of the Last Directory Record of the Root Directory Entity
+          VR      = UL
+          VM      = 1
+     [ALL,ALL] [1]
+[0004,1212]
+          NAME    = File-set Consistency Flag
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1]
+[0004,1400]
+          NAME    = Offset of the Next Directory Record
+          VR      = UL
+          VM      = 1
+     [ALL,ALL] [1]
+[0004,1410]
+          NAME    = Record In-use Flag
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1]
+[0004,1420]
+          NAME    = Offset of Referenced Lower-Level Directory Entity
+          VR      = UL
+          VM      = 1
+     [ALL,ALL] [1]
+[0004,1430]
+          NAME    = Directory Record Type
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [PATIENT\STUDY\SERIES\IMAGE\RT DOSE\RT STRUCTURE SET\RT PLAN\RT TREAT RECORD\PRESENTATION\WAVEFORM\SR DOCUMENT\KEY OBJECT DOC\SPECTROSCOPY\RAW DATA\REGISTRATION\FIDUCIAL\HANGING PROTOCOL\ENCAP DOC\HL7 STRUC DOC\VALUE MAP\STEREOMETRIC\MEASUREMENT\IMPLANT\IMPLANT GROUP\IMPLANT ASSY\SURFACE]
+[0008,0008]
+          NAME    = Image Type
+          VR      = CS
+          VM      = 2-n
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [ORIGINAL\PRIMARY\SINGLE PLANE]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [ORIGINAL\PRIMARY\SINGLE PLANE]
+     [STANDARD_CR,C_STORE_RQ] [ORIGINAL\PRIMARY]
+     [STANDARD_CT,C_STORE_RQ] [ORIGINAL\PRIMARY\AXIAL]
+     [STANDARD_MR,C_STORE_RQ] [ORIGINAL\PRIMARY\OTHER]
+     [STANDARD_NM,C_STORE_RQ] [ORIGINAL\PRIMARY\STATIC\EMISSION]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [ORIGINAL\SECONDARY]
+     [STANDARD_US,C_STORE_RQ] [ORIGINAL\PRIMARY\MUSCULOSKELETAL\0001]
+     [STANDARD_US_MF,C_STORE_RQ] [ORIGINAL\PRIMARY\MUSCULOSKELETAL\0001]
+     [STUDY_ROOT_QR_FIND,C_FIND_RQ] [ORIGINAL\PRIMARY\ABDOMINAL\0001]
+     [STUDY_ROOT_QR_FIND,C_FIND_RSP] [ORIGINAL\PRIMARY\ABDOMINAL\0001]
+     [ALL,ALL] [\ORIGINAL\DERIVED\\PRIMARY\SECONDARY\\AXIAL\LOCALIZER\\MPR\PROJECTION IMAGE\T1 MAP\T2 MAP\DIFFUSION MAP\DENSITY MAP\PHASE MAP\VELOCITY MAP\IMAGE ADDITION\PHASE SUBTRACT\MODULUS SUBTRACT\OTHER\\ABDOMINAL\BREAST\CHEST\ ENDOCAVITARY\ENDORECTAL\ENDOVAGINAL\EPICARDIAL\FETAL HEART\GYNECOLOGY\INTRACARDIAC\INTRAOPERATIVE\INTRAVASCULAR\MUSCULOSKELETAL\NEONATAL HEAD\OBSTETRICAL\OPHTHALMIC\PEDIATRIC\PELVIC\RETROPERITONEAL\SCROTAL\SMALL PARTS\TEE\THYROID\TRANSCRANIAL\TTE\US BIOPSY\VASCULAR\\AXIAL\LONGITUDINAL\\]
+[0008,0014]
+          NAME    = Instance Creator UID
+          VR      = UI
+          VM      = 1
+     [ALL,ALL] [2.16.840.1.113669.11.0.0]
+[0008,0018]
+          NAME    = SOP Instance UID
+          VR      = UI
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+[0008,002A]
+          NAME    = Acquisition DateTime
+          VR      = DT
+          VM      = 1
+     [ALL,ALL] [2000]
+[0008,0050]
+          NAME    = Accession Number
+          VR      = SH
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [NULL]
+     [STANDARD_MR,C_STORE_RQ] [NULL]
+     [STANDARD_NM,C_STORE_RQ] [NULL]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [NULL]
+     [STANDARD_US,C_STORE_RQ] [NULL]
+     [ALL,ALL] [NULL]
+[0008,0052]
+          NAME    = Query/Retrieve Level
+          VR      = CS
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [IMAGE]
+     [STUDY_ROOT_QR_FIND,C_FIND_RQ] [STUDY]
+     [STUDY_ROOT_QR_FIND,C_FIND_RSP] [STUDY]
+     [STUDY_ROOT_QR_MOVE,C_MOVE_RQ] [STUDY]
+     [ALL,ALL] [PATIENT\STUDY\SERIES\IMAGE\FRAME]
+[0008,0054]
+          NAME    = Retrieve AE Title
+          VR      = AE
+          VM      = 1-n
+     [ALL,ALL] [MERGE_AE]
+[0008,0060]
+          NAME    = Modality
+          VR      = CS
+          VM      = 1
+     [STANDARD_CR,C_STORE_RQ] [CR]
+     [STANDARD_CT,C_STORE_RQ] [CT]
+     [STANDARD_HARDCOPY_COLOR,C_STORE_RQ] [HC]
+     [STANDARD_HARDCOPY_GRAYSCALE,C_STORE_RQ] [HC]
+     [STANDARD_MR,C_STORE_RQ] [MR]
+     [STANDARD_NM,C_STORE_RQ] [NM]
+     [STANDARD_RT_DOSE,C_STORE_RQ] [RTDOSE]
+     [STANDARD_RT_IMAGE,C_STORE_RQ] [RTIMAGE]
+     [STANDARD_RT_PLAN,C_STORE_RQ] [RTPLAN]
+     [STANDARD_RT_STRUCTURE,C_STORE_RQ] [RTSTRUCT]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [OT]
+     [STANDARD_US,C_STORE_RQ] [US]
+     [STANDARD_US_MF,C_STORE_RQ] [US]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [XA]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [XA]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [RF]
+     [ALL,ALL] [CR\CT\MR\NM\US\OT\BI\DG\ES\LS\PT\RG\TG\XA\RF\RTIMAGE\RTDOSE\RTSTRUCT\RTPLAN\RTRECORD\HC\DX\MG\IO\PX\GM\SM\XC\PR\AU\ECG\EPS\HD\SR\IVUS\OP\SMR\AR\KER\VA\SRF\OCT\LEN\OPV\OPM\OAM\RESP\KO\SEG\REG\OPT\BDUS\BMD\DOC\FID\PLAN\IOL\IVOCT\OSS]
+[0008,0064]
+          NAME    = Conversion Type
+          VR      = CS
+          VM      = 1
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [DI]
+     [ALL,ALL] [DV\DI\DF\WSD]
+[0008,0070]
+          NAME    = Manufacturer
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [MC3File]
+[0008,0080]
+          NAME    = Institution Name
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [INSTITUTION NAME]
+[0008,0090]
+          NAME    = Referring Physician's Name
+          VR      = PN
+          VM      = 1
+     [ALL,ALL] [Last^Physician^Dr.]
+[0008,0092]
+          NAME    = Referring Physician's Address
+          VR      = ST
+          VM      = 1
+     [ALL,ALL] [Physician Address]
+[0008,0094]
+          NAME    = Referring Physician's Telephone Numbers
+          VR      = SH
+          VM      = 1-n
+     [ALL,ALL] [(414)977-4000]
+[0008,0100]
+          NAME    = Code Value
+          VR      = SH
+          VM      = 1
+     [ALL,ALL] [Cvalue]
+[0008,0102]
+          NAME    = Coding Scheme Designator
+          VR      = SH
+          VM      = 1
+     [ALL,ALL] [99SDM]
+[0008,0104]
+          NAME    = Code Meaning
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Code Meaning]
+[0008,1010]
+          NAME    = Station Name
+          VR      = SH
+          VM      = 1
+     [ALL,ALL] [STATION]
+[0008,1032]
+          NAME    = Procedure Code Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+[0008,1040]
+          NAME    = Institutional Department Name
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Advanced Toolkit Department]
+[0008,1050]
+          NAME    = Performing Physician's Name
+          VR      = PN
+          VM      = 1-n
+     [ALL,ALL] [Physician^Performing^Dr.]
+[0008,1060]
+          NAME    = Name of Physician(s) Reading Study
+          VR      = PN
+          VM      = 1-n
+     [ALL,ALL] [Physician^Reading^Dr.]
+[0008,1090]
+          NAME    = Manufacturer's Model Name
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [MODEL NAME]
+[0008,1110]
+          NAME    = Referenced Study Sequence
+          VR      = SQ
+          VM      = 1
+     [ALL,ALL] [\\]
+[0008,1111]
+          NAME    = Referenced Performed Procedure Step Sequence
+          VR      = SQ
+          VM      = 1
+     [ALL,ALL] [\\]
+[0008,1115]
+          NAME    = Referenced Series Sequence
+          VR      = SQ
+          VM      = 1
+     [ALL,ALL] [\\]
+[0008,1120]
+          NAME    = Referenced Patient Sequence
+          VR      = SQ
+          VM      = 1
+     [ALL,ALL] [\\]
+[0008,113A]
+          NAME    = Referenced Waveform Sequence
+          VR      = SQ
+          VM      = 1
+     [ALL,ALL] [\\]
+[0008,1140]
+          NAME    = Referenced Image Sequence
+          VR      = SQ
+          VM      = 1
+     [ALL,ALL] [\\]
+[0008,114A]
+          NAME    = Referenced Instance Sequence
+          VR      = SQ
+          VM      = 1
+     [STANDARD_CR,C_STORE_RQ] [\\]
+     [STANDARD_CT,C_STORE_RQ] [\\]
+     [STANDARD_MR,C_STORE_RQ] [\\]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [\\]
+     [STANDARD_US,C_STORE_RQ] [\\]
+     [STANDARD_US_MF,C_STORE_RQ] [\\]
+     [STANDARD_US_MF_RETIRED,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [\\]
+     [ALL,ALL] [\\]
+[0008,1250]
+          NAME    = Related Series Sequence
+          VR      = SQ
+          VM      = 1
+     [ALL,ALL] [\\]
+[0008,2112]
+          NAME    = Source Image Sequence
+          VR      = SQ
+          VM      = 1
+     [ALL,ALL] [\\]
+[0008,2218]
+          NAME    = Anatomic Region Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STANDARD_US,C_STORE_RQ] [\\]
+     [STANDARD_US_MF,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [\\]
+[0008,2220]
+          NAME    = Anatomic Region Modifier Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STANDARD_NM,C_STORE_RQ] [\\]
+     [STANDARD_US,C_STORE_RQ] [\\]
+     [STANDARD_US_MF,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [\\]
+[0008,2228]
+          NAME    = Primary Anatomic Structure Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STANDARD_US,C_STORE_RQ] [\\]
+     [STANDARD_US_MF,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [\\]
+[0008,2230]
+          NAME    = Primary Anatomic Structure Modifier Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STANDARD_US,C_STORE_RQ] [\\]
+     [STANDARD_US_MF,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [\\]
+[0008,9205]
+          NAME    = Pixel Presentation
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [COLOR\MONOCHROME\MIXED]
+[0008,9206]
+          NAME    = Volumetric Properties
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [VOLUME\SAMPLED\DISTORTED\MIXED]
+[0008,9207]
+          NAME    = Volume Based Calculation Technique
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [MAX_IP\MIN_IP\VOLUME_RENDER\SURFACE_RENDER\MPR\CURVED_MPR\NONE\MIXED]
+[0010,0010]
+          NAME    = Patient's Name
+          VR      = PN
+          VM      = 1
+     [ALL,ALL] [Last^First]
+[0010,0020]
+          NAME    = Patient ID
+          VR      = LO
+          VM      = 1
+     [PATIENT_STUDY_ONLY_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_STUDY_ONLY_QR_FIND,C_FIND_RSP] [\\]
+     [ALL,ALL] [Patient ID]
+[0010,0021]
+          NAME    = Issuer of Patient ID
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Issuer ID]
+[0010,0022]
+          NAME    = Type of Patient ID
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [TEXT]
+[0010,0040]
+          NAME    = Patient's Sex
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\M\F\O\]
+[0010,1001]
+          NAME    = Other Patient Names
+          VR      = PN
+          VM      = 1-n
+     [ALL,ALL] [Other^Name]
+[0010,1005]
+          NAME    = Patient's Birth Name
+          VR      = PN
+          VM      = 1
+     [ALL,ALL] [Last^Birth]
+[0010,1010]
+          NAME    = Patient's Age
+          VR      = AS
+          VM      = 1
+     [ALL,ALL] [024Y]
+[0010,1030]
+          NAME    = Patient's Weight
+          VR      = DS
+          VM      = 1
+     [ALL,ALL] [180]
+[0010,1040]
+          NAME    = Patient's Address
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Patient Address]
+[0010,1060]
+          NAME    = Patient's Mother's Birth Name
+          VR      = PN
+          VM      = 1
+     [ALL,ALL] [Name^Birth]
+[0010,1080]
+          NAME    = Military Rank
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [\Private\Admiral\]
+[0010,1081]
+          NAME    = Branch of Service
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [\Marines\Navy\]
+[0010,2150]
+          NAME    = Country of Residence
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Milwaukee]
+[0010,2152]
+          NAME    = Region of Residence
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Southeastern Wisconsin]
+[0010,2154]
+          NAME    = Patient's Telephone Numbers
+          VR      = SH
+          VM      = 1-n
+     [ALL,ALL] [(414)977-4000]
+[0010,2160]
+          NAME    = Ethnic Group
+          VR      = SH
+          VM      = 1
+     [ALL,ALL] [Ethnic Group]
+[0010,2180]
+          NAME    = Occupation
+          VR      = SH
+          VM      = 1
+     [ALL,ALL] [Engineer]
+[0010,21A0]
+          NAME    = Smoking Status
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [YES\NO\UNKNOWN]
+[0010,21C0]
+          NAME    = Pregnancy Status
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [\0001\0002\0003\0004\]
+[0010,21F0]
+          NAME    = Patient's Religious Preference
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [\Religion\]
+[0010,2295]
+          NAME    = Breed Registration Number
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [RegNumber]
+[0010,4000]
+          NAME    = Patient Comments
+          VR      = LT
+          VM      = 1
+     [ALL,ALL] [\Patient Comments\]
+[0018,0010]
+          NAME    = Contrast/Bolus Agent
+          VR      = LO
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [NULL]
+     [STANDARD_MR,C_STORE_RQ] [NULL]
+     [STANDARD_US,C_STORE_RQ] [NULL]
+[0018,0012]
+          NAME    = Contrast/Bolus Agent Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+[0018,0014]
+          NAME    = Contrast/Bolus Administration Route Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+[0018,0015]
+          NAME    = Body Part Examined
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\SKULL\CSPINE\TSPINE\LSPINE\SSPINE\COCCYX\CHEST\CLAVICLE\BREAST\ABDOMEN\PELVIS\HIP\SHOULDER\ELBOW\KNEE\ANKLE\HAND\FOOT\EXTREMITY\LEGS\ATLANTOAXIAL\ATLANTOOCCIPITAL\BLADDER\CARPUS\CTSPINE\CHESTABDOMEN\TAIL\COLON\DIGIT\DISTALPHALANX\WHOLEBODY\ESOPHAGUS\FEMUR\FOREFETLOCK\HINDFETLOCK\FOREFOOT\FRONTALSINUS\HINDFOOT\HUMERUS\LSSPINE\JAW\METACARPUS\METATARSUS\NAVICULAR\FOREPASTERN\HINDPASTERN\PATELLA\RADIUSULNA\STIFLE\TARSUS\TLSPINE\TIBIAFIBULA\UGITRACT\URETHRA\URINARYTRACT\WING]
+[0018,0020]
+          NAME    = Scanning Sequence
+          VR      = CS
+          VM      = 1-n
+     [STANDARD_MR,C_STORE_RQ] [RM]
+     [ALL,ALL] [\SE\IR\GR\EP\RM\]
+[0018,0021]
+          NAME    = Sequence Variant
+          VR      = CS
+          VM      = 1-n
+     [STANDARD_MR,C_STORE_RQ] [NONE]
+[0018,0022]
+          NAME    = Scan Options
+          VR      = CS
+          VM      = 1-n
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [EKG]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STANDARD_CT,C_STORE_RQ] [NULL]
+     [STANDARD_MR,C_STORE_RQ] [NULL]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_RF,C_STORE_RQ] []
+     [ALL,ALL] [\PER\RG\CG\PPG\FC\PFF\PFP\SP\FS\]
+[0018,0023]
+          NAME    = MR Acquisition Type
+          VR      = CS
+          VM      = 1
+     [STANDARD_MR,C_STORE_RQ] [NULL]
+     [ALL,ALL] [\2D\3D\]
+[0018,0025]
+          NAME    = Angio Flag
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\Y\N\]
+[0018,0029]
+          NAME    = Intervention Drug Code Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STANDARD_US,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [\\]
+[0018,0031]
+          NAME    = Radiopharmaceutical
+          VR      = LO
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [NULL]
+[0018,0036]
+          NAME    = Intervention Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STANDARD_US,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [\\]
+[0018,0038]
+          NAME    = Intervention Status
+          VR      = CS
+          VM      = 1
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [PRE]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [PRE]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [PRE]
+     [ALL,ALL] [PRE\INTERMEDIATE\POST\NONE]
+[0018,0050]
+          NAME    = Slice Thickness
+          VR      = DS
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [8.0]
+     [STANDARD_MR,C_STORE_RQ] [8.0]
+     [STANDARD_NM,C_STORE_RQ] [8.0]
+     [ALL,ALL] [\8.0\]
+[0018,0060]
+          NAME    = KVP
+          VR      = DS
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [125]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [125]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [125]
+[0018,0070]
+          NAME    = Counts Accumulated
+          VR      = IS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [NULL]
+[0018,0071]
+          NAME    = Acquisition Termination Condition
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\CNTS\DENS\MANU\OVFL\TIME\TRIG\]
+[0018,0080]
+          NAME    = Repetition Time
+          VR      = DS
+          VM      = 1
+     [STANDARD_MR,C_STORE_RQ] [832.0]
+[0018,0081]
+          NAME    = Echo Time
+          VR      = DS
+          VM      = 1
+     [STANDARD_MR,C_STORE_RQ] [10.0]
+[0018,0084]
+          NAME    = Imaging Frequency
+          VR      = DS
+          VM      = 1
+     [STANDARD_MR,C_STORE_RQ] [63.5]
+[0018,0085]
+          NAME    = Imaged Nucleus
+          VR      = SH
+          VM      = 1
+     [STANDARD_MR,C_STORE_RQ] [1H]
+[0018,0086]
+          NAME    = Echo Number(s)
+          VR      = IS
+          VM      = 1-n
+     [STANDARD_MR,C_STORE_RQ] [1]
+[0018,0090]
+          NAME    = Data Collection Diameter
+          VR      = DS
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [1]
+[0018,0091]
+          NAME    = Echo Train Length
+          VR      = IS
+          VM      = 1
+     [STANDARD_MR,C_STORE_RQ] [NULL]
+[0018,1000]
+          NAME    = Device Serial Number
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Device Serial Number]
+[0018,1004]
+          NAME    = Plate ID
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Plate ID]
+[0018,1016]
+          NAME    = Secondary Capture Device Manufacturer
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Device Manufacturer]
+[0018,1018]
+          NAME    = Secondary Capture Device Manufacturer's Model Name
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Secondary Capture Model Name]
+[0018,1019]
+          NAME    = Secondary Capture Device Software Versions
+          VR      = LO
+          VM      = 1-n
+     [ALL,ALL] [1_0]
+[0018,1020]
+          NAME    = Software Version(s)
+          VR      = LO
+          VM      = 1-n
+     [ALL,ALL] [SOFTVERSION]
+[0018,1030]
+          NAME    = Protocol Name
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Protocol Name]
+[0018,1041]
+          NAME    = Contrast/Bolus Volume
+          VR      = DS
+          VM      = 1
+     [ALL,ALL] [1]
+[0018,1049]
+          NAME    = Contrast/Bolus Ingredient Concentration
+          VR      = DS
+          VM      = 1
+     [ALL,ALL] [1]
+[0018,1063]
+          NAME    = Frame Time
+          VR      = DS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [5]
+[0018,1070]
+          NAME    = Radiopharmaceutical Route
+          VR      = LO
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [NULL]
+[0018,1071]
+          NAME    = Radiopharmaceutical Volume
+          VR      = DS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [NULL]
+[0018,1074]
+          NAME    = Radionuclide Total Dose
+          VR      = DS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [NULL]
+[0018,1080]
+          NAME    = Beat Rejection Flag
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\Y\N\]
+[0018,1110]
+          NAME    = Distance Source to Detector
+          VR      = DS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [75]
+[0018,1130]
+          NAME    = Table Height
+          VR      = DS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [225]
+[0018,1131]
+          NAME    = Table Traverse
+          VR      = DS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [45]
+[0018,1140]
+          NAME    = Rotation Direction
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\CW\CC\]
+[0018,1142]
+          NAME    = Radial Position
+          VR      = DS
+          VM      = 1-n
+     [STANDARD_NM,C_STORE_RQ] [422]
+[0018,1143]
+          NAME    = Scan Arc
+          VR      = DS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [90]
+[0018,1144]
+          NAME    = Angular Step
+          VR      = DS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [90]
+[0018,1147]
+          NAME    = Field of View Shape
+          VR      = CS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [ROUND]
+     [STANDARD_PET,C_STORE_RQ] [CYLINDRICAL RING]
+     [STANDARD_PET_CURVE,C_STORE_RQ] [CYLINDRICAL RING]
+     [ALL,ALL] [\ROUND\RECTANGLE\HEXAGONAL\]
+[0018,1149]
+          NAME    = Field of View Dimension(s)
+          VR      = IS
+          VM      = 1-2
+     [STANDARD_NM,C_STORE_RQ] [375]
+[0018,1150]
+          NAME    = Exposure Time
+          VR      = IS
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [1]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [1]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [1]
+[0018,1151]
+          NAME    = X-Ray Tube Current
+          VR      = IS
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [1]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [100]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [100]
+[0018,1152]
+          NAME    = Exposure
+          VR      = IS
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [1]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] []
+     [STANDARD_XRAY_RF,C_STORE_RQ] []
+[0018,1155]
+          NAME    = Radiation Setting
+          VR      = CS
+          VM      = 1
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [SC]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [SC]
+[0018,1160]
+          NAME    = Filter Type
+          VR      = SH
+          VM      = 1
+     [ALL,ALL] [\STRIP\WEDGE\BUTTERFLY\MULTIPLE\NONE]
+[0018,1180]
+          NAME    = Collimator/Grid Name
+          VR      = SH
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [LEAP]
+[0018,1181]
+          NAME    = Collimator Type
+          VR      = CS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [SLNT]
+     [STANDARD_PET,C_STORE_RQ] [NONE]
+     [STANDARD_PET_CURVE,C_STORE_RQ] [NONE]
+     [ALL,ALL] [\PARA\PINH\FANB\CONE\SLNT\ASTG\]
+[0018,1182]
+          NAME    = Focal Distance
+          VR      = IS
+          VM      = 1-2
+     [STANDARD_NM,C_STORE_RQ] [0]
+[0018,1190]
+          NAME    = Focal Spot(s)
+          VR      = DS
+          VM      = 1-n
+     [STANDARD_CT,C_STORE_RQ] [1]
+[0018,1242]
+          NAME    = Actual Frame Duration
+          VR      = IS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [10]
+     [STANDARD_PET,C_STORE_RQ] [NULL]
+[0018,1301]
+          NAME    = Whole Body Technique
+          VR      = CS
+          VM      = 1-n
+     [ALL,ALL] [\1PS\2PS\PCN\DIV\MSP\]
+[0018,1312]
+          NAME    = In-plane Phase Encoding Direction
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\ROW\COL\]
+[0018,1315]
+          NAME    = Variable Flip Angle Flag
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\Y\N\]
+[0018,1402]
+          NAME    = Cassette Orientation
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\LANDSCAPE\PORTRAIT\]
+[0018,1403]
+          NAME    = Cassette Size
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [18CMX24CM\8INX10IN\24CMX30CM\10INX12IN\30CMX35CM\30CMX40CM\11INX14IN\35CMX35CM\35CMX43CM\]
+[0018,1510]
+          NAME    = Positioner Primary Angle
+          VR      = DS
+          VM      = 1
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [.1]
+[0018,1511]
+          NAME    = Positioner Secondary Angle
+          VR      = DS
+          VM      = 1
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [.1]
+[0018,1600]
+          NAME    = Shutter Shape
+          VR      = CS
+          VM      = 1-3
+     [ALL,ALL] [\RECTANGULAR\CIRCULAR\POLYGONAL\BITMAP]
+[0018,5000]
+          NAME    = Output Power
+          VR      = SH
+          VM      = 1-n
+     [STANDARD_US,C_STORE_RQ] [24dB]
+[0018,5010]
+          NAME    = Transducer Data
+          VR      = LO
+          VM      = 1-n
+     [STANDARD_US,C_STORE_RQ] [F-disk\F-disk\F-disk]
+[0018,5012]
+          NAME    = Focus Depth
+          VR      = DS
+          VM      = 1
+     [STANDARD_US,C_STORE_RQ] [4.5]
+[0018,5024]
+          NAME    = Bone Thermal Index
+          VR      = DS
+          VM      = 1
+     [STANDARD_US,C_STORE_RQ] [NULL]
+[0018,5026]
+          NAME    = Cranial Thermal Index
+          VR      = DS
+          VM      = 1
+     [STANDARD_US,C_STORE_RQ] [NULL]
+[0018,5027]
+          NAME    = Soft Tissue Thermal Index
+          VR      = DS
+          VM      = 1
+     [STANDARD_US,C_STORE_RQ] [NULL]
+[0018,5028]
+          NAME    = Soft Tissue-focus Thermal Index
+          VR      = DS
+          VM      = 1
+     [STANDARD_US,C_STORE_RQ] [NULL]
+[0018,5029]
+          NAME    = Soft Tissue-surface Thermal Index
+          VR      = DS
+          VM      = 1
+     [STANDARD_US,C_STORE_RQ] [NULL]
+[0018,5100]
+          NAME    = Patient Position
+          VR      = CS
+          VM      = 1
+     [STANDARD_CR,C_STORE_RQ] [\\]
+     [STANDARD_CT,C_STORE_RQ] [HFS]
+     [STANDARD_CURVE,C_STORE_RQ] [\\]
+     [STANDARD_HARDCOPY_COLOR,C_STORE_RQ] [\\]
+     [STANDARD_HARDCOPY_GRAYSCALE,C_STORE_RQ] [\\]
+     [STANDARD_MODALITY_LUT,C_STORE_RQ] [\\]
+     [STANDARD_MR,C_STORE_RQ] [HFS]
+     [STANDARD_OVERLAY,C_STORE_RQ] [\\]
+     [STANDARD_US,C_STORE_RQ] [\\]
+     [STANDARD_US_MF,C_STORE_RQ] [\\]
+     [STANDARD_US_MF_RETIRED,C_STORE_RQ] [\\]
+     [STANDARD_US_RETIRED,C_STORE_RQ] [\\]
+     [STANDARD_VOI_LUT,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] []
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [\\]
+     [STANDARD_PET,C_STORE_RQ] [\\]
+     [STANDARD_PET_CURVE,C_STORE_RQ] [\\]
+     [STANDARD_PRINT_STORAGE,C_STORE_RQ] [\\]
+     [ALL,ALL] [\HFP\HFS\HFDR\HFDL\FFP\FFS\FFDR\FFDL\]
+[0018,5101]
+          NAME    = View Position
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\AP\PA\LL\RL\RLD\LLD\RLO\LLO\]
+[0018,6012]
+          NAME    = Region Spatial Format
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1\2\3\4\5]
+[0018,6014]
+          NAME    = Region Data Type
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1\2\3\4\5\6\7\8\9\10\11\12]
+[0018,6016]
+          NAME    = Region Flags
+          VR      = UL
+          VM      = 1
+     [ALL,ALL] [1\0]
+[0018,6018]
+          NAME    = Region Location Min X0
+          VR      = UL
+          VM      = 1
+     [ALL,ALL] [150]
+[0018,601A]
+          NAME    = Region Location Min Y0
+          VR      = UL
+          VM      = 1
+     [ALL,ALL] [150]
+[0018,601C]
+          NAME    = Region Location Max X1
+          VR      = UL
+          VM      = 1
+     [ALL,ALL] [1150]
+[0018,601E]
+          NAME    = Region Location Max Y1
+          VR      = UL
+          VM      = 1
+     [ALL,ALL] [1150]
+[0018,6024]
+          NAME    = Physical Units X Direction
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [2]
+[0018,6026]
+          NAME    = Physical Units Y Direction
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [2]
+[0018,602C]
+          NAME    = Physical Delta X
+          VR      = FD
+          VM      = 1
+     [ALL,ALL] [0.15]
+[0018,602E]
+          NAME    = Physical Delta Y
+          VR      = FD
+          VM      = 1
+     [ALL,ALL] [2.0]
+[0018,6031]
+          NAME    = Transducer Type
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\SECTOR_PHASED\SECTOR_MECH\SECTOR_ANNULAR\LINEAR\CURVED LINEAR\SINGLE CRYSTAL\SPLIT XTAL CWD\IV_PHASED\IV_ROT XTAL\IV_ROT MIRROR\ENDOCAV_PA\ENDOCAV_MECH\ENDOCAV_CLA\ENDOCAV_AA\ENDOCAV_LINEAR\VECTOR_PHASED\]
+[0018,6044]
+          NAME    = Pixel Component Organization
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1\0]
+[0018,6046]
+          NAME    = Pixel Component Mask
+          VR      = UL
+          VM      = 1
+     [ALL,ALL] [1]
+[0018,604C]
+          NAME    = Pixel Component Physical Units
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [2]
+[0018,604E]
+          NAME    = Pixel Component Data Type
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1]
+[0018,6050]
+          NAME    = Number of Table Break Points
+          VR      = UL
+          VM      = 1
+     [ALL,ALL] [1]
+[0018,6052]
+          NAME    = Table of X Break Points
+          VR      = UL
+          VM      = 1-n
+     [ALL,ALL] [1]
+[0018,6054]
+          NAME    = Table of Y Break Points
+          VR      = FD
+          VM      = 1-n
+     [ALL,ALL] [1]
+[0018,7004]
+          NAME    = Detector Type
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [DIRECT\SCINTILLATOR\STORAGE\FILM\CCD\CMOS]
+[0018,7050]
+          NAME    = Filter Material
+          VR      = CS
+          VM      = 1-n
+     [ALL,ALL] [\MOLYBDENUM\ALUMINUM\COPPER\RHODIUM\NIOBIUM\EUROPIUM\LEAD]
+[0018,9330]
+          NAME    = X-Ray Tube Current in mA
+          VR      = FD
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [1]
+[0018,9337]
+          NAME    = Contrast/Bolus Agent Number
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1]
+[0018,A001]
+          NAME    = Contributing Equipment Sequence
+          VR      = SQ
+          VM      = 1
+     [ALL,ALL] [\\]
+[0020,000D]
+          NAME    = Study Instance UID
+          VR      = UI
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+[0020,000E]
+          NAME    = Series Instance UID
+          VR      = UI
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STUDY_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [STUDY_ROOT_QR_FIND,C_FIND_RSP] [\\]
+[0020,0010]
+          NAME    = Study ID
+          VR      = SH
+          VM      = 1
+     [ALL,ALL] [Study ID]
+[0020,0011]
+          NAME    = Series Number
+          VR      = IS
+          VM      = 1
+     [ALL,ALL] [\1\2\3\]
+[0020,0012]
+          NAME    = Acquisition Number
+          VR      = IS
+          VM      = 1
+     [ALL,ALL] [\1\2\3\]
+[0020,0020]
+          NAME    = Patient Orientation
+          VR      = CS
+          VM      = 2
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [A\P]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [A\P]
+     [STANDARD_CR,C_STORE_RQ] [L\P]
+     [STANDARD_CT,C_STORE_RQ] [L\P]
+     [STANDARD_MR,C_STORE_RQ] [L\P]
+     [STANDARD_NM,C_STORE_RQ] [L\P]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [L\P]
+     [STANDARD_US,C_STORE_RQ] [L\P]
+     [STANDARD_US_MF,C_STORE_RQ] [L\P]
+     [STANDARD_US_MF_RETIRED,C_STORE_RQ] [\\]
+     [STANDARD_US_RETIRED,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [L\P]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [L\P]
+     [STANDARD_XRAY_RF,C_STORE_RQ] []
+     [STUDY_ROOT_QR_FIND,C_FIND_RQ] [L\P]
+     [STUDY_ROOT_QR_FIND,C_FIND_RSP] [L\P]
+[0020,0032]
+          NAME    = Image Position (Patient)
+          VR      = DS
+          VM      = 3
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [0\0\0]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [0\0\0]
+     [STANDARD_CT,C_STORE_RQ] [0\0\0]
+     [STANDARD_MR,C_STORE_RQ] [0\0\0]
+     [STANDARD_NM,C_STORE_RQ] [0\0\0]
+     [STUDY_ROOT_QR_FIND,C_FIND_RQ] [1\1\1]
+     [STUDY_ROOT_QR_FIND,C_FIND_RSP] [1\1\1]
+     [STANDARD_PET,C_STORE_RQ] [1\1\1]
+[0020,0060]
+          NAME    = Laterality
+          VR      = CS
+          VM      = 1
+     [STANDARD_CR,C_STORE_RQ] [\\]
+     [STANDARD_CT,C_STORE_RQ] [\\]
+     [STANDARD_CURVE,C_STORE_RQ] [\\]
+     [STANDARD_MODALITY_LUT,C_STORE_RQ] [\\]
+     [STANDARD_MR,C_STORE_RQ] [\\]
+     [STANDARD_NM,C_STORE_RQ] [\\]
+     [STANDARD_OVERLAY,C_STORE_RQ] [\\]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [\\]
+     [STANDARD_US,C_STORE_RQ] [\\]
+     [STANDARD_US_MF,C_STORE_RQ] [\\]
+     [STANDARD_US_MF_RETIRED,C_STORE_RQ] [\\]
+     [STANDARD_US_RETIRED,C_STORE_RQ] [\\]
+     [STANDARD_VOI_LUT,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [\\]
+     [STANDARD_HARDCOPY_COLOR,C_STORE_RQ] [\\]
+     [STANDARD_HARDCOPY_GRAYSCALE,C_STORE_RQ] [\\]
+[0020,1040]
+          NAME    = Position Reference Indicator
+          VR      = LO
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [NULL]
+     [STANDARD_MR,C_STORE_RQ] [NULL]
+     [STANDARD_NM,C_STORE_RQ] [NULL]
+     [STANDARD_US,C_STORE_RQ] [NULL]
+     [STANDARD_PET,C_STORE_RQ] [NULL]
+     [ALL,ALL] [POSITION INDICATOR]
+[0028,0002]
+          NAME    = Samples per Pixel
+          VR      = US
+          VM      = 1
+     [STANDARD_HARDCOPY_COLOR,C_STORE_RQ] [3]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RQ] [3]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RSP] [3]
+     [ALL,ALL] [1]
+[0028,0004]
+          NAME    = Photometric Interpretation
+          VR      = CS
+          VM      = 1
+     [STANDARD_HARDCOPY_COLOR,C_STORE_RQ] [RGB]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RQ] [RGB]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RSP] [RGB]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [MONOCHROME2]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [MONOCHROME2]
+     [STANDARD_CT,C_STORE_RQ] [MONOCHROME1]
+     [STANDARD_MR,C_STORE_RQ] [MONOCHROME1]
+     [STANDARD_NM,C_STORE_RQ] [PALETTE COLOR]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [MONOCHROME1]
+     [STANDARD_US,C_STORE_RQ] [RGB]
+     [STANDARD_US_MF,C_STORE_RQ] [MONOCHROME2]
+     [STANDARD_US_MF_RETIRED,C_STORE_RQ] [MONOCHROME2]
+     [STANDARD_US_RETIRED,C_STORE_RQ] [MONOCHROME2]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [MONOCHROME2]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [MONOCHROME2]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [MONOCHROME2]
+     [STUDY_ROOT_QR_FIND,C_FIND_RQ] [RGB]
+     [STUDY_ROOT_QR_FIND,C_FIND_RSP] [RGB]
+     [STANDARD_PET,C_STORE_RQ] [MONOCHROME2]
+     [ALL,ALL] [MONOCHROME1\MONOCHROME2\PALETTE\COLOR\RGB\HSV\ARGB\CMYK]
+[0028,0006]
+          NAME    = Planar Configuration
+          VR      = US
+          VM      = 1
+     [STANDARD_HARDCOPY_COLOR,C_STORE_RQ] [1]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RQ] [1]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RSP] [1]
+     [STANDARD_CR,C_STORE_RQ] [\\]
+     [STANDARD_CT,C_STORE_RQ] [\\]
+     [STANDARD_MR,C_STORE_RQ] [\\]
+     [STANDARD_NM,C_STORE_RQ] [\\]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [\\]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [\\]
+     [STANDARD_PET,C_STORE_RQ] [\\]
+     [ALL,ALL] [\0000\0001\]
+[0028,0008]
+          NAME    = Number of Frames
+          VR      = IS
+          VM      = 1
+     [STANDARD_NM,C_STORE_RQ] [1]
+     [STANDARD_US_MF,C_STORE_RQ] [1]
+[0028,0009]
+          NAME    = Frame Increment Pointer
+          VR      = AT
+          VM      = 1-n
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [1577061]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [1577061]
+     [STANDARD_NM,C_STORE_RQ] [5505040]
+     [STANDARD_US,C_STORE_RQ] [1577059]
+     [STANDARD_US_MF,C_STORE_RQ] [1577059]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [1577059]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [1577059]
+     [STUDY_ROOT_QR_FIND,C_FIND_RQ] [1577059]
+     [STUDY_ROOT_QR_FIND,C_FIND_RSP] [1577059]
+[0028,0010]
+          NAME    = Rows
+          VR      = US
+          VM      = 1
+     [STANDARD_HARDCOPY_COLOR,C_STORE_RQ] [256]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RQ] [128]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RSP] [128]
+     [BASIC_GRAYSCALE_IMAGE_BOX,N_SET_RQ] [128]
+     [BASIC_GRAYSCALE_IMAGE_BOX,N_SET_RSP] [128]
+     [STANDARD_CR,C_STORE_RQ] [1024]
+     [STANDARD_CT,C_STORE_RQ] [512]
+     [STANDARD_MR,C_STORE_RQ] [256]
+     [STANDARD_NM,C_STORE_RQ] [412]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [412]
+     [STANDARD_US,C_STORE_RQ] [640]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [1024]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [1024]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [1024]
+     [STANDARD_HARDCOPY_GRAYSCALE,C_STORE_RQ] [256]
+     [STANDARD_PET,C_STORE_RQ] [512]
+     [ALL,ALL] [512]
+[0028,0011]
+          NAME    = Columns
+          VR      = US
+          VM      = 1
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RQ] [128]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RSP] [128]
+     [BASIC_GRAYSCALE_IMAGE_BOX,N_SET_RQ] [128]
+     [BASIC_GRAYSCALE_IMAGE_BOX,N_SET_RSP] [128]
+     [STANDARD_CR,C_STORE_RQ] [1024]
+     [STANDARD_CT,C_STORE_RQ] [512]
+     [STANDARD_MR,C_STORE_RQ] [256]
+     [STANDARD_NM,C_STORE_RQ] [512]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [128]
+     [STANDARD_US,C_STORE_RQ] [480]
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [1024]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [1024]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [1024]
+     [STANDARD_HARDCOPY_COLOR,C_STORE_RQ] [256]
+     [STANDARD_HARDCOPY_GRAYSCALE,C_STORE_RQ] [256]
+     [STANDARD_PET,C_STORE_RQ] [512]
+     [ALL,ALL] [512]
+[0028,0030]
+          NAME    = Pixel Spacing
+          VR      = DS
+          VM      = 2
+     [STANDARD_CT,C_STORE_RQ] [0.38\0.38]
+     [STANDARD_MR,C_STORE_RQ] [0.38\0.38]
+     [STANDARD_NM,C_STORE_RQ] [0.38\0.38]
+     [STANDARD_PET,C_STORE_RQ] [1.00\1.00]
+[0028,0032]
+          NAME    = Zoom Center
+          VR      = DS
+          VM      = 2
+     [STANDARD_NM,C_STORE_RQ] [4\4]
+[0028,0034]
+          NAME    = Pixel Aspect Ratio
+          VR      = IS
+          VM      = 2
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RQ] [1\1]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RSP] [1\1]
+     [BASIC_GRAYSCALE_IMAGE_BOX,N_SET_RQ] [1\1]
+     [BASIC_GRAYSCALE_IMAGE_BOX,N_SET_RSP] [1\1]
+[0028,0051]
+          NAME    = Corrected Image
+          VR      = CS
+          VM      = 1-n
+     [STANDARD_PET,C_STORE_RQ] [NULL]
+     [STANDARD_PET_CURVE,C_STORE_RQ] [NULL]
+     [ALL,ALL] [\UNIF\COR\NCO\DECY\ATTN\SCAT\DTIM\]
+[0028,0100]
+          NAME    = Bits Allocated
+          VR      = US
+          VM      = 1
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RQ] [8]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RSP] [8]
+     [STANDARD_HARDCOPY_COLOR,C_STORE_RQ] [8]
+     [ALL,ALL] [16]
+[0028,0101]
+          NAME    = Bits Stored
+          VR      = US
+          VM      = 1
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RQ] [8]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RSP] [8]
+     [STANDARD_NM,C_STORE_RQ] [8]
+     [STANDARD_HARDCOPY_COLOR,C_STORE_RQ] [8]
+     [STANDARD_PET,C_STORE_RQ] [16]
+     [ALL,ALL] [12]
+[0028,0102]
+          NAME    = High Bit
+          VR      = US
+          VM      = 1
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RQ] [7]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RSP] [7]
+     [STANDARD_NM,C_STORE_RQ] [7]
+     [STANDARD_HARDCOPY_COLOR,C_STORE_RQ] [7]
+     [ALL,ALL] [11]
+[0028,0103]
+          NAME    = Pixel Representation
+          VR      = US
+          VM      = 1
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RQ] [0]
+     [BASIC_COLOR_IMAGE_BOX,N_SET_RSP] [0]
+     [ALL,ALL] [0]
+[0028,0301]
+          NAME    = Burned In Annotation
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [YES\NO]
+[0028,1040]
+          NAME    = Pixel Intensity Relationship
+          VR      = CS
+          VM      = 1
+     [STANDARD_XRAY_ANGIO,C_STORE_RQ] [LIN]
+     [STANDARD_XRAY_ANGIO_BIPLANE,C_STORE_RQ] [LIN]
+     [STANDARD_XRAY_RF,C_STORE_RQ] [LIN]
+[0028,1050]
+          NAME    = Window Center
+          VR      = DS
+          VM      = 1-n
+     [STANDARD_CT,C_STORE_RQ] [2047]
+     [STANDARD_MR,C_STORE_RQ] [2047]
+     [STANDARD_NM,C_STORE_RQ] [2047]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [2047]
+     [STANDARD_US,C_STORE_RQ] [1220]
+     [VOI_LUT_BOX,N_CREATE_RSP] [2047]
+[0028,1051]
+          NAME    = Window Width
+          VR      = DS
+          VM      = 1-n
+     [STANDARD_CT,C_STORE_RQ] [2095]
+     [STANDARD_MR,C_STORE_RQ] [4095]
+     [STANDARD_NM,C_STORE_RQ] [4095]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [4095]
+     [STANDARD_US,C_STORE_RQ] [3580]
+     [VOI_LUT_BOX,N_CREATE_RSP] [4095]
+[0028,1052]
+          NAME    = Rescale Intercept
+          VR      = DS
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [0]
+     [STANDARD_MODALITY_LUT,C_STORE_RQ] [\\]
+[0028,1053]
+          NAME    = Rescale Slope
+          VR      = DS
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [1]
+     [STANDARD_MODALITY_LUT,C_STORE_RQ] [\\]
+[0028,1054]
+          NAME    = Rescale Type
+          VR      = LO
+          VM      = 1
+     [STANDARD_MODALITY_LUT,C_STORE_RQ] [\\]
+[0028,1055]
+          NAME    = Window Center Width Explanation
+          VR      = LO
+          VM      = 1-n
+     [VOI_LUT_BOX,N_CREATE_RSP] [Window width & center explanation]
+[0028,3002]
+          NAME    = LUT Descriptor
+          VR      = US
+          VM      = 3
+     [VOI_LUT_BOX,N_CREATE_RQ] [0\0\16]
+     [VOI_LUT_BOX,N_CREATE_RSP] [0\0\16]
+     [VOI_LUT_BOX,N_SET_RQ] [0\0\16]
+     [VOI_LUT_BOX,N_SET_RSP] [0\0\16]
+[0028,3006]
+          NAME    = LUT Data
+          VR      = US
+          VM      = 1-n
+     [VOI_LUT_BOX,N_CREATE_RQ] [0\0\0\0]
+     [VOI_LUT_BOX,N_CREATE_RSP] [0\0\0\0]
+     [VOI_LUT_BOX,N_SET_RQ] [0\0\0]
+     [VOI_LUT_BOX,N_SET_RSP] [0\0\0\0]
+[0028,6100]
+          NAME    = Mask Subtraction Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+[0032,1060]
+          NAME    = Requested Procedure Description
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [PROCEDURE DESCRIPTION]
+[0038,0008]
+          NAME    = Visit Status ID
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\CREATED\SCHEDULED\ADMITTED\DISCHARGED\]
+[0038,0050]
+          NAME    = Special Needs
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Special Needs]
+[0038,0300]
+          NAME    = Current Patient Location
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Patient Location]
+[0038,0400]
+          NAME    = Patient's Institution Residence
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Institution Residence]
+[0038,0500]
+          NAME    = Patient State
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Patient State]
+[003A,0301]
+          NAME    = Channel Identification Code
+          VR      = IS
+          VM      = 1
+     [ALL,ALL] [\1\2\3\]
+[003A,0302]
+          NAME    = Channel Mode
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [MONO\STEREO]
+[0040,0009]
+          NAME    = Scheduled Procedure Step ID
+          VR      = SH
+          VM      = 1
+     [ALL,ALL] [SPSID]
+[0040,0551]
+          NAME    = Specimen Identifier
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [SPECIMEN IDENTIFIER]
+[0040,1001]
+          NAME    = Requested Procedure ID
+          VR      = SH
+          VM      = 1
+     [ALL,ALL] [ReqPID]
+[0040,2016]
+          NAME    = Placer Order Number / Imaging Service Request
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [PLACER ORDER NUMBER]
+[0040,2017]
+          NAME    = Filler Order Number / Imaging Service Request
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [FILLER ORDER NUMBER]
+[0040,A027]
+          NAME    = Verifying Organization
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [VERIFYING ORGANIZATION]
+[0040,A030]
+          NAME    = Verification DateTime
+          VR      = DT
+          VM      = 1
+     [ALL,ALL] [2000]
+[0040,A040]
+          NAME    = Value Type
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [DATE\DATETIME\TIME\PNAME\UIDREF\TEXT\CODE\NUMERIC\NUM\COMPOSITE\IMAGE\WAVEFORM\SCOORD\TCOORD\CONTAINER\SCOORD3D]
+[0040,A075]
+          NAME    = Verifying Observer Name
+          VR      = PN
+          VM      = 1
+     [ALL,ALL] [OBSERVER^NAME]
+[0040,A080]
+          NAME    = Participation Type
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [SOURCE\ENT\ATTEST]
+[0040,A082]
+          NAME    = Participation DateTime
+          VR      = DT
+          VM      = 1
+     [ALL,ALL] [2000]
+[0040,A084]
+          NAME    = Observer Type
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [PSN\DEV]
+[0040,A121]
+          NAME    = Date
+          VR      = DA
+          VM      = 1
+     [ALL,ALL] [20001231]
+[0040,A122]
+          NAME    = Time
+          VR      = TM
+          VM      = 1
+     [ALL,ALL] [054555]
+[0040,A390]
+          NAME    = HL7 Structured Document Reference Sequence
+          VR      = SQ
+          VM      = 1
+     [ALL,ALL] [\\]
+[0040,A491]
+          NAME    = Completion Flag
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [PARTIAL\COMPLETE]
+[0040,A493]
+          NAME    = Verification Flag
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [UNVERIFIED\VERIFIED]
+[0042,0010]
+          NAME    = Document Title
+          VR      = ST
+          VM      = 1
+     [ALL,ALL] [TITLE]
+[0042,0012]
+          NAME    = MIME Type of Encapsulated Document
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [TYPE]
+[0050,0010]
+          NAME    = Device Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+[0054,0010]
+          NAME    = Energy Window Vector
+          VR      = US
+          VM      = 1-n
+     [STANDARD_NM,C_STORE_RQ] [1]
+[0054,0011]
+          NAME    = Number of Energy Windows
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1]
+[0054,0012]
+          NAME    = Energy Window Information Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STANDARD_NM,C_STORE_RQ] [NULL]
+[0054,0016]
+          NAME    = Radiopharmaceutical Information Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STANDARD_PET,C_STORE_RQ] [NULL]
+     [STANDARD_PET_CURVE,C_STORE_RQ] [NULL]
+[0054,0021]
+          NAME    = Number of Detectors
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1]
+[0054,0022]
+          NAME    = Detector Information Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+[0054,0032]
+          NAME    = Phase Information Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+[0054,0033]
+          NAME    = Number of Frames in Phase
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1]
+[0054,0036]
+          NAME    = Phase Delay
+          VR      = IS
+          VM      = 1
+     [ALL,ALL] [1]
+[0054,0038]
+          NAME    = Pause Between Frames
+          VR      = IS
+          VM      = 1
+     [ALL,ALL] [2]
+[0054,0052]
+          NAME    = Rotation Information Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+[0054,0053]
+          NAME    = Number of Frames in Rotation
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1]
+[0054,0062]
+          NAME    = Gated Information Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+[0054,0081]
+          NAME    = Number of Slices
+          VR      = US
+          VM      = 1
+     [STANDARD_PET,C_STORE_RQ] [10]
+     [STANDARD_PET_CURVE,C_STORE_RQ] [10]
+[0054,0200]
+          NAME    = Start Angle
+          VR      = DS
+          VM      = 1
+     [ALL,ALL] [20.0]
+[0054,0308]
+          NAME    = Energy Window Number
+          VR      = US
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STANDARD_NM,C_STORE_RQ] [1]
+[0054,0410]
+          NAME    = Patient Orientation Code Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STANDARD_NM,C_STORE_RQ] [NULL]
+     [STANDARD_PET,C_STORE_RQ] [NULL]
+[0054,0414]
+          NAME    = Patient Gantry Relationship Code Sequence
+          VR      = SQ
+          VM      = 1
+     [PATIENT_ROOT_QR_FIND,C_FIND_RQ] [\\]
+     [PATIENT_ROOT_QR_FIND,C_FIND_RSP] [\\]
+     [STANDARD_NM,C_STORE_RQ] [NULL]
+     [STANDARD_PET,C_STORE_RQ] [NULL]
+[0054,1000]
+          NAME    = Series Type
+          VR      = CS
+          VM      = 2
+     [STANDARD_PET,C_STORE_RQ] [WHOLE BODY\IMAGE]
+     [STANDARD_PET_CURVE,C_STORE_RQ] [WHOLE BODY\IMAGE]
+[0054,1001]
+          NAME    = Units
+          VR      = CS
+          VM      = 1
+     [STANDARD_PET,C_STORE_RQ] [NONE]
+     [STANDARD_PET_CURVE,C_STORE_RQ] [NONE]
+     [STANDARD_PET_CURVE,C_STORE_RQ] [NONE]
+[0054,1002]
+          NAME    = Counts Source
+          VR      = CS
+          VM      = 1
+     [STANDARD_PET,C_STORE_RQ] [EMISSION]
+     [STANDARD_PET_CURVE,C_STORE_RQ] [EMISSION]
+[0054,1102]
+          NAME    = Decay Correction
+          VR      = CS
+          VM      = 1
+     [STANDARD_PET,C_STORE_RQ] [NONE]
+     [STANDARD_PET_CURVE,C_STORE_RQ] [NONE]
+[0054,1300]
+          NAME    = Frame Reference Time
+          VR      = DS
+          VM      = 1
+     [STANDARD_PET,C_STORE_RQ] [1.00]
+[0054,1330]
+          NAME    = Image Index
+          VR      = US
+          VM      = 1
+     [STANDARD_PET,C_STORE_RQ] [1]
+[0064,0003]
+          NAME    = Source Frame of Reference UID
+          VR      = UI
+          VM      = 1
+     [ALL,ALL] [111]
+[0070,0080]
+          NAME    = Content Label
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [LABEL]
+[0070,0081]
+          NAME    = Content Description
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [CONTENT DESCRIPTION]
+[0070,0084]
+          NAME    = Content Creator's Name
+          VR      = PN
+          VM      = 1
+     [ALL,ALL] [LAST^FIRST]
+[0070,031A]
+          NAME    = Fiducial UID
+          VR      = UI
+          VM      = 1
+     [ALL,ALL] [111]
+[0400,0005]
+          NAME    = MAC ID Number
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [123]
+[0400,0010]
+          NAME    = MAC Calculation Transfer Syntax UID
+          VR      = UI
+          VM      = 1
+     [ALL,ALL] [321]
+[0400,0015]
+          NAME    = MAC Algorithm
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [RIPEMD160\MD5\SHA1]
+[0400,0020]
+          NAME    = Data Elements Signed
+          VR      = AT
+          VM      = 1-n
+     [ALL,ALL] [\04000100\04000020]
+[0400,0100]
+          NAME    = Digital Signature UID
+          VR      = UI
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [1]
+     [STANDARD_MR,C_STORE_RQ] [1]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [1]
+     [STANDARD_US,C_STORE_RQ] [1]
+     [STANDARD_US_MF,C_STORE_RQ] [1]
+     [STANDARD_US_MF_RETIRED,C_STORE_RQ] [1]
+     [STANDARD_US_RETIRED,C_STORE_RQ] [1]
+     [STANDARD_XRAY_AGNIO,C_STORE_RQ] [1]
+     [STANDARD_XRAY_AGNIO_BIPLANE,C_STORE_RQ] [1]
+     [STANDARD_CR,C_STORE_RQ] [1]
+[0400,0105]
+          NAME    = Digital Signature DateTime
+          VR      = DT
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [2008]
+     [STANDARD_MR,C_STORE_RQ] [2008]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [2008]
+     [STANDARD_US,C_STORE_RQ] [2008]
+     [STANDARD_US_MF,C_STORE_RQ] [2008]
+     [STANDARD_US_MF_RETIRED,C_STORE_RQ] [2008]
+     [STANDARD_US_RETIRED,C_STORE_RQ] [2008]
+     [STANDARD_XRAY_AGNIO,C_STORE_RQ] [2008]
+     [STANDARD_XRAY_AGNIO_BIPLANE,C_STORE_RQ] [2008]
+     [STANDARD_CR,C_STORE_RQ] [2008]
+[0400,0110]
+          NAME    = Certificate Type
+          VR      = CS
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [X509_1993_SIG]
+     [STANDARD_MR,C_STORE_RQ] [X509_1993_SIG]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [X509_1993_SIG]
+     [STANDARD_US,C_STORE_RQ] [X509_1993_SIG]
+     [STANDARD_US_MF,C_STORE_RQ] [X509_1993_SIG]
+     [STANDARD_US_MF_RETIRED,C_STORE_RQ] [X509_1993_SIG]
+     [STANDARD_US_RETIRED,C_STORE_RQ] [X509_1993_SIG]
+     [STANDARD_XRAY_AGNIO,C_STORE_RQ] [X509_1993_SIG]
+     [STANDARD_XRAY_AGNIO_BIPLANE,C_STORE_RQ] [X509_1993_SIG]
+     [STANDARD_CR,C_STORE_RQ] [X509_1993_SIG]
+[0400,0115]
+          NAME    = Certificate of Signer
+          VR      = OB
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [0]
+     [STANDARD_MR,C_STORE_RQ] [0]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [0]
+     [STANDARD_US,C_STORE_RQ] [0]
+     [STANDARD_US_MF,C_STORE_RQ] [0]
+     [STANDARD_US_MF_RETIRED,C_STORE_RQ] [0]
+     [STANDARD_US_RETIRED,C_STORE_RQ] [0]
+     [STANDARD_XRAY_AGNIO,C_STORE_RQ] [0]
+     [STANDARD_XRAY_AGNIO_BIPLANE,C_STORE_RQ] [0]
+     [STANDARD_CR,C_STORE_RQ] [0]
+[0400,0120]
+          NAME    = Signature
+          VR      = OB
+          VM      = 1
+     [STANDARD_CT,C_STORE_RQ] [0]
+     [STANDARD_CR,C_STORE_RQ] [0]
+     [STANDARD_MR,C_STORE_RQ] [0]
+     [STANDARD_SEC_CAPTURE,C_STORE_RQ] [0]
+     [STANDARD_US,C_STORE_RQ] [0]
+     [STANDARD_US_MF,C_STORE_RQ] [0]
+     [STANDARD_US_MF_RETIRED,C_STORE_RQ] [0]
+     [STANDARD_US_RETIRED,C_STORE_RQ] [0]
+     [STANDARD_XRAY_AGNIO,C_STORE_RQ] [0]
+     [STANDARD_XRAY_AGNIO_BIPLANE,C_STORE_RQ] [0]
+[0400,0561]
+          NAME    = Original Attributes Sequence
+          VR      = SQ
+          VM      = 1
+     [STANDARD_CR,C_STORE_RQ] [\\]
+     [ALL,ALL] [\\]
+[2000,0010]
+          NAME    = Number of Copies
+          VR      = IS
+          VM      = 1
+     [ALL,ALL] [1]
+[2000,0020]
+          NAME    = Print Priority
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\HIGH\MED\LOW\]
+[2000,0030]
+          NAME    = Medium Type
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\PAPER\CLEAR FILM\BLUE FILM\]
+[2000,0040]
+          NAME    = Film Destination
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\MAGAZINE\PROCESSOR\]
+[2010,0010]
+          NAME    = Image Display Format
+          VR      = ST
+          VM      = 1
+     [BASIC_FILM_BOX,N_CREATE_RQ] [STANDARD\]
+     [BASIC_FILM_BOX,N_CREATE_RSP] [STANDARD\]
+     [STANDARD_PRINT_STORAGE,C_STORE_RQ] [STANDARD\]
+     [ALL,ALL] [STANDARD\ROW\COL\SLIDE\SUPERSLIDE\CUSTOM]
+[2010,0040]
+          NAME    = Film Orientation
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\PORTRAIT\LANDSCAPE\]
+[2010,0050]
+          NAME    = Film Size ID
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\8INX10IN\10INX14IN\14INX14IN\24CMX24CM\10INX12IN\11INX14IN\14INX17IN\24CMX30CM\]
+[2010,0060]
+          NAME    = Magnification Type
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\REPLICATE\BILINEAR\CUBIC\NONE\]
+[2010,0100]
+          NAME    = Border Density
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\BLACK\WHITE\]
+[2010,0110]
+          NAME    = Empty Image Density
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\BLACK\WHITE\]
+[2010,0130]
+          NAME    = Max Density
+          VR      = US
+          VM      = 1
+     [BASIC_FILM_BOX,N_CREATE_RSP] [1]
+     [ALL,ALL] [1]
+[2010,0140]
+          NAME    = Trim
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\YES\NO\]
+[2010,0150]
+          NAME    = Configuration Information
+          VR      = ST
+          VM      = 1
+     [BASIC_FILM_BOX,N_CREATE_RSP] [Config Info]
+     [ALL,ALL] [Config Info]
+[2020,0010]
+          NAME    = Image Box Position
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1]
+[2020,0020]
+          NAME    = Polarity
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [NORMAL\REVERSE]
+[2030,0010]
+          NAME    = Annotation Position
+          VR      = US
+          VM      = 1
+     [ALL,ALL] [1]
+[2030,0020]
+          NAME    = Text String
+          VR      = LO
+          VM      = 1
+     [ALL,ALL] [Text string for annotation position]
+[2100,0020]
+          NAME    = Execution Status
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\PENDING\PRINTING\DONE\FAILURE\]
+[2100,0030]
+          NAME    = Execution Status Info
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\QUEUED\NO SUPPLY MGZ\NO RECEIVE MGZ\SUPPLY EMPTY\RECEIVER FULL\FILM JAM\]
+[2100,0070]
+          NAME    = Originator
+          VR      = AE
+          VM      = 1
+     [STANDARD_PRINT_STORAGE,C_STORE_RQ] [MERGE_PRINT_SCU]
+[2100,0140]
+          NAME    = Destination AE
+          VR      = AE
+          VM      = 1
+     [STANDARD_PRINT_STORAGE,C_STORE_RQ] [MERGE_PRINT_SCP]
+[2110,0010]
+          NAME    = Printer Status
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\NORMAL\WARNING\FAILURE\]
+[2110,0020]
+          NAME    = Printer Status Info
+          VR      = CS
+          VM      = 1
+     [ALL,ALL] [\SUPPLY EMPTY\SUPPLY LOW\RECEIVER FULL\FILM JAM\]
+[6000,0010]
+          NAME    = Overlay Rows
+          VR      = US
+          VM      = 1
+     [STANDARD_OVERLAY,C_STORE_RQ] [128]
+[6000,0011]
+          NAME    = Overlay Columns
+          VR      = US
+          VM      = 1
+     [STANDARD_OVERLAY,C_STORE_RQ] [128]
+[6000,0040]
+          NAME    = Overlay Type
+          VR      = CS
+          VM      = 1
+     [STANDARD_OVERLAY,C_STORE_RQ] [G]
+[6000,0050]
+          NAME    = Overlay Origin
+          VR      = SS
+          VM      = 2
+     [STANDARD_OVERLAY,C_STORE_RQ] [1\1]
+[6000,0100]
+          NAME    = Overlay Bits Allocated
+          VR      = US
+          VM      = 1
+     [STANDARD_OVERLAY,C_STORE_RQ] [16]
+[6000,0102]
+          NAME    = Overlay Bit Position
+          VR      = US
+          VM      = 1
+     [STANDARD_OVERLAY,C_STORE_RQ] [12]
