@@ -8,8 +8,15 @@ using System.ComponentModel;
 
 namespace ADIU
 {
+    /// <summary>
+    /// This class is responsible for handle all common operations on
+    /// communication with the provider
+    /// </summary>
     public class MergeBase
     {
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public MergeBase()
         {
         
@@ -20,19 +27,25 @@ namespace ADIU
         private const int EXIT_SUCCESS = 0;
         private const int EXIT_FAILURE = 1;
 
-
-
-        // Association with the remote application
+        /// <summary>
+        /// Association with the remote application
+        /// </summary>
         protected static MCassociation myAssoc = null;
 
         #region Atributes
 
+        /// <summary>
+        /// Communications Timeout
+        /// </summary>
         [DefaultValue(300000)]
         public long Timeout
         {
             get; set;
         }
 
+        /// <summary>
+        /// Configuration Object
+        /// </summary>
         public MergeHandler Handler
         {
             get;
@@ -43,6 +56,10 @@ namespace ADIU
 
         #region Association
 
+        /// <summary>
+        /// Opens the association with provider. It is necessary 
+        /// to send the information
+        /// </summary>
         protected void OpenAssociation()
         {
             try
@@ -55,19 +72,19 @@ namespace ADIU
                     else
                         remApp = MCremoteApplication.getObject(Handler.RemoteAE);
 
-                    if (Handler.SecureAssociation)
-                    {
-                        Ssl ssl = new Ssl();
+                    //if (Handler.SecureAssociation)
+                    //{
+                    //    Ssl ssl = new Ssl();
 
-                        ssl.Certificate = "ssl.crt";
-                        ssl.Password = "SSL SAMPLE";
+                    //    ssl.Certificate = "ssl.crt";
+                    //    ssl.Password = "SSL SAMPLE";
 
-                        myAssoc = MCassociation.requestSecureAssociation(Handler.LocalApplication, remApp, ssl);
-                    }
-                    else
-                    {
+                    //    myAssoc = MCassociation.requestSecureAssociation(Handler.LocalApplication, remApp, ssl);
+                    //}
+                    //else
+                    //{
                         myAssoc = MCassociation.requestAssociation(Handler.LocalApplication, remApp);
-                    }
+                    //}
                 }
                 catch (MCexception e1)
                 {
@@ -81,7 +98,9 @@ namespace ADIU
             }
         }
 
-
+        /// <summary>
+        /// Close the association
+        /// </summary>
         protected void CloseAssociation()
         {
             try

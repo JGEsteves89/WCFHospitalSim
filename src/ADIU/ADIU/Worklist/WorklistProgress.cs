@@ -9,15 +9,23 @@ using System.ComponentModel;
 
 namespace ADIU
 {
+    /// <summary>
+    /// This class is responsible for handle que status report to Provider
+    /// </summary>
     public class WorklistProgress:MergeBase
     {
-
-        public WorkPatient Patient
+        /// <summary>
+        /// Info about Appointment
+        /// </summary>
+        public Appointment Appointment
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Identifier of Status created
+        /// </summary>
         public String AffectedSOPInstance
         {
             get;
@@ -30,9 +38,6 @@ namespace ADIU
         /// modality.  As a consequence of that performed procedure, information
         /// regarding a performed procedure step is relayed to the worklist/mpps
         /// </summary>
-        /// <param name="patient">the scheduled patient
-        /// 
-        /// </param>
         /// <exception cref="MCexception"></exception>
         public void CreateProgress()
         {
@@ -196,8 +201,6 @@ namespace ADIU
         /// 
         /// </summary>
         /// <param name="message">a valid message</param>
-        /// <param name="patient">the scheduled patient
-        /// </param>
         /// <exception cref="MCexception"></exception>
         private void setNCREATERQ(ref MCdimseMessage message)
         {
@@ -237,7 +240,7 @@ namespace ADIU
             */
             try
             {
-                item[MCdicom.STUDY_INSTANCE_UID, 0] = Patient.StudyInstance;
+                item[MCdicom.STUDY_INSTANCE_UID, 0] = Appointment.StudyInstance;
             }
             catch (MCexception e1)
             {
@@ -249,7 +252,7 @@ namespace ADIU
             */
             try
             {
-                message.DataSet[MCdicom.PERFORMED_PROCEDURE_STEP_ID, 0] = Patient.ProcedureID;
+                message.DataSet[MCdicom.PERFORMED_PROCEDURE_STEP_ID, 0] = Appointment.ProcedureID;
             }
             catch (MCexception e1)
             {
@@ -257,7 +260,7 @@ namespace ADIU
             }
             try
             {
-                message.DataSet[MCdicom.PERFORMED_PROCEDURE_STEP_DESCRIPTION, 0] = Patient.ProcedureDesc;
+                message.DataSet[MCdicom.PERFORMED_PROCEDURE_STEP_DESCRIPTION, 0] = Appointment.ProcedureDesc;
             }
             catch (MCexception e1)
             {
@@ -324,7 +327,7 @@ namespace ADIU
             */
             try
             {
-                message.DataSet[MCdicom.MODALITY, 0] = Patient.Modality;
+                message.DataSet[MCdicom.MODALITY, 0] = Appointment.Modality;
             }
             catch (MCexception e1)
             {
@@ -370,55 +373,55 @@ namespace ADIU
             */
             try
             {
-                if (Patient.PatientID == null || (System.Object)Patient.PatientID == (System.Object)"")
+                if (Appointment.PatientID == null || (System.Object)Appointment.PatientID == (System.Object)"")
                     message.DataSet[MCdicom.PATIENT_ID, 0] = null;
                 else
-                    message.DataSet[MCdicom.PATIENT_ID, 0] = Patient.PatientID;
+                    message.DataSet[MCdicom.PATIENT_ID, 0] = Appointment.PatientID;
 
-                if (Patient.PatientName == null || (System.Object)Patient.PatientName == (System.Object)"")
+                if (Appointment.PatientName == null || (System.Object)Appointment.PatientName == (System.Object)"")
                     message.DataSet[MCdicom.PATIENTS_NAME, 0] = null;
                 else
-                    message.DataSet[MCdicom.PATIENTS_NAME, 0] = Patient.PatientName;
+                    message.DataSet[MCdicom.PATIENTS_NAME, 0] = Appointment.PatientName;
 
-                if (Patient.PatientSex == null || (System.Object)Patient.PatientSex == (System.Object)"")
+                if (Appointment.PatientSex == null || (System.Object)Appointment.PatientSex == (System.Object)"")
                     message.DataSet[MCdicom.PATIENTS_SEX, 0] = null;
                 else
-                    message.DataSet[MCdicom.PATIENTS_SEX, 0] = Patient.PatientSex;
+                    message.DataSet[MCdicom.PATIENTS_SEX, 0] = Appointment.PatientSex;
 
-                if (Patient.ProcedureID == null || (System.Object)Patient.ProcedureID == (System.Object)"")
+                if (Appointment.ProcedureID == null || (System.Object)Appointment.ProcedureID == (System.Object)"")
                     item[MCdicom.REQUESTED_PROCEDURE_ID, 0] = null;
                 else
-                    item[MCdicom.REQUESTED_PROCEDURE_ID, 0] = Patient.ProcedureID;
+                    item[MCdicom.REQUESTED_PROCEDURE_ID, 0] = Appointment.ProcedureID;
 
-                if (Patient.ProcedureDesc == null || (System.Object)Patient.ProcedureDesc == (System.Object)"")
+                if (Appointment.ProcedureDesc == null || (System.Object)Appointment.ProcedureDesc == (System.Object)"")
                     item[MCdicom.REQUESTED_PROCEDURE_DESCRIPTION, 0] = null;
                 else
-                    item[MCdicom.REQUESTED_PROCEDURE_DESCRIPTION, 0] = Patient.ProcedureDesc;
+                    item[MCdicom.REQUESTED_PROCEDURE_DESCRIPTION, 0] = Appointment.ProcedureDesc;
 
-                if (Patient.StepID == null || (System.Object)Patient.StepID == (System.Object)"")
+                if (Appointment.StepID == null || (System.Object)Appointment.StepID == (System.Object)"")
                     item[MCdicom.SCHEDULED_PROCEDURE_STEP_ID, 0] = null;
                 else
-                    item[MCdicom.SCHEDULED_PROCEDURE_STEP_ID, 0] = Patient.StepID;
+                    item[MCdicom.SCHEDULED_PROCEDURE_STEP_ID, 0] = Appointment.StepID;
 
-                if (Patient.StepDesc == null || (System.Object)Patient.StepDesc == (System.Object)"")
+                if (Appointment.StepDesc == null || (System.Object)Appointment.StepDesc == (System.Object)"")
                     item[MCdicom.SCHEDULED_PROCEDURE_STEP_DESCRIPTION, 0] = null;
                 else
-                    item[MCdicom.SCHEDULED_PROCEDURE_STEP_DESCRIPTION, 0] = Patient.StepDesc;
+                    item[MCdicom.SCHEDULED_PROCEDURE_STEP_DESCRIPTION, 0] = Appointment.StepDesc;
 
-                if (Patient.Accession == null || (System.Object)Patient.Accession == (System.Object)"")
+                if (Appointment.Accession == null || (System.Object)Appointment.Accession == (System.Object)"")
                     item[MCdicom.ACCESSION_NUMBER, 0] = null;
                 else
-                    item[MCdicom.ACCESSION_NUMBER, 0] = Patient.Accession;
+                    item[MCdicom.ACCESSION_NUMBER, 0] = Appointment.Accession;
 
-                if (Patient.PhysicianName == null || (System.Object)Patient.PhysicianName == (System.Object)"")
+                if (Appointment.PhysicianName == null || (System.Object)Appointment.PhysicianName == (System.Object)"")
                     item[MCdicom.SCHEDULED_PERFORMING_PHYSICIANS_NAME, 0] = null;
                 else
-                    item[MCdicom.SCHEDULED_PERFORMING_PHYSICIANS_NAME, 0] = Patient.PhysicianName;
+                    item[MCdicom.SCHEDULED_PERFORMING_PHYSICIANS_NAME, 0] = Appointment.PhysicianName;
 
-                if (Patient.PatientBirthDay == null || (System.Object)Patient.PatientBirthDay == (System.Object)"")
+                if (Appointment.PatientBirthDay == null || (System.Object)Appointment.PatientBirthDay == (System.Object)"")
                     message.DataSet[MCdicom.PATIENTS_BIRTH_DATE, 0] = null;
                 else
-                    message.DataSet[MCdicom.PATIENTS_BIRTH_DATE, 0] = Patient.PatientBirthDay;
+                    message.DataSet[MCdicom.PATIENTS_BIRTH_DATE, 0] = Appointment.PatientBirthDay;
             }
             catch (MCexception e1)
             {

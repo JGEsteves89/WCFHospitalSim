@@ -8,10 +8,16 @@ using System.Configuration;
 
 namespace ADIU
 {
+    /// <summary>
+    /// WCF service that implements the Acuity Interface for the user
+    /// </summary>
     public class ADIUService : IADIU
     {
         MergeHandler handler;
 
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public ADIUService ()
         {
             string filepath = System.Reflection.Assembly.GetExecutingAssembly().Location;
@@ -23,7 +29,8 @@ namespace ADIU
             handler.RemoteAE = System.Configuration.ConfigurationManager.AppSettings["RemoteAE"];
             handler.LocalAE = System.Configuration.ConfigurationManager.AppSettings["LocalAE"];
             handler.IniFilePath = System.Configuration.ConfigurationManager.AppSettings["IniFilePath"];
-            handler.SecureAssociation = false;
+            handler.SecureAssociation = 
+                Boolean.Parse(System.Configuration.ConfigurationManager.AppSettings["SecureAssociation"]);
             handler.Initialize();
             handler.RegisterApp();
             handler.CreateContextList();
@@ -37,10 +44,9 @@ namespace ADIU
 
                 WorkList workList = new WorkList();
                 workList.Handler = handler;
-                List<WorkPatient> workPatients = workList.GetList();
-                workPatients.ForEach(r => appointments.Add(ConvertFromWorkPatient(r)));
+                appointments = workList.GetList();
 
-                return  appointments.ToArray();
+                return appointments.ToArray();
             }
             catch(Exception)
             {
@@ -89,8 +95,7 @@ namespace ADIU
             {
                 WorklistProgress progress = new WorklistProgress();
                 progress.Handler = handler;
-                WorkPatient workPatient = ConvertFromWorkAppointtment(appointment);
-                progress.Patient = workPatient;
+                progress.Appointment = appointment;
                 progress.CreateProgress();
 
                 return progress.AffectedSOPInstance;
@@ -99,50 +104,6 @@ namespace ADIU
             {
                 return null;
             }
-        }
-
-        Appointment ConvertFromWorkPatient(WorkPatient patient)
-        {
-            Appointment appointment = new Appointment();
-            appointment.Accession = patient.Accession;
-            appointment.Modality = patient.Modality;
-            appointment.PatientBirthDay = patient.PatientBirthDay;
-            appointment.PatientID = patient.PatientID;
-            appointment.PatientName = patient.PatientName;
-            appointment.PatientSex = patient.PatientSex;
-            appointment.PhysicianName = patient.PhysicianName;
-            appointment.ProcedureDesc = patient.ProcedureDesc;
-            appointment.ProcedureID = patient.ProcedureID;
-            appointment.StartDate = patient.StartDate;
-            appointment.StartTime = patient.StartTime;
-            appointment.StepID = patient.StepID;
-            appointment.StudyInstance = patient.StudyInstance;
-            return appointment;
-        }
-
-        WorkPatient ConvertFromWorkAppointtment(Appointment appointment)
-        {
-            WorkPatient workPatient = new WorkPatient();
-            workPatient.Accession = appointment.Accession;
-            workPatient.Modality = appointment.Modality;
-            workPatient.PatientBirthDay = appointment.PatientBirthDay;
-            workPatient.PatientID = appointment.PatientID;
-            workPatient.PatientName = appointment.PatientName;
-            workPatient.PatientSex = appointment.PatientSex;
-            workPatient.PhysicianName = appointment.PhysicianName;
-            workPatient.ProcedureDesc = appointment.ProcedureDesc;
-            workPatient.ProcedureID = appointment.ProcedureID;
-            workPatient.StartDate = appointment.StartDate;
-            workPatient.StartTime = appointment.StartTime;
-            workPatient.StepID = appointment.StepID;
-            workPatient.StudyInstance = appointment.StudyInstance;
-            return workPatient;
-        }
-
-
-
-       
-
-      
+        }  
     }
 }

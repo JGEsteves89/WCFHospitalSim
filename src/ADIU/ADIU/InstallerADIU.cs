@@ -10,12 +10,18 @@ using System.ServiceProcess;
 
 namespace ADIU
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [RunInstaller(true)]
     public partial class InstallerADIU : System.Configuration.Install.Installer
     {
         private ServiceProcessInstaller process;
         private ServiceInstaller service;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public InstallerADIU()
         {
             InitializeComponent();

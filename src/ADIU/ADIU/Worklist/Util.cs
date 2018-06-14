@@ -68,97 +68,6 @@ namespace ADIU
         }
 
         /// <summary>
-        /// Reads a line from stdin, insures that it is at least
-        /// one character long, and returns it trimmed.
-        /// </summary>
-        /// <value>Trimmed input
-        /// </value>
-        public static String Line
-        {
-            get
-            {
-                String userInput = String.Empty;
-
-                try
-                {
-                    while (userInput.Length == 0)
-                    {
-                        userInput = Console.ReadLine();
-                    }
-                }
-                catch
-                {
-                    Console.WriteLine("IO Error reading from console");
-                    userInput = String.Empty;
-                }
-                return (userInput == null) ? String.Empty : userInput.Trim();
-            }
-        }
-
-        /// <summary>
-        /// Retrieves the first character typed by the user.
-        /// Keeps trying until user types one of the expected characters.
-        /// </summary>
-        /// <param name="expected">An array containing expected characters.
-        /// </param>
-        /// <returns>The character typed by the user.
-        /// </returns>
-        public static char getChar(ArrayList expected)
-        {
-            for (; ; )
-            {
-                String inp = Line;
-                if (inp.Length == 0) continue;
-
-                for (int i = 0; i < expected.Count; i++)
-                {
-                    if (inp[0] == (char)expected[i]) return inp[0];
-                }
-            }
-        }
-
-        /// <summary>
-        /// Retrieves the first character typed by the user.
-        /// Keeps trying until user types one of the expected characters.
-        /// </summary>
-        /// <param name="expected">An array containing expected characters.
-        /// </param>
-        /// <returns>The character typed by the user.
-        /// </returns>
-        public static char getChar(char[] expected)
-        {
-            return getChar(new ArrayList(expected));
-        }
-
-        /// <summary>
-        /// This method gets the merge.ini file location from the command line
-        /// and uses it to initialize the library.
-        /// </summary>
-        /// <param name="args">The command line arguments, can be null.
-        /// </param>
-        internal static void initializeMergeCOM(String[] args)
-        {
-            for (int i = 0; args != null && i < (args.Length - 1); i++)
-            {
-                if (args[i].Equals("-i", StringComparison.InvariantCultureIgnoreCase))
-                {
-                    iniFilePath = args[i + 1];                   
-                }
-            }
-
-            MC.mcInitialization(new System.IO.FileInfo("C:\\Users\\dcosta\\Documents\\GitHub\\Dummy\\WCFHospitalSim\\src\\ADIU\\ADIU\\bin\\MERGE.INI"), "F47D-4E28-F854");
-        }
-
-        /// <summary>
-        /// Prints a message to the console.
-        /// </summary>
-        /// <param name="msg">The message to display.</param>
-        internal static void print(String msg)
-        {
-            Console.Write(msg);
-        }
-
-        /// <summary>
         /// Prints an error to the console.
         /// </summary>
         /// <param name="msg">Error message to display.</param>
@@ -189,31 +98,6 @@ namespace ADIU
             println(System.Threading.Thread.CurrentThread.Name + ": " + msg);
         }
 
-        /// <summary>
-        /// Prints a number, right-justified in a specified column width.
-        /// </summary>
-        /// <param name="num">The integer number to print.
-        /// </param>
-        /// <param name="colWidth">The width of the column being printed.
-        /// </param>
-        internal static void printInColumn(int num, int colWidth)
-        {
-            printInColumn(Convert.ToString(num), colWidth);
-        }
-
-        /// <summary>
-        /// Prints a string and appends spaces to make string the
-        /// specified column width.
-        /// </summary>
-        /// <param name="str">The string to print.
-        /// </param>
-        /// <param name="colWidth">The width of the column being printed.
-        /// </param>
-        internal static void printInColumn(String str, int colWidth)
-        {
-            print(str);
-            for (int p = str.Length; p < colWidth; p++) print(" ");
-        }
 
     }
 }

@@ -9,7 +9,10 @@ using System.ComponentModel;
 
 namespace ADIU
 {
-   
+   /// <summary>
+   /// This class is responsible for all configuration
+   /// used in the DICOM Merge Configuration
+   /// </summary>
     public sealed class MergeHandler
     {
         //  Constant values - Definition of the argument values for the exit() function
@@ -17,6 +20,9 @@ namespace ADIU
         private const int EXIT_FAILURE = 1;
         private static readonly MergeHandler _instance = new MergeHandler();
 
+        /// <summary>
+        /// Singleton Instance
+        /// </summary>
         public static MergeHandler Instance
         {
             get
@@ -33,62 +39,91 @@ namespace ADIU
             RemotePort = 104;
         }
 
+        /// <summary>
+        /// License Number
+        /// </summary>
         public string LicenseNum
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Remote Application Entity
+        /// </summary>
         public string RemoteAE
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Local Application Entity
+        /// </summary>
         public string LocalAE
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Merge.Ini File Path
+        /// </summary>
         public string IniFilePath
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Remote Host IP
+        /// </summary>
         public string RemoteHost
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Remote Port from the Host
+        /// </summary>
         public int RemotePort
         {
             get;
             set;
         }
 
-        // Set by main and never changed
+        /// <summary>
+        ///  Set by main and never changed
+        /// </summary>
         public MCapplication LocalApplication
         {
             get;
             private set;
         }
 
+        /// <summary>
+        /// Context List configuration-
+        /// Little Endian, Big Endian
+        /// </summary>
         public MCproposedContextList SCUContextList
         {
             get;
             private set;
         }
 
-
+        /// <summary>
+        /// SSL Comunnication
+        /// </summary>
         public bool SecureAssociation
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Initialize the Merge DICOM library
+        /// </summary>
         public void Initialize()
         {
             // ------------------------------------------------------------------------
@@ -113,6 +148,9 @@ namespace ADIU
             }
         }
 
+        /// <summary>
+        /// Get the application from the Merge Application
+        /// </summary>
         public void RegisterApp()
         {
             // ------------------------------------------------------------------------
@@ -129,6 +167,9 @@ namespace ADIU
             }
         }
 
+        /// <summary>
+        /// Create the Context List
+        /// </summary>
         public void CreateContextList()
         {
             MCproposedContext[] contextArray = new MCproposedContext[2];

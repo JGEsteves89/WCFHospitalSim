@@ -8,10 +8,15 @@ using System.Text;
 
 namespace ADIU
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [DataContract]
     public class Appointment
     {
-
+        /// <summary>
+        /// 
+        /// </summary>
         [DataMember]
         public String StartDate
         {
@@ -19,6 +24,9 @@ namespace ADIU
             set;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [DataMember]
         public String StartTime
         {
@@ -26,6 +34,9 @@ namespace ADIU
             set;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [DataMember]
         public String Modality
         {
@@ -33,7 +44,9 @@ namespace ADIU
             set;
         }
 
-        // Scheduled procedure step ID
+        /// <summary>
+        /// Scheduled procedure step ID
+        /// </summary>
         [DataMember]
         public String StepID
         {
@@ -41,7 +54,9 @@ namespace ADIU
             set;
         }
 
-        // Scheduled procedure step description
+        /// <summary>
+        /// Scheduled procedure step description
+        /// </summary>
         [DataMember]
         public String StepDesc
         {
@@ -49,6 +64,9 @@ namespace ADIU
             set;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [DataMember]
         public String PhysicianName
         {
@@ -56,7 +74,9 @@ namespace ADIU
             set;
         }
 
-        // Requested precedure ID
+        /// <summary>
+        /// Requested precedure ID
+        /// </summary>
         [DataMember]
         public String ProcedureID
         {
@@ -64,7 +84,9 @@ namespace ADIU
             set;
         }
 
-        // Requested procedure description
+        /// <summary>
+        ///  Requested procedure description
+        /// </summary>
         [DataMember]
         public String ProcedureDesc
         {
@@ -72,6 +94,9 @@ namespace ADIU
             set;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [DataMember]
         public String StudyInstance
         {
@@ -79,6 +104,9 @@ namespace ADIU
             set;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [DataMember]
         public String Accession
         {
@@ -86,6 +114,9 @@ namespace ADIU
             set;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [DataMember]
         public String PatientName
         {
@@ -93,6 +124,9 @@ namespace ADIU
             set;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [DataMember]
         public String PatientID
         {
@@ -100,6 +134,9 @@ namespace ADIU
             set;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [DataMember]
         public String PatientBirthDay
         {
@@ -107,16 +144,14 @@ namespace ADIU
             set;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [DataMember]
         public String PatientSex
         {
             get;
             set;
-        }
-
-        public override string ToString()
-        {
-            return String.Join(" ", PatientID, "\t", PatientName);
         }
     }
 }

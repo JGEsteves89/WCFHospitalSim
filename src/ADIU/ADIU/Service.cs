@@ -13,10 +13,17 @@ using System.Configuration.Install;
 
 namespace ADIU
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class Service : ServiceBase
     {
+        /// <summary></summary>
         public ServiceHost serviceHost = null;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Service()
         {
             InitializeComponent();
@@ -24,6 +31,10 @@ namespace ADIU
             ServiceName = "ADI Service - Island Acuity";
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
         protected override void OnStart(string[] args)
         {
             try
@@ -48,6 +59,9 @@ namespace ADIU
             }
         }
 
+        /// <summary>
+        ///
+        /// </summary>
         protected override void OnStop()
         {
             try

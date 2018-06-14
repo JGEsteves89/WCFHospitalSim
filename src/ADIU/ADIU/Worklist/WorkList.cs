@@ -8,51 +8,75 @@ using System.ComponentModel;
 
 namespace ADIU
 {
+    /// <summary> 
+    /// This class is responsible for request and retrieve all the information
+    /// about the appointment from the provider
+    /// </summary>
     public class WorkList:MergeBase
     {
-
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public WorkList()
         {
             Threshold = 31;
         }
-       
-      
+
+
         #region Attributes
-      
+
+        /// <summary>
+        /// Application Entity Title
+        /// </summary>
         public String AETitle
         {
             get; set;
         }
 
+        /// <summary>
+        /// Modality
+        /// </summary>
         public String Modality
         {
             get; set;
         }
 
+        /// <summary>
+        /// Patient Name
+        /// </summary>
         public String PatientName
         {
             get; set;
         }
-       
+
+        /// <summary>
+        /// Start date of the appointment
+        /// </summary>
         public String StartDate
         {
             get; set;
         }
 
+        /// <summary>
+        /// Maximum number of records returned
+        /// </summary>
         [DefaultValue(31)]
         public int Threshold 
         {
             get;
             set;
         }
-    
+
         #endregion
 
-        public List <WorkPatient> GetList()
+        /// <summary>
+        /// Returns the list from the provider
+        /// </summary>
+        public List <Appointment> GetList()
         {
             try
             {
-                List<WorkPatient> workPatients = new List<WorkPatient>();
+                List<Appointment> workPatients = new List<Appointment>();
                 OpenAssociation();
                 MCdimseMessage reqMessage = new MCdimseMessage();
 
@@ -71,7 +95,10 @@ namespace ADIU
             }          
         }
    
-
+        /// <summary>
+        /// Builds the messages to send the prover
+        /// </summary>
+        /// <param name="message"></param>
         public void BuildMsg(ref MCdimseMessage message)
         {
             MCitem item = null;
@@ -197,6 +224,10 @@ namespace ADIU
             }
         }
 
+        /// <summary>
+        /// Build the messages of CFIND to retrieve the appointment
+        /// </summary>
+        /// <param name="message"></param>
         public void SendCFINDMsg(ref MCdimseMessage message)
         {
             MCbasicWorklistManagementService service = new MCbasicWorklistManagementService(myAssoc);
@@ -212,13 +243,18 @@ namespace ADIU
            
         }
 
-        public List<WorkPatient> ProcessWorkListReplyMsg(MCdimseMessage reqMsg)
+        /// <summary>
+        /// Process the mensagens sent from the provider
+        /// </summary>
+        /// <param name="reqMsg">Message returned from the provider</param>
+        /// <returns></returns>
+        public List<Appointment> ProcessWorkListReplyMsg(MCdimseMessage reqMsg)
         {
-            List<WorkPatient> workPatients = new List<WorkPatient>();
+            List<Appointment> workPatients = new List<Appointment>();
             MCdimseMessage message = null; // The response message from the SCP
             ushort response; // The response value from the SCP
             MCitem item = null; // The item number that pertains to the sequence of procedure steps 
-            WorkPatient patientRec; // to stock the Patient data
+            Appointment patientRec; // to stock the Patient data
             int messageCount = 0; // the number of responses from SCP
             bool alreadySent = false; // to know if a C_CANCEL_RQ has been sent to the SCP 
 
@@ -276,7 +312,7 @@ namespace ADIU
                     * Here is where we actually grab the data from the toolkit's
                     * data strctures and attempt to display it to the user.
                     */
-                    patientRec = new WorkPatient();
+                    patientRec = new Appointment();
 
                     /*
                     * Since some of the responses are contained within a sequence,

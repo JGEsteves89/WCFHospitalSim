@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Reflection;
 using System.ServiceProcess;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace ADIU_UnitTest
 {
@@ -127,5 +128,6 @@ namespace ADIU_UnitTest
         {
             Assert.IsFalse(iADIU.SetStatusAppointments(string.Empty, ADIU.Status_Worklist.COMPLETED));
         }
+
     }
 }
