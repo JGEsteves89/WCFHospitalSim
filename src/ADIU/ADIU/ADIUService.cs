@@ -48,6 +48,59 @@ namespace ADIU
             }
         }
 
+        bool IADIU.SetStatusAppointments(string affectedSOPInstance, Status_Worklist status)
+        {
+            try
+            {
+                WorklistProgress progress = new WorklistProgress();
+                progress.Handler = handler;
+                progress.AffectedSOPInstance = affectedSOPInstance;
+
+                switch (status)
+                {
+                    case Status_Worklist.COMPLETED:
+                        {
+                            progress.SendNSETRQComplete();
+                            break;
+                        }
+                    case Status_Worklist.DISCONTINUED:
+                        {
+                            progress.SetProgress("DISCONTINUED");
+                            break;
+                        }
+                    case Status_Worklist.IN_PROGRESS:
+                        {
+
+                            progress.SetProgress("IN PROGRESS");
+                            break;
+                        }
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        string IADIU.CreateStatusAppointments(Appointment appointment)
+        {     
+            try
+            {
+                WorklistProgress progress = new WorklistProgress();
+                progress.Handler = handler;
+                WorkPatient workPatient = ConvertFromWorkAppointtment(appointment);
+                progress.Patient = workPatient;
+                progress.CreateProgress();
+
+                return progress.AffectedSOPInstance;
+            }
+            catch(Exception)
+            {
+                return null;
+            }
+        }
+
         Appointment ConvertFromWorkPatient(WorkPatient patient)
         {
             Appointment appointment = new Appointment();
@@ -67,40 +120,29 @@ namespace ADIU
             return appointment;
         }
 
-
-        bool IADIU.SetStatusAppointments(string studyid, Status_Worklist status)
+        WorkPatient ConvertFromWorkAppointtment(Appointment appointment)
         {
-            try
-            {
-                WorklistProgress progress = new WorklistProgress();
-                progress.Handler = handler;
-                progress.Patient = new WorkPatient();
-                progress.Patient.StudyInstance = studyid;
-                switch (status)
-                {
-                    case Status_Worklist.COMPLETED:
-                        {
-                            progress.SendNSETRQComplete();
-                            break;
-                        }
-                    case Status_Worklist.DISCONTINUED:
-                        {
-                            progress.SetProgress("DISCONTINUED");
-                            break;
-                        }
-                    case Status_Worklist.IN_PROGRESS:
-                        {
-                            progress.SetProgress("IN PROGRESS");
-                            break;
-                        }
-
-                }
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
+            WorkPatient workPatient = new WorkPatient();
+            workPatient.Accession = appointment.Accession;
+            workPatient.Modality = appointment.Modality;
+            workPatient.PatientBirthDay = appointment.PatientBirthDay;
+            workPatient.PatientID = appointment.PatientID;
+            workPatient.PatientName = appointment.PatientName;
+            workPatient.PatientSex = appointment.PatientSex;
+            workPatient.PhysicianName = appointment.PhysicianName;
+            workPatient.ProcedureDesc = appointment.ProcedureDesc;
+            workPatient.ProcedureID = appointment.ProcedureID;
+            workPatient.StartDate = appointment.StartDate;
+            workPatient.StartTime = appointment.StartTime;
+            workPatient.StepID = appointment.StepID;
+            workPatient.StudyInstance = appointment.StudyInstance;
+            return workPatient;
         }
+
+
+
+       
+
+      
     }
 }

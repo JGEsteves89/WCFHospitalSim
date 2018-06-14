@@ -598,8 +598,10 @@ namespace ADIU
             {
                 mppsStatus = ((String)responseMessage.DataSet[new MCtag(MCdicom.PERFORMED_PROCEDURE_STEP_STATUS), 0]);
             }
-            catch (MCexception)
+            catch (MCexception ex)
             {
+                CloseAssociation();
+                throw ex;
             }
             if (mppsStatus != null)
                 Util.println("Received performed procedure step status: " + mppsStatus + " in N_SET response message.");
@@ -848,8 +850,10 @@ namespace ADIU
                 mppsStatus = ((String)responseMessage.DataSet[new MCtag(MCdicom.PERFORMED_PROCEDURE_STEP_STATUS), 0]);
                 Util.println("Received performed procedure step status: " + mppsStatus + " in N_SET response message.");
             }
-            catch (MCexception)
+            catch (MCexception ex)
             {
+                CloseAssociation();
+                throw ex;
             }
 
             CloseAssociation();

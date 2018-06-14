@@ -20,41 +20,24 @@ namespace ADIU
             /// The main entry point for the application.
             /// </summary>
             /// 
-            MergeHandler handler = MergeHandler.Instance;
-            handler.RemoteHost = null;
-            handler.LicenseNum = System.Configuration.ConfigurationManager.AppSettings["LicenseNum"];
-            handler.RemotePort = int.Parse(System.Configuration.ConfigurationManager.AppSettings["RemotePort"]);
-            handler.RemoteAE = System.Configuration.ConfigurationManager.AppSettings["RemoteAE"];
-            handler.LocalAE = System.Configuration.ConfigurationManager.AppSettings["LocalAE"];
-            handler.IniFilePath = System.Configuration.ConfigurationManager.AppSettings["IniFilePath"];
-            handler.SecureAssociation = false;
-            handler.Initialize();
-            handler.RegisterApp();
-            handler.CreateContextList();
+            IADIU aDIU = new ADIUService();
+            List<Appointment> appointments = new List<Appointment>(aDIU.GetAppointments());
 
-            WorkList workList = new WorkList();
-            workList.Handler = MergeHandler.Instance;
-            List<WorkPatient> workPatients = workList.GetList();
-
-            for (int i = 0; i < workPatients.Count; i++)
+            for (int i = 0; i < appointments.Count; i++)
             {
-                Console.WriteLine(i + " - \t" + workPatients[i].ToString());
-
+                Console.WriteLine(i + " - \t" + appointments[i].ToString());
             }
+
             Console.Write("Choose one patient: ");
             string nbr = Console.ReadLine();
             int nbrPatient = 0;
 
             if (int.TryParse(nbr, out nbrPatient))
             {
-                WorklistProgress progress = new WorklistProgress();
-                progress.Handler = MergeHandler.Instance;
-                progress.Patient =  workPatients[nbrPatient];
-                progress.CreateProgress();
-
-                progress.SetProgress("IN PROGRESS");
-
-                progress.SendNSETRQComplete();
+                Appointment appointment = appointments[nbrPatient];
+                string affectedSOPInstance = aDIU.CreateStatusAppointments(appointment);
+                aDIU.SetStatusAppointments(affectedSOPInstance, Status_Worklist.IN_PROGRESS);
+                aDIU.SetStatusAppointments(affectedSOPInstance, Status_Worklist.COMPLETED);
             }
             //workPatients.ForEach(r => Console.WriteLine(r.ToString()));
 

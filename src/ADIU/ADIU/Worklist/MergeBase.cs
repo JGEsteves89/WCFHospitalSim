@@ -12,6 +12,7 @@ namespace ADIU
     {
         public MergeBase()
         {
+        
             Timeout = 3000000;
         }
 

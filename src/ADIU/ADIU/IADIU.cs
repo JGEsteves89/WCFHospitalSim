@@ -14,6 +14,9 @@ namespace ADIU
         Appointment[] GetAppointments();
 
         [OperationContract]
-        bool SetStatusAppointments(string studyid, Status_Worklist status);
+        bool SetStatusAppointments(string affectedSOPInstance, Status_Worklist status);
+
+        [OperationContract]
+        string CreateStatusAppointments(Appointment appointment);
     }
 }

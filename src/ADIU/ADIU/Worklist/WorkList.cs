@@ -14,22 +14,21 @@ namespace ADIU
         public WorkList()
         {
             Threshold = 31;
-            Timeout = 3000000;
         }
        
       
-        #region attributes
+        #region Attributes
       
-
-   
         public String AETitle
         {
             get; set;
         }
+
         public String Modality
         {
             get; set;
         }
+
         public String PatientName
         {
             get; set;
@@ -39,6 +38,7 @@ namespace ADIU
         {
             get; set;
         }
+
         [DefaultValue(31)]
         public int Threshold 
         {
@@ -47,8 +47,6 @@ namespace ADIU
         }
     
         #endregion
-     
-
 
         public List <WorkPatient> GetList()
         {
@@ -59,7 +57,7 @@ namespace ADIU
                 MCdimseMessage reqMessage = new MCdimseMessage();
 
                 BuildMsg(ref reqMessage);
-                sendCFINDMsg(ref reqMessage);
+                SendCFINDMsg(ref reqMessage);
                 workPatients = ProcessWorkListReplyMsg(reqMessage);
 
                 CloseAssociation();
@@ -70,8 +68,7 @@ namespace ADIU
             {
                 Util.println("Cannot create an association with the remote application");
                 throw et;
-            }
-           
+            }          
         }
    
 
@@ -199,7 +196,8 @@ namespace ADIU
                 throw e1;
             }
         }
-        public void sendCFINDMsg(ref MCdimseMessage message)
+
+        public void SendCFINDMsg(ref MCdimseMessage message)
         {
             MCbasicWorklistManagementService service = new MCbasicWorklistManagementService(myAssoc);
             try
@@ -213,6 +211,7 @@ namespace ADIU
             }
            
         }
+
         public List<WorkPatient> ProcessWorkListReplyMsg(MCdimseMessage reqMsg)
         {
             List<WorkPatient> workPatients = new List<WorkPatient>();

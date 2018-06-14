@@ -97,12 +97,6 @@ namespace ADIU
             set;
         }
 
-        public String Study_ID
-        {
-            get;
-            set;
-        }
-
         public override string ToString()
         {
             return String.Join(" ", PatientID, "\t" ,PatientName);
