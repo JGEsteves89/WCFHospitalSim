@@ -4,6 +4,8 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
+using System.Reflection;
 
 namespace ADIU
 {
@@ -14,7 +16,15 @@ namespace ADIU
         /// </summary>
         static void Main(String[] args)
         {
-            WorkSCU.getList(args);
+            /// <summary>
+            /// The main entry point for the application.
+            /// </summary>
+            ServiceBase[] ServicesToRun;
+            ServicesToRun = new ServiceBase[]
+            {
+                new Service()
+            };
+            ServiceBase.Run(ServicesToRun);
         }
     }
 }
