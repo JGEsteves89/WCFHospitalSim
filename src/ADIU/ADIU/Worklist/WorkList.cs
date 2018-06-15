@@ -5,6 +5,7 @@ using System.Net;
 using Mergecom;
 using Mergecom.Exceptions;
 using System.ComponentModel;
+using System.Globalization;
 
 namespace ADIU
 {
@@ -12,7 +13,7 @@ namespace ADIU
     /// This class is responsible for request and retrieve all the information
     /// about the appointment from the provider
     /// </summary>
-    public class WorkList:MergeBase
+    public class WorkList:MergeBase,IWorlist
     {
         /// <summary>
         /// Default Constructor
@@ -99,7 +100,7 @@ namespace ADIU
         /// Builds the messages to send the prover
         /// </summary>
         /// <param name="message"></param>
-        public void BuildMsg(ref MCdimseMessage message)
+        void BuildMsg(ref MCdimseMessage message)
         {
             MCitem item = null;
             //Create DIMSE message with "Modality C-FIND"
@@ -228,7 +229,7 @@ namespace ADIU
         /// Build the messages of CFIND to retrieve the appointment
         /// </summary>
         /// <param name="message"></param>
-        public void SendCFINDMsg(ref MCdimseMessage message)
+        void SendCFINDMsg(ref MCdimseMessage message)
         {
             MCbasicWorklistManagementService service = new MCbasicWorklistManagementService(myAssoc);
             try
@@ -248,7 +249,7 @@ namespace ADIU
         /// </summary>
         /// <param name="reqMsg">Message returned from the provider</param>
         /// <returns></returns>
-        public List<Appointment> ProcessWorkListReplyMsg(MCdimseMessage reqMsg)
+        List<Appointment> ProcessWorkListReplyMsg(MCdimseMessage reqMsg)
         {
             List<Appointment> workPatients = new List<Appointment>();
             MCdimseMessage message = null; // The response message from the SCP
@@ -334,7 +335,19 @@ namespace ADIU
                     try
                     {
                         MCdate date = item[new MCtag(MCdicom.SCHEDULED_PROCEDURE_STEP_START_DATE), 0] as MCdate;
-                        patientRec.StartDate = date == null ? "" : date.ToString();
+                        if (date == null)
+                            throw new FormatException();
+                        else
+                        {
+                            DateTime tmp = new DateTime();
+                            if (DateTime.TryParseExact(date.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture, DateTimeStyles.None, out tmp))
+                            {
+                                patientRec.StartDate = tmp;
+                            }
+                            else
+                                throw new FormatException();
+                        }
+                        //patientRec.StartDate = date == null ? "" : date.ToString();
                     }
                     catch (MCexception e3)
                     {
@@ -509,7 +522,14 @@ namespace ADIU
                     */
                     try
                     {
-                        patientRec.PatientSex = ((String)message.DataSet[new MCtag(MCdicom.PATIENTS_SEX), 0]);
+                        string sex = ((String)message.DataSet[new MCtag(MCdicom.PATIENTS_SEX), 0]);
+                        switch(sex)
+                        {
+                            case "Female"   :   patientRec.PatientSex = PatientSex.Female;break;
+                            case "Male"     :   patientRec.PatientSex = PatientSex.Male;break;
+                            default:            patientRec.PatientSex = PatientSex.NotDefined;break;
+                        }
+
                     }
                     catch (MCexception e3)
                     {

@@ -16,7 +16,7 @@ namespace ADIU
         /// <summary>
         /// Get all the Appointments of the Provider
         /// </summary>
-        /// <returns>Returns all appointments</returns>
+        /// <returns>Array of appointments</returns>
         [OperationContract]
         Appointment[] GetAppointments();
 
@@ -25,9 +25,9 @@ namespace ADIU
         /// </summary>
         /// <param name="affectedSOPInstance">Instance UID of the status state</param>
         /// <param name="status">Status value</param>
-        /// <returns></returns>
+        /// <returns>Return true if it was sucessful. Otherwise, returns false</returns>
         [OperationContract]
-        bool SetStatusAppointments(string affectedSOPInstance, Status_Worklist status);
+        bool SetStatusAppointments(string affectedSOPInstance, StatusWorklist status);
 
         /// <summary>
         /// Create a status register in the provider

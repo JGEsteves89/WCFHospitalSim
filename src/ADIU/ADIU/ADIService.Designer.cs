@@ -1,6 +1,6 @@
 ﻿namespace ADIU
 {
-    partial class Service
+    partial class ADIService
     {
         /// <summary> 
         /// Required designer variable.

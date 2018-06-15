@@ -71,14 +71,15 @@
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </Compile>
     <Compile Include="Worklist\Appointment.cs" />
+    <Compile Include="Worklist\IWorlist.cs" />
     <Compile Include="Worklist\Ssl.cs" />
-    <Compile Include="Worklist\Status_Worklist.cs" />
+    <Compile Include="Worklist\StatusWorklist.cs" />
     <Compile Include="IADIU.cs" />
-    <Compile Include="Service.cs">
+    <Compile Include="ADIService.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Service.Designer.cs">
-      <DependentUpon>Service.cs</DependentUpon>
+    <Compile Include="ADIService.Designer.cs">
+      <DependentUpon>ADIService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

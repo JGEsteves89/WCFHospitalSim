@@ -75,19 +75,19 @@ namespace ADIU_UnitTest
 
             string affectedSOP = iADIU.CreateStatusAppointments(appointment);
 
-            Assert.IsTrue(iADIU.SetStatusAppointments(affectedSOP, ADIU.Status_Worklist.IN_PROGRESS));
+            Assert.IsTrue(iADIU.SetStatusAppointments(affectedSOP, ADIU.StatusWorklist.InProgress));
         }
 
         [TestMethod]
         public void TestSetStatusInProgressNull()
         {
-            Assert.IsFalse(iADIU.SetStatusAppointments(null, ADIU.Status_Worklist.IN_PROGRESS));
+            Assert.IsFalse(iADIU.SetStatusAppointments(null, ADIU.StatusWorklist.InProgress));
         }
 
         [TestMethod]
         public void TestSetStatusInProgressEmpty()
         {
-            Assert.IsFalse(iADIU.SetStatusAppointments(string.Empty, ADIU.Status_Worklist.IN_PROGRESS));
+            Assert.IsFalse(iADIU.SetStatusAppointments(string.Empty, ADIU.StatusWorklist.InProgress));
         }
 
 
@@ -100,19 +100,19 @@ namespace ADIU_UnitTest
 
             string affectedSOP = iADIU.CreateStatusAppointments(appointment);
 
-            Assert.IsTrue(iADIU.SetStatusAppointments(affectedSOP, ADIU.Status_Worklist.DISCONTINUED));
+            Assert.IsTrue(iADIU.SetStatusAppointments(affectedSOP, ADIU.StatusWorklist.Discontinued));
         }
 
         [TestMethod]
         public void TestSetStatusDiscontinuedNull()
         {
-            Assert.IsFalse(iADIU.SetStatusAppointments(null, ADIU.Status_Worklist.DISCONTINUED));
+            Assert.IsFalse(iADIU.SetStatusAppointments(null, ADIU.StatusWorklist.Discontinued));
         }
 
         [TestMethod]
         public void TestSetStatusDiscontinuedEmpty()
         {
-            Assert.IsFalse(iADIU.SetStatusAppointments(string.Empty, ADIU.Status_Worklist.DISCONTINUED));
+            Assert.IsFalse(iADIU.SetStatusAppointments(string.Empty, ADIU.StatusWorklist.Discontinued));
         }
 
 
@@ -125,21 +125,21 @@ namespace ADIU_UnitTest
 
             string affectedSOP = iADIU.CreateStatusAppointments(appointment);
 
-            iADIU.SetStatusAppointments(affectedSOP, ADIU.Status_Worklist.IN_PROGRESS);
+            iADIU.SetStatusAppointments(affectedSOP, ADIU.StatusWorklist.InProgress);
 
-            Assert.IsTrue(iADIU.SetStatusAppointments(affectedSOP, ADIU.Status_Worklist.COMPLETED));
+            Assert.IsTrue(iADIU.SetStatusAppointments(affectedSOP, ADIU.StatusWorklist.Completed));
         }
 
         [TestMethod]
         public void TestSetStatusCompletedSOPNull()
         {
-            Assert.IsFalse(iADIU.SetStatusAppointments(null, ADIU.Status_Worklist.COMPLETED));
+            Assert.IsFalse(iADIU.SetStatusAppointments(null, ADIU.StatusWorklist.Completed));
         }
 
         [TestMethod]
         public void TestSetStatusCompletedSOPEmpty()
         {
-            Assert.IsFalse(iADIU.SetStatusAppointments(string.Empty, ADIU.Status_Worklist.COMPLETED));
+            Assert.IsFalse(iADIU.SetStatusAppointments(string.Empty, ADIU.StatusWorklist.Completed));
         }
 
     }

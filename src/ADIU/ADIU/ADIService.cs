@@ -16,7 +16,7 @@ namespace ADIU
     /// <summary>
     /// 
     /// </summary>
-    public partial class Service : ServiceBase
+    public partial class ADIService : ServiceBase
     {
         /// <summary></summary>
         public ServiceHost serviceHost = null;
@@ -24,7 +24,7 @@ namespace ADIU
         /// <summary>
         /// 
         /// </summary>
-        public Service()
+        public ADIService()
         {
             InitializeComponent();
             // Name the Windows Service

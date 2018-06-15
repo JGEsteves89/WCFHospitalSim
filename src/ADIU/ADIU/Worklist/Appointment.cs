@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Globalization;
 
 
 namespace ADIU
@@ -15,17 +16,19 @@ namespace ADIU
     public class Appointment
     {
         /// <summary>
-        /// 
+        /// Start Time of Procedure
+        /// Format Type: yyyyMMdd
         /// </summary>
         [DataMember]
-        public String StartDate
+        public DateTime StartDate
         {
             get;
             set;
         }
 
         /// <summary>
-        /// 
+        /// Start Time of Procedure
+        /// It's not datetime type
         /// </summary>
         [DataMember]
         public String StartTime
@@ -35,7 +38,7 @@ namespace ADIU
         }
 
         /// <summary>
-        /// 
+        /// Modality
         /// </summary>
         [DataMember]
         public String Modality
@@ -65,7 +68,7 @@ namespace ADIU
         }
 
         /// <summary>
-        /// 
+        /// Physician Name
         /// </summary>
         [DataMember]
         public String PhysicianName
@@ -85,7 +88,7 @@ namespace ADIU
         }
 
         /// <summary>
-        ///  Requested procedure description
+        /// Requested procedure description
         /// </summary>
         [DataMember]
         public String ProcedureDesc
@@ -95,7 +98,7 @@ namespace ADIU
         }
 
         /// <summary>
-        /// 
+        /// Study Instance
         /// </summary>
         [DataMember]
         public String StudyInstance
@@ -105,7 +108,7 @@ namespace ADIU
         }
 
         /// <summary>
-        /// 
+        /// Access Number 
         /// </summary>
         [DataMember]
         public String Accession
@@ -115,7 +118,7 @@ namespace ADIU
         }
 
         /// <summary>
-        /// 
+        /// Patient Name
         /// </summary>
         [DataMember]
         public String PatientName
@@ -125,7 +128,7 @@ namespace ADIU
         }
 
         /// <summary>
-        /// 
+        /// Patient Identification
         /// </summary>
         [DataMember]
         public String PatientID
@@ -135,7 +138,7 @@ namespace ADIU
         }
 
         /// <summary>
-        /// 
+        /// Patient Birth Day
         /// </summary>
         [DataMember]
         public String PatientBirthDay
@@ -145,13 +148,38 @@ namespace ADIU
         }
 
         /// <summary>
-        /// 
+        /// Patient Sex
         /// </summary>
         [DataMember]
-        public String PatientSex
+        public PatientSex PatientSex
         {
             get;
             set;
         }
+    }
+
+    /// <summary>
+    /// Enumeration of Patient Sex
+    /// </summary>
+    [DataContract(Name = "PatientSex")]
+    public enum PatientSex
+    {
+        /// <summary>
+        /// Male
+        /// </summary>
+        [EnumMember]
+        Male = 0,
+
+        /// <summary>
+        /// Female
+        /// </summary>
+        [EnumMember]
+        Female = 1,
+
+        /// <summary>
+        /// Other gender
+        /// </summary>
+        [EnumMember]
+        NotDefined = 2
     }
 }

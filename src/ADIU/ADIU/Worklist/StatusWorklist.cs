@@ -13,24 +13,24 @@ namespace ADIU
     /// the provider 
     /// </summary>
     [DataContract(Name = "Status_Worklist")]
-    public enum Status_Worklist
+    public enum StatusWorklist
     {
         /// <summary>
         /// In Progress
         /// </summary>
         [EnumMember]
-        IN_PROGRESS =0,
+        InProgress =0,
 
         /// <summary>
         /// Discontinued
         /// </summary>
         [EnumMember]
-        DISCONTINUED =1,
+        Discontinued =1,
 
         /// <summary>
         /// Completed
         /// </summary>
         [EnumMember]
-        COMPLETED =2
+        Completed =2
     }
 }
