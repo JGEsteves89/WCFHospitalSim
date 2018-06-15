@@ -72,19 +72,19 @@ namespace ADIU
                     else
                         remApp = MCremoteApplication.getObject(Handler.RemoteAE);
 
-                    //if (Handler.SecureAssociation)
-                    //{
-                    //    Ssl ssl = new Ssl();
+                    if (Handler.SecureAssociation)
+                    {
+                        Ssl ssl = new Ssl();
 
-                    //    ssl.Certificate = "ssl.crt";
-                    //    ssl.Password = "SSL SAMPLE";
+                        ssl.Certificate = "ssl.crt";
+                        ssl.Password = "SSL SAMPLE";
 
-                    //    myAssoc = MCassociation.requestSecureAssociation(Handler.LocalApplication, remApp, ssl);
-                    //}
-                    //else
-                    //{
+                        myAssoc = MCassociation.requestSecureAssociation(Handler.LocalApplication, remApp, ssl);
+                    }
+                    else
+                    {
                         myAssoc = MCassociation.requestAssociation(Handler.LocalApplication, remApp);
-                    //}
+                    }
                 }
                 catch (MCexception e1)
                 {

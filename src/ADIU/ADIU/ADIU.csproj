@@ -64,15 +64,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADIUService.cs" />
-    <Compile Include="Worklist\Appointment.cs" />
-    <Compile Include="Worklist\Status_Worklist.cs" />
-    <Compile Include="IADIU.cs" />
-    <Compile Include="InstallerADIU.cs">
+    <Compile Include="ProjectInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="InstallerADIU.Designer.cs">
-      <DependentUpon>InstallerADIU.cs</DependentUpon>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </Compile>
+    <Compile Include="Worklist\Appointment.cs" />
+    <Compile Include="Worklist\Ssl.cs" />
+    <Compile Include="Worklist\Status_Worklist.cs" />
+    <Compile Include="IADIU.cs" />
     <Compile Include="Service.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -92,6 +93,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

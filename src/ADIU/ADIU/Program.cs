@@ -16,9 +16,7 @@ namespace ADIU
         /// </summary>
         static void Main(String[] args)
         {
-            /// <summary>
-            /// The main entry point for the application.
-            /// </summary>
+
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {

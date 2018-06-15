@@ -37,6 +37,7 @@ namespace ADIU
 
             RemoteHost = null;
             RemotePort = 104;
+            GetConfiguration();
         }
 
         /// <summary>
@@ -119,6 +120,28 @@ namespace ADIU
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// Get All configuration from the App.Config
+        /// </summary>
+        public void GetConfiguration()
+        {
+            try
+            {
+                RemoteHost = null;
+                LicenseNum = System.Configuration.ConfigurationManager.AppSettings["LicenseNum"];
+                RemotePort = int.Parse(System.Configuration.ConfigurationManager.AppSettings["RemotePort"]);
+                RemoteAE = System.Configuration.ConfigurationManager.AppSettings["RemoteAE"];
+                LocalAE = System.Configuration.ConfigurationManager.AppSettings["LocalAE"];
+                IniFilePath = System.Configuration.ConfigurationManager.AppSettings["IniFilePath"];
+                SecureAssociation =
+                    Boolean.Parse(System.Configuration.ConfigurationManager.AppSettings["SecureAssociation"]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
 
         /// <summary>

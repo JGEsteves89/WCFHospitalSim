@@ -32,7 +32,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-	<Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mergecom, Version=1.1.0.2, Culture=neutral, PublicKeyToken=2b03cb8ffd6e1064, processorArchitecture=MSIL">

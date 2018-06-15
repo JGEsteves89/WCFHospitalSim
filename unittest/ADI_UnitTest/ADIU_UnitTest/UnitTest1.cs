@@ -13,6 +13,19 @@ namespace ADIU_UnitTest
         ADIU.IADIU iADIU = new ADIU.ADIUService();
 
         [TestMethod]
+        public void TestSSL()
+        {
+            ADIU.MergeHandler handler = ADIU.MergeHandler.Instance;
+            handler.GetConfiguration();
+            handler.SecureAssociation = true;
+
+            ADIU.IADIU iADIUssl = new ADIU.ADIUService(handler);
+            int length = 0;
+            length = iADIU.GetAppointments().Length;
+            Assert.AreNotEqual(length, 0);
+        }
+
+        [TestMethod]
         public void TestGetAppointments()
         {
             int length = 0;
